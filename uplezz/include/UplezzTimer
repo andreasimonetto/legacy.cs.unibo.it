@@ -1,0 +1,25 @@
+#ifndef _UPLEZZ_TIMER_
+#define _UPLEZZ_TIMER_
+#include "mre/Object"
+#include "sys/Clock"
+
+using namespace mre;
+using namespace sys;
+
+/** Timer. &Egrave; l'orologio presente nella parte superiore dello schermo. 
+&Egrave; solo un elemento di abbellimento che utilizza la classe sys::Clock.
+*/
+class UplezzTimer : public mre::Object {
+	private:
+		Clock start, pause;
+	public:
+		UplezzTimer() { }
+
+		void reset() { start.sync(); }
+		void suspend() { pause.sync(); }
+		void restart() { start += Clock::now() - pause; }
+		void render() const;
+};
+
+#endif
+

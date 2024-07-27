@@ -1,0 +1,32 @@
+#ifndef _MRE_VECTOR2F_
+#define _MRE_VECTOR2F_
+#include <string.h>
+
+namespace mre {
+
+/** Vettore bidimensionale di float.
+*/
+class Vector2f {
+	private:
+		float f[2];
+	public:
+		/** Costruttore copia */
+		Vector2f(const Vector2f &v) { memcpy(f, v.f, 2 * sizeof(float)); }
+		/** Costruttore parametrico.
+			\param[in] a Prima componente 
+			\param[in] b Seconda componente 
+		*/
+		Vector2f(float a = 0.0, float b = 0.0) { f[0] = a; f[1] = b; }
+
+		/** Operatore di subscript (in sola lettura) */
+		const float& operator [](int i) const { return f[i]; }
+		/** Operatore di subscript (lettura/scrittura) */
+		float& operator [](int i) { return f[i]; }
+
+		/** Operatore di deferenzazione */
+		const float* operator *() const { return f; }
+};
+
+};
+#endif
+

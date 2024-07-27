@@ -1,0 +1,199 @@
+#ifndef _MRE_ANIMATION_
+#define _MRE_ANIMATION_
+#include "mre/Object"
+#include "mre/RenderEngine"
+#include "mre/SceneFactory"
+#include "mre/SceneManager"
+#include "sys/Timer"
+#include <string>
+#include <stdio.h>
+
+namespace mre {
+
+/** Classe MESH animata. Una MESH animata &egrave; una sequenza di fotogrammi
+3D che cambiano con una certa frequenza. Per esempio, si consideri come 
+animazione un personaggio che cammina: si suppone di avere i fotogrammi salvati
+in una cartella contenente:
+
+\verbatim
+walk_frame1.obj     walk_frame4.obj     walk_frame7.obj
+walk_frame2.obj     walk_frame5.obj     walk_frame8.obj
+walk_frame3.obj     walk_frame6.obj
+\endverbatim
+
+dove (walk_frame1.obj, ..., walk_frame8.obj) corrispondono ai modelli 3D
+schematizzati nella figura seguente:
+
+\image html images/anim_sample.gif "Esempio di animazione"
+
+Questi modelli sono dunque i fotogrammi di un personaggio animato che cammina.
+Il compito dell'utente &egrave; solo quello di specificare il percorso dei 
+file "fotogramma" e la frequenza di animazione (per default 25 fotogrammi al 
+secondo): sara&agrave; in seguito compito del sistema cambiarli con la corretta 
+periodicit&agrave;, rispettando le eventuali trasformazioni applicate (ad 
+esempio traslazioni o rotazioni). Questa classe &egrave; pensata per poter
+cambiare dinamicamente il flusso dei fotogrammi, mediante dei metodi di callback
+definiti di volta in volta: per questa ragione &egrave; generica, in modo da 
+poter raggruppare diverse animazioni in un solo oggetto. Ad esempio, si suppone 
+di avere la sequenza di fotogrammi descritta sopra ed un altra sequenza
+(jump_frame1.obj, ..., jump_frame5.obj): si vuole definire una classe \em Human 
+che rappresenti un modello antropomorfo in grado di camminare e saltare e 
+correre, e che inoltre possa calciare mentre salta. In pratica, le azioni
+di \em jump e di \em run sono modificabili a run-time, ad esempio in funzione
+di un tasto premuto:
+
+\verbatim
+class Human {
+	private:
+		Animation<Human> *walkAnim;
+		Animation<Human> *jumpAnim;
+
+		bool walkCallback(unsigned cycle, unsigned frame) {
+			if(frame == 0 && shiftPressed())
+				return startRun();
+			return true;
+		}
+
+		bool jumpCallback(unsigned cycle, unsigned frame) {
+			if(spacebarPressed())
+				return kick();
+			return true;
+		}
+	public:
+		Human() {
+			walkAnim = new Animation(8, "data/human/walk_frame");
+			walkAnim->setFrameCallback(this, &Human::walkCallback);
+
+			jumpAnim = new Animation(5, "data/human/jump_frame", 30);
+			jumpAnim->setFrameCallback(this, &Human::jumpCallback);
+		}
+		
+		//...
+\endverbatim
+
+Ecco come, grazie ai tipi generici, &egrave; possibile gestire le interazioni
+durante l'animazione. Si noti che il parametro \em cycle indica il ciclo di 
+esecuzione corrente dell'animazione (cycle >= 0) mentre \em frame indica
+il fotogramma corrente. I callback sono attivati ogni volta che un fotogramma
+deve essere cambiato: se il metodo definito dall'utente ritorna \em false, 
+l'animazione viene interrotta; altrimenti, se l'utente ritorna true o se il
+callback non &egrave; definito, l'animazione procede il suo normale corso.
+
+*/
+template <class T>
+class Animation : public Object {
+	private:
+		unsigned framesNum;
+		Object **frames;
+		unsigned curCycle, curFrame;
+		sys::Timer clock;
+		bool isRunning, loop;
+
+		T *frameCallbackObject;
+		bool (T::*frameCallbackMethod)(unsigned, unsigned);
+
+		void callback() {
+			if(frameCallbackObject && frameCallbackMethod) {
+				if(!(frameCallbackObject->*frameCallbackMethod)(curCycle, curFrame)) {
+					isRunning = false;
+					return;
+				}
+			}
+
+			RenderEngine::getInstance()->postRedisplay();
+		}
+
+		void nextFrame() {
+			if(loop) {
+				curFrame = (curFrame + 1) % framesNum;
+				curCycle++;
+			}
+			else {
+				if(curFrame == framesNum - 1) 
+					isRunning = false;
+				else
+					curFrame++;
+			}
+		}
+	public:
+		/** Costruttore parametrico. 
+			\param[in] framesNum Numero di fotogrammi da caricare per questa animazione
+			\param[in] framesPrefix Percorso dei fotogrammi: a questo viene
+				aggiunto un suffisso della forma "\em i.obj" con i compreso
+				tra 1 e \em framesNum
+			\param[in] fps Framerate dell'animazione
+		*/
+		Animation(unsigned framesNum, const std::string &framesPrefix, unsigned fps = 25) 
+		{
+			frames = new Object* [framesNum];
+			for(unsigned i = 0; i < framesNum; i++)
+			{
+			char framePath[128];
+			//Mesh *m;
+
+				sprintf(framePath, "%s%d.obj", framesPrefix.c_str(), i + 1);
+				frames[i] = SceneFactory::getInstance()->loadMesh(framePath);
+				//frames[i] = SceneManager::getInstance()->createObject(framePath, m);
+			}
+
+			this->framesNum = framesNum;
+			//this->framesPrefix = framesPrefix;
+			curFrame = curCycle = 0;
+			isRunning = false;
+			frameCallbackObject = 0;
+			clock.restart((unsigned long)((1.0 / fps) * 1000000.0));
+		}
+
+		~Animation() {
+			if(frames)
+				delete frames;
+		}
+
+		/** Setter per il callback dell'animazione (vedi Descrizione dettagliata) */
+		void setFrameCallback(T *obj, bool (T::*cb)(unsigned cycle, unsigned frame)) {
+			frameCallbackObject = obj;
+			frameCallbackMethod = cb;
+		}
+
+		/** Avvia l'animazione. Ogni animazione viene creata in uno stato
+			di "stop" e va avviata con questo metodo.
+			\param[in] withLoop Flag che specifica se l'animazione va eseguita
+				in ciclo continuo o se deve arrestarsi all'ultimo frame.
+		*/	
+		void start(bool withLoop = false) {
+			isRunning = true;
+			if((loop = withLoop))
+				curCycle = 0;
+			curFrame = 0;
+			clock.restart();
+		}
+
+		/** Arresta l'animazione */
+		void stop() { isRunning = false; }
+
+		/** Imposta se l'animazione va eseguita in ciclo continuo o meno. */
+		void setLoop(bool val) { loop = val; }
+
+		/** Ritorna il numero di fotogrammi */
+		unsigned getFramesNum() const { return framesNum; }
+
+		/** Verifica se il fotogramma corrente &egrave; il primo */
+		bool isStart() const { return (curFrame == 0); }
+
+		/** Verifica se il fotogramma corrente &egrave; l'ultimo */
+		bool isEnd() const { return !isRunning; }
+
+		void render() const { RenderEngine::getInstance()->render(frames[curFrame]); }
+
+		void run() {
+			if(isRunning && clock.hasExpired()) {
+				clock.restart();
+				callback();
+				nextFrame();
+			}
+		}
+};
+
+};
+#endif
+

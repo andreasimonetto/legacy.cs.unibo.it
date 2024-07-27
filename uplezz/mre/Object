@@ -1,0 +1,95 @@
+#ifndef _MRE_OBJECT_
+#define _MRE_OBJECT_
+#include "sys/Object"
+#include "mre/Material"
+#include "mre/Vector3f"
+
+namespace mre {
+
+/** Oggetto "renderable". Questa &egrave; la classe di base per qualunque
+oggetto inseribile in una scena. Fornisce dei metodi per la trasformazione
+(traslazione, rotazione e scala) e dei metodi per attivare/deattivare
+esplicitamente le trasformazioni (in generale questo non si rivela necessario,
+poich&egrave; &egrave; il motore di resa ad applicare le trasformazioni
+prima di rendere l'oggetto, pu&ograve; essere utile in alcuni contesti 
+specifici).
+
+\sa SceneFactory, SceneManager
+*/
+class Object : public sys::Object {
+	friend class RenderEngine;
+	friend class SceneFactory;
+	private:
+		unsigned displayList;
+		float tm[16];
+		Vector3f pos, rot, scf;
+	protected:
+		void setNullTransform() {
+			tm[1] = tm[2] = tm[3] = tm[4] = 0.0;
+			tm[6] = tm[7] = tm[8] = tm[9] = 0.0;
+			tm[11] = tm[12] = tm[13] = tm[14] = 0.0;
+			tm[0] = tm[5] = tm[10] = tm[15] = 1.0;
+
+			scf[0] = scf[1] = scf[2] = 1.0;
+			pos[0] = pos[1] = pos[2] = 0.0;
+			rot[0] = rot[1] = rot[2] = 0.0;
+		}
+
+		Object(unsigned displayList = 0) : position(pos), rotation(rot), scale(scf) {
+			setNullTransform();
+			this->displayList = displayList;
+		}
+
+		virtual void prerender();
+		virtual void render() const { }
+	public:
+		/** Assi nello spazio 3D */
+		enum Axis {
+			/** Asse X (lunghezza) */
+			AXIS_X, 
+			/** Asse Y (altezza) */
+			AXIS_Y,
+			/** Asse Z (profondit&agrave;) */
+			AXIS_Z
+		};
+
+		/** Posizione nello spazio 3D (sola lettura) */
+		const Vector3f &position;
+
+		/** Angoli di rotazione 3D (sola lettura) */
+		const Vector3f &rotation;
+
+		/** Fattori di scale delle componenti (sola lettura) */
+		const Vector3f &scale;
+
+		/** Materiale dell'oggetto */
+		Material material;
+
+		/** Ruota l'oggetto attorno ad un asse.
+			\param[in] degree Gradi di rotazione 
+			\param[in] axis Asse di rotazione
+		*/
+		void rotate(float degree, Axis axis);
+
+		/** Setta la posizione dell'oggetto */
+		void setPosition(float x, float y, float z);
+
+		/** Sposta l'oggetto */
+		void move(float x, float y, float z);
+
+		/** Scala l'oggetto */
+		void setScale(float xfact, float yfact, float zfact);
+
+		/** Resetta la trasformazione attuale. */
+		virtual void resetTransform() { setNullTransform(); }
+
+		/** Attiva la trasformazione dell'oggetto. */ 
+		virtual void transformBegin() const;
+
+		/** Disattiva la trasformazione dell'oggetto. */
+		virtual void transformEnd() const;
+};
+
+};
+#endif
+

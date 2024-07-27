@@ -1,0 +1,44 @@
+#ifndef _SYS_SYSTEM_
+#define _SYS_SYSTEM_
+
+#include <stack>
+#include <stdio.h>
+
+/** Modulo d'interfacciamento col sistema operativo.
+*/
+namespace sys {
+
+typedef void (*ExitHandler)(int exitStatus);
+
+/** 
+*/
+class System {
+	private:
+		std::stack<ExitHandler> exitHandlers;
+		static System *instance;
+		System();
+		~System() { }
+	public:
+		/** bla
+		*/
+		static System* getInstance() {
+			if(!instance)
+				instance = new System();
+			return instance;
+		}
+
+		static void freeInstance() { delete instance; }
+
+		void exit(int status);
+		void pushExitHandler(ExitHandler handler) { exitHandlers.push(handler); }
+
+		inline void fatalError(const char *msg) {
+			fprintf(stderr, "uplezz: fatal error: %s\n", msg);
+			//System::getInstance()->exit(1);
+		}
+};
+
+};
+
+#endif
+

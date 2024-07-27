@@ -1,0 +1,610 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Uplezz: Riferimenti per la classe mre::RenderEngine</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<div align="center"><img src="images/banner.png" /></div>
+<div style="padding-left: 2em; padding-right: 2em; padding-bottom: 1em;">
+
+<!-- Generato da Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Pagina&nbsp;Principale</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace</span></a></li>
+      <li class="current"><a href="classes.html"><span>Classi</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="classes.html"><span>Lista&nbsp;in&nbsp;ordine&nbsp;alfabetico</span></a></li>
+      <li><a href="annotated.html"><span>Elenco&nbsp;dei&nbsp;tipi&nbsp;composti</span></a></li>
+      <li><a href="hierarchy.html"><span>Gerarchia&nbsp;delle&nbsp;classi</span></a></li>
+      <li><a href="functions.html"><span>Membri&nbsp;dei&nbsp;composti</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacemre.html">mre</a>::<a class="el" href="classmre_1_1RenderEngine.html">RenderEngine</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Riferimenti per la classe mre::RenderEngine</h1><!-- doxytag: class="mre::RenderEngine" --><div class="dynheader">
+Diagramma di collaborazione per mre::RenderEngine:</div>
+<div class="dynsection">
+<p><center><img src="classmre_1_1RenderEngine__coll__graph.png" border="0" usemap="#mre_1_1RenderEngine__coll__map" alt="Collaboration graph"></center>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="classmre_1_1RenderEngine-members.html">Elenco di tutti i membri.</a><hr><a name="_details"></a><h2>Descrizione dettagliata</h2>
+Motore di resa. 
+<p>
+Il motore di resa &egrave; la classe principale del modulo MRE. Gestisce il main loop e gli eventi di I/O. &Egrave; un singleton, accessibile tramite il metodo statico <a class="el" href="classmre_1_1RenderEngine.html#38a00008ed1177551d5d00d3a0bf8297" title="Recupera l&#39;unica istanza di questa classe.">mre::RenderEngine::getInstance()</a>. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#bfb42da94b9512df51ebd67e34b08644">initMainWindow</a> (int argc, char *argv[], const char *title, unsigned x, unsigned y, unsigned width, unsigned height)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inizializza la finestra di resa.  <a href="#bfb42da94b9512df51ebd67e34b08644"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#d9e2e65ac4517ea448b9d5343274fdc6">getWindowWidth</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna la larghezza della finestra.  <a href="#d9e2e65ac4517ea448b9d5343274fdc6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#53e3596641c34fa04707f8367a03e366">getWindowHeight</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna l'altezza della finestra.  <a href="#53e3596641c34fa04707f8367a03e366"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#4123261370e9b0eea640b7939cf1438c">mainLoop</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inizia il ciclo di resa.  <a href="#4123261370e9b0eea640b7939cf1438c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#cbe5a7b05527044ea5ad8569d7944278">setReshapeHandler</a> (void(*reshapeHandler)(int, int))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setta l'handler di reshape.  <a href="#cbe5a7b05527044ea5ad8569d7944278"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#c05396864ef2a4463fe0e8ede0d21f74">setKeyPressHandler</a> (void(*keyPressHandler)(int, int, int, int))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setta il gestore della tastiera (evento tasto premuto).  <a href="#c05396864ef2a4463fe0e8ede0d21f74"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#f4f57abb415c357a6a635a775ef1eedd">setKeyReleaseHandler</a> (void(*keyReleaseHandler)(int, int, int, int))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setta il gestore della tastiera (evento tasto rilasciato).  <a href="#f4f57abb415c357a6a635a775ef1eedd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#a05178528a73fd821b1d970cdaf1de1d">setMouseMotionHandler</a> (void(*mouseMotionHandler)(int, int, int))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setta il gestore del mouse (evento di motion).  <a href="#a05178528a73fd821b1d970cdaf1de1d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#16ab8bf9cee225af33e0b4827caac2ec">setMouseButtonPressHandler</a> (void(*mouseButtonPressHandler)(int, int, int, int))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setta il gestore del mouse (evento di button-press).  <a href="#16ab8bf9cee225af33e0b4827caac2ec"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#8c0bf7d37ea4f1831d1f5489ac3807ac">setMouseButtonReleaseHandler</a> (void(*mouseButtonReleaseHandler)(int, int, int, int))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setta il gestore del mouse (evento di button-release).  <a href="#8c0bf7d37ea4f1831d1f5489ac3807ac"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#639d3dbce50813aefdf8db8c51420240">snapshot</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Prende uno snapshot della scena corrente, con antialiasing.  <a href="#639d3dbce50813aefdf8db8c51420240"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#b2b94e40b673b25cda3a0f77c66fc58e">fadeOut</a> (float fact=0.0625)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Effetto di fading out: sfuma la scena verso il nero con una certa velocit&agrave;.  <a href="#b2b94e40b673b25cda3a0f77c66fc58e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#9f7f7b4fbd63dd575a0321918fed702b">postRedisplay</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Richiede esplicitamente un redisplay della scena.  <a href="#9f7f7b4fbd63dd575a0321918fed702b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#29ae58c2237e42bc1c8f28214d095134">postQuit</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Richiede l'uscita dal main loop.  <a href="#29ae58c2237e42bc1c8f28214d095134"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#7c2800d1de7c4f0b1b7ffb5795ff1195">render</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Rende l'intera scena.  <a href="#7c2800d1de7c4f0b1b7ffb5795ff1195"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#b7d5ddc8a4ce7bbd46e8754496d8472b">render</a> (const <a class="el" href="classmre_1_1Object.html">Object</a> *obj) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Rende un singolo oggetto.  <a href="#b7d5ddc8a4ce7bbd46e8754496d8472b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#0bea4714599a5d21acfc7fe7db550f85">render</a> (const <a class="el" href="structmre_1_1image__t.html">image_t</a> *image, unsigned x=0, unsigned y=0) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Rende un immagine 2D.  <a href="#0bea4714599a5d21acfc7fe7db550f85"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici statici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="classmre_1_1RenderEngine.html">RenderEngine</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1RenderEngine.html#38a00008ed1177551d5d00d3a0bf8297">getInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recupera l'unica istanza di questa classe.  <a href="#38a00008ed1177551d5d00d3a0bf8297"></a><br></td></tr>
+</table>
+<hr><h2>Documentazione delle funzioni membro</h2>
+<a class="anchor" name="38a00008ed1177551d5d00d3a0bf8297"></a><!-- doxytag: member="mre::RenderEngine::getInstance" ref="38a00008ed1177551d5d00d3a0bf8297" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classmre_1_1RenderEngine.html">RenderEngine</a>* mre::RenderEngine::getInstance           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Recupera l'unica istanza di questa classe. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="bfb42da94b9512df51ebd67e34b08644"></a><!-- doxytag: member="mre::RenderEngine::initMainWindow" ref="bfb42da94b9512df51ebd67e34b08644" args="(int argc, char *argv[], const char *title, unsigned x, unsigned y, unsigned width, unsigned height)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::initMainWindow           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>height</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Inizializza la finestra di resa. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>argc</em>&nbsp;</td><td>Numero di argomenti da riga di comando. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>argv</em>&nbsp;</td><td>Vettore di argomenti da riga di comando. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>title</em>&nbsp;</td><td>Titolo della finestra. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>x</em>&nbsp;</td><td>Coordinata X della finestra. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>y</em>&nbsp;</td><td>Coordinata Y della finestra. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>width</em>&nbsp;</td><td>Larghezza della finestra. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>height</em>&nbsp;</td><td>Altezza della finestra. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d9e2e65ac4517ea448b9d5343274fdc6"></a><!-- doxytag: member="mre::RenderEngine::getWindowWidth" ref="d9e2e65ac4517ea448b9d5343274fdc6" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned mre::RenderEngine::getWindowWidth           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ritorna la larghezza della finestra. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="53e3596641c34fa04707f8367a03e366"></a><!-- doxytag: member="mre::RenderEngine::getWindowHeight" ref="53e3596641c34fa04707f8367a03e366" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned mre::RenderEngine::getWindowHeight           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ritorna l'altezza della finestra. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="4123261370e9b0eea640b7939cf1438c"></a><!-- doxytag: member="mre::RenderEngine::mainLoop" ref="4123261370e9b0eea640b7939cf1438c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mre::RenderEngine::mainLoop           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Inizia il ciclo di resa. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="cbe5a7b05527044ea5ad8569d7944278"></a><!-- doxytag: member="mre::RenderEngine::setReshapeHandler" ref="cbe5a7b05527044ea5ad8569d7944278" args="(void(*reshapeHandler)(int, int))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::setReshapeHandler           </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(int, int)&nbsp;</td>
+          <td class="paramname"> <em>reshapeHandler</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Setta l'handler di reshape. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>reshapeHandler</em>&nbsp;</td><td>: (int width, int height) funzione di reshape. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c05396864ef2a4463fe0e8ede0d21f74"></a><!-- doxytag: member="mre::RenderEngine::setKeyPressHandler" ref="c05396864ef2a4463fe0e8ede0d21f74" args="(void(*keyPressHandler)(int, int, int, int))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::setKeyPressHandler           </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(int, int, int, int)&nbsp;</td>
+          <td class="paramname"> <em>keyPressHandler</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Setta il gestore della tastiera (evento tasto premuto). 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>keyPressHandler</em>&nbsp;</td><td>: (int key, int state, int x, int y) funzione di gestione, dove <em>key</em> &egrave; il tasto premuto, <em>state</em> &egrave; lo stato del mouse ed <em>x</em>, <em>y</em> le coordinate del puntatore. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f4f57abb415c357a6a635a775ef1eedd"></a><!-- doxytag: member="mre::RenderEngine::setKeyReleaseHandler" ref="f4f57abb415c357a6a635a775ef1eedd" args="(void(*keyReleaseHandler)(int, int, int, int))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::setKeyReleaseHandler           </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(int, int, int, int)&nbsp;</td>
+          <td class="paramname"> <em>keyReleaseHandler</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Setta il gestore della tastiera (evento tasto rilasciato). 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>keyReleaseHandler</em>&nbsp;</td><td>: (int key, int state, int x, int y) funzione di gestione, dove <em>key</em> &egrave; il tasto rilasciato, <em>state</em> &egrave; lo stato del mouse ed <em>x</em>, <em>y</em> le coordinate del puntatore. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a05178528a73fd821b1d970cdaf1de1d"></a><!-- doxytag: member="mre::RenderEngine::setMouseMotionHandler" ref="a05178528a73fd821b1d970cdaf1de1d" args="(void(*mouseMotionHandler)(int, int, int))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::setMouseMotionHandler           </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(int, int, int)&nbsp;</td>
+          <td class="paramname"> <em>mouseMotionHandler</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Setta il gestore del mouse (evento di motion). 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>mouseMotionHandler</em>&nbsp;</td><td>: (int state, int x, int y) funzione di gestione, dove <em>state</em> &egrave; lo stato del mouse ed <em>x</em>, <em>y</em> le coordinate del puntatore. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="16ab8bf9cee225af33e0b4827caac2ec"></a><!-- doxytag: member="mre::RenderEngine::setMouseButtonPressHandler" ref="16ab8bf9cee225af33e0b4827caac2ec" args="(void(*mouseButtonPressHandler)(int, int, int, int))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::setMouseButtonPressHandler           </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(int, int, int, int)&nbsp;</td>
+          <td class="paramname"> <em>mouseButtonPressHandler</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Setta il gestore del mouse (evento di button-press). 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>mouseButtonPressHandler</em>&nbsp;</td><td>: (int button, int x, int y) funzione di gestione, dove <em>button</em> &egrave; il tasto premuto ed <em>x</em>, <em>y</em> le coordinate del puntatore. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8c0bf7d37ea4f1831d1f5489ac3807ac"></a><!-- doxytag: member="mre::RenderEngine::setMouseButtonReleaseHandler" ref="8c0bf7d37ea4f1831d1f5489ac3807ac" args="(void(*mouseButtonReleaseHandler)(int, int, int, int))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::setMouseButtonReleaseHandler           </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(int, int, int, int)&nbsp;</td>
+          <td class="paramname"> <em>mouseButtonReleaseHandler</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Setta il gestore del mouse (evento di button-release). 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>mouseButtonReleaseHandler</em>&nbsp;</td><td>: (int button, int x, int y) funzione di gestione, dove <em>button</em> &egrave; il tasto rilasciato ed <em>x</em>, <em>y</em> le coordinate del puntatore. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="639d3dbce50813aefdf8db8c51420240"></a><!-- doxytag: member="mre::RenderEngine::snapshot" ref="639d3dbce50813aefdf8db8c51420240" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mre::RenderEngine::snapshot           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Prende uno snapshot della scena corrente, con antialiasing. 
+<p>
+Gli snapshot sono salvati nella cartella 'data/snapshots'. 
+</div>
+</div><p>
+<a class="anchor" name="b2b94e40b673b25cda3a0f77c66fc58e"></a><!-- doxytag: member="mre::RenderEngine::fadeOut" ref="b2b94e40b673b25cda3a0f77c66fc58e" args="(float fact=0.0625)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::fadeOut           </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>fact</em> = <code>0.0625</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Effetto di fading out: sfuma la scena verso il nero con una certa velocit&agrave;. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fact</em>&nbsp;</td><td>Fattore di velocit&agrave;. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9f7f7b4fbd63dd575a0321918fed702b"></a><!-- doxytag: member="mre::RenderEngine::postRedisplay" ref="9f7f7b4fbd63dd575a0321918fed702b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::postRedisplay           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Richiede esplicitamente un redisplay della scena. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="29ae58c2237e42bc1c8f28214d095134"></a><!-- doxytag: member="mre::RenderEngine::postQuit" ref="29ae58c2237e42bc1c8f28214d095134" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::postQuit           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Richiede l'uscita dal main loop. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="7c2800d1de7c4f0b1b7ffb5795ff1195"></a><!-- doxytag: member="mre::RenderEngine::render" ref="7c2800d1de7c4f0b1b7ffb5795ff1195" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::render           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Rende l'intera scena. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="b7d5ddc8a4ce7bbd46e8754496d8472b"></a><!-- doxytag: member="mre::RenderEngine::render" ref="b7d5ddc8a4ce7bbd46e8754496d8472b" args="(const Object *obj) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::render           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmre_1_1Object.html">Object</a> *&nbsp;</td>
+          <td class="paramname"> <em>obj</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Rende un singolo oggetto. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>obj</em>&nbsp;</td><td>Oggetto da rendere. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0bea4714599a5d21acfc7fe7db550f85"></a><!-- doxytag: member="mre::RenderEngine::render" ref="0bea4714599a5d21acfc7fe7db550f85" args="(const image_t *image, unsigned x=0, unsigned y=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mre::RenderEngine::render           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmre_1_1image__t.html">image_t</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>x</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>y</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Rende un immagine 2D. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>image</em>&nbsp;</td><td>Puntatore all'immagine da rendere. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>x</em>&nbsp;</td><td>Ascissa a cui rendere l'immagine. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>y</em>&nbsp;</td><td>Ordinata a cui rendere l'immagine. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
+<li>RenderEngine</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed Nov 12 10:08:57 2008 for Uplezz by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 
+1.5.6</small></address></div>
+</body>
+</html>

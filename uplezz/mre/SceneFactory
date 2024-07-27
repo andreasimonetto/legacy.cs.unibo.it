@@ -1,0 +1,140 @@
+#ifndef _MRE_MESHFACTORY_
+#define _MRE_MESHFACTORY_
+#include "mre/Camera"
+#include "mre/Cube"
+#include "mre/Light"
+#include "mre/Mesh"
+#include "mre/Object"
+#include "mre/Plane"
+#include "mre/SkyBox"
+#include "mre/Sphere"
+#include "mre/Texture2D"
+#include "mre/Vector3f"
+
+#include <list>
+#include <map>
+#include <string>
+
+namespace mre {
+
+/** Classe "fabbrica" per oggetti MRE. Per produrre qualunque oggetto
+da inserire nelle scene, bisogna utilizzare questa classe, accessibile unicamente
+dal metodo statico mre::SceneFactory::getInstance(). Gli oggetti che vengono
+caricati da file vengono registrati in una tabella per poterne velocizzare
+successivi accessi. Inoltre gli oggetti complessi vengono "precompilati" grazie
+alle primitive GL in modo da aumentare le performance di resa.
+*/
+class SceneFactory {
+	friend void __mre_close(int status);
+	private:
+		static SceneFactory *instance;
+		SceneFactory() { }
+		~SceneFactory();
+
+		std::map<std::string, Texture2D*> textures;
+		std::map<std::string, Object*> meshes;
+
+		//std::map<std::string, Object*> namedObjects;
+		std::list<Object*> objects;
+
+		std::map<std::string, Camera*> cameras;
+		std::map<std::string, Light*> lights;
+	public:
+		/** Recupera l'unica istanza di questa classe. */
+		static SceneFactory* getInstance() {
+			if(!instance)
+				instance = new SceneFactory();
+			return instance;
+		}
+
+		/** Carica una texture da file */
+		Texture2D* loadTexture2D(const std::string &path);
+
+		/** Carica una mesh da file */
+		Object* loadMesh(const std::string &path);
+
+		/** Crea una sfera 
+			\param[in] radius Raggio della sfera
+			\param[in] depth Livello di dettaglio
+			\param[in] reverseNormals Decide se invertire il verso delle normali
+		*/
+		Sphere* createSphere(float radius = 1.0, int depth = 5, bool reverseNormals = false);
+
+		/** Crea un piano 
+			\param[in] width Larghezza
+			\param[in] depth Profondit&agrave;
+		*/
+		Plane* createPlane(float width = 1.0, float depth = 1.0);
+
+		/** Crea un cubo 
+			\param[in] edge Dimensione del lato
+			\param[in] reverseNormals Decide se invertire il verso delle normali
+		*/
+		Cube* createCube(float edge = 1.0, bool reverseNormals = false);
+
+		/** Crea uno Skybox. Uno Skybox &egrave; un cubo di lato arbitrario
+		alle cui 6 facce interne vengono applicate altrettante texture che
+		descrivono lo "sfondo" di gioco.
+			\param[in] skyBoxPath percorso delle immagini. Le 6 immagini vengono
+				cercate, a partire dal percorso specificato, concatenando
+				a quest'ultimo 6 suffissi:\br
+					\arg "_bk.ppm" Faccia posteriore (back);
+					\arg "_ft.ppm" Faccia anteriore (front);
+					\arg "_lf.ppm" Faccia sinistra (left);
+					\arg "_rt.ppm" Faccia destra (right);
+					\arg "_up.ppm" Faccia superiore (up);
+					\arg "_dn.ppm" Faccia inferiore (down);
+			
+				&Egrave; necessario che tutte e 6 le immagini si trovino
+				nel percorso specificato e nel formato PPM.
+			\param[in] edge Lato del cubo.
+		*/
+		SkyBox* createSkyBox(const std::string &skyBoxPath, float edge = 1.0);
+
+		/** Crea una camera con nome */
+		Camera* createCamera(const std::string &name);
+
+		/** Crea una camera con nome e parametri */
+		Camera* createCamera(const std::string &name, const Vector3f &pos, const Vector3f &center, const Vector3f &viewup);
+
+		/** Elimina una camera */
+		bool deleteCamera(const std::string &name) {
+			std::map<std::string, Camera*>::iterator it = cameras.find(name);
+			if(it == cameras.end())
+				return false;
+
+			cameras.erase(it);
+			delete it->second;
+			return true;
+		}
+
+		/** Ritorna una camera dato il nome */
+		Camera* getCamera(const std::string &name) const {
+			std::map<std::string, Camera*>::const_iterator it = cameras.find(name);
+			return (it == cameras.end() ? 0 : it->second);
+		}
+
+		/** Crea una luce con nome */
+		Light* createLight(const std::string &name);
+
+		/** Elimina una luce */
+		bool deleteLight(const std::string &name) {
+			std::map<std::string, Light*>::iterator it = lights.find(name);
+			if(it == lights.end())
+				return false;
+
+			lights.erase(it);
+			delete it->second;
+			return true;
+		}
+
+		/** Ritorna una luce dato il nome */
+		Light* getLight(const std::string &name) const {
+			std::map<std::string, Light*>::const_iterator it = lights.find(name);
+			return (it == lights.end() ? 0 : it->second);
+		}
+};
+
+};
+#endif
+

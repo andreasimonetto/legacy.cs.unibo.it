@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Uplezz: Template per la classe mre::Animation&lt; T &gt;</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<div align="center"><img src="images/banner.png" /></div>
+<div style="padding-left: 2em; padding-right: 2em; padding-bottom: 1em;">
+
+<!-- Generato da Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Pagina&nbsp;Principale</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace</span></a></li>
+      <li class="current"><a href="classes.html"><span>Classi</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="classes.html"><span>Lista&nbsp;in&nbsp;ordine&nbsp;alfabetico</span></a></li>
+      <li><a href="annotated.html"><span>Elenco&nbsp;dei&nbsp;tipi&nbsp;composti</span></a></li>
+      <li><a href="hierarchy.html"><span>Gerarchia&nbsp;delle&nbsp;classi</span></a></li>
+      <li><a href="functions.html"><span>Membri&nbsp;dei&nbsp;composti</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacemre.html">mre</a>::<a class="el" href="classmre_1_1Animation.html">Animation</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Template per la classe mre::Animation&lt; T &gt;</h1><!-- doxytag: class="mre::Animation" --><!-- doxytag: inherits="mre::Object" --><div class="dynheader">
+Diagramma delle classi per mre::Animation&lt; T &gt;</div>
+<div class="dynsection">
+<p><center><img src="classmre_1_1Animation__inherit__graph.png" border="0" usemap="#mre_1_1Animation_3_01T_01_4__inherit__map" alt="Inheritance graph"></center>
+<map name="mre_1_1Animation_3_01T_01_4__inherit__map">
+<area shape="rect" href="classmre_1_1Object.html" title="Oggetto &quot;renderable&quot;." alt="" coords="32,80,120,107"><area shape="rect" href="classsys_1_1Object.html" title="Oggetto di sistema." alt="" coords="32,5,120,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagramma di collaborazione per mre::Animation&lt; T &gt;:</div>
+<div class="dynsection">
+<p><center><img src="classmre_1_1Animation__coll__graph.png" border="0" usemap="#mre_1_1Animation_3_01T_01_4__coll__map" alt="Collaboration graph"></center>
+<map name="mre_1_1Animation_3_01T_01_4__coll__map">
+<area shape="rect" href="classmre_1_1Object.html" title="Oggetto &quot;renderable&quot;." alt="" coords="121,267,209,293"><area shape="rect" href="classsys_1_1Object.html" title="Oggetto di sistema." alt="" coords="5,96,93,123"><area shape="rect" href="classmre_1_1Material.html" title="Materiali." alt="" coords="117,96,213,123"><area shape="rect" href="classmre_1_1Texture2D.html" title="Texture bidimensionale." alt="" coords="109,5,221,32"><area shape="rect" href="classmre_1_1Vector3f.html" title="Vettore tridimensionale di float." alt="" coords="237,96,336,123"><area shape="rect" href="classsys_1_1Timer.html" title="Conto alla rovescia." alt="" coords="236,267,319,293"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="classmre_1_1Animation-members.html">Elenco di tutti i membri.</a><hr><a name="_details"></a><h2>Descrizione dettagliata</h2>
+<h3>template&lt;class T&gt;<br>
+ class mre::Animation&lt; T &gt;</h3>
+
+Classe MESH animata. 
+<p>
+Una MESH animata &egrave; una sequenza di fotogrammi 3D che cambiano con una certa frequenza. Per esempio, si consideri come animazione un personaggio che cammina: si suppone di avere i fotogrammi salvati in una cartella contenente:<p>
+<div class="fragment"><pre class="fragment">
+walk_frame1.obj     walk_frame4.obj     walk_frame7.obj
+walk_frame2.obj     walk_frame5.obj     walk_frame8.obj
+walk_frame3.obj     walk_frame6.obj
+</pre></div><p>
+dove (walk_frame1.obj, ..., walk_frame8.obj) corrispondono ai modelli 3D schematizzati nella figura seguente:<p>
+<div align="center">
+<img src="images/anim_sample.gif" alt="anim_sample.gif">
+<p><strong>Esempio di animazione</strong></p></div>
+ Questi modelli sono dunque i fotogrammi di un personaggio animato che cammina. Il compito dell'utente &egrave; solo quello di specificare il percorso dei file "fotogramma" e la frequenza di animazione (per default 25 fotogrammi al secondo): sara&agrave; in seguito compito del sistema cambiarli con la corretta periodicit&agrave;, rispettando le eventuali trasformazioni applicate (ad esempio traslazioni o rotazioni). Questa classe &egrave; pensata per poter cambiare dinamicamente il flusso dei fotogrammi, mediante dei metodi di callback definiti di volta in volta: per questa ragione &egrave; generica, in modo da poter raggruppare diverse animazioni in un solo oggetto. Ad esempio, si suppone di avere la sequenza di fotogrammi descritta sopra ed un altra sequenza (jump_frame1.obj, ..., jump_frame5.obj): si vuole definire una classe <em>Human</em> che rappresenti un modello antropomorfo in grado di camminare e saltare e correre, e che inoltre possa calciare mentre salta. In pratica, le azioni di <em>jump</em> e di <em>run</em> sono modificabili a run-time, ad esempio in funzione di un tasto premuto:<p>
+<div class="fragment"><pre class="fragment">
+class Human {
+	private:
+		Animation&lt;Human&gt; *walkAnim;
+		Animation&lt;Human&gt; *jumpAnim;
+
+		bool walkCallback(unsigned cycle, unsigned frame) {
+			if(frame == 0 &amp;&amp; shiftPressed())
+				return startRun();
+			return true;
+		}
+
+		bool jumpCallback(unsigned cycle, unsigned frame) {
+			if(spacebarPressed())
+				return kick();
+			return true;
+		}
+	public:
+		Human() {
+			walkAnim = new Animation(8, "data/human/walk_frame");
+			walkAnim-&gt;setFrameCallback(this, &amp;Human::walkCallback);
+
+			jumpAnim = new Animation(5, "data/human/jump_frame", 30);
+			jumpAnim-&gt;setFrameCallback(this, &amp;Human::jumpCallback);
+		}
+		
+		//...
+</pre></div><p>
+Ecco come, grazie ai tipi generici, &egrave; possibile gestire le interazioni durante l'animazione. Si noti che il parametro <em>cycle</em> indica il ciclo di esecuzione corrente dell'animazione (cycle &gt;= 0) mentre <em>frame</em> indica il fotogramma corrente. I callback sono attivati ogni volta che un fotogramma deve essere cambiato: se il metodo definito dall'utente ritorna <em>false</em>, l'animazione viene interrotta; altrimenti, se l'utente ritorna true o se il callback non &egrave; definito, l'animazione procede il suo normale corso. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#0603986cb34338c1278295ac03a8341d">Animation</a> (unsigned framesNum, const std::string &amp;framesPrefix, unsigned fps=25)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Costruttore parametrico.  <a href="#0603986cb34338c1278295ac03a8341d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fdfeba04b3607e1c4a4e9193e7b4d9a0"></a><!-- doxytag: member="mre::Animation::setFrameCallback" ref="fdfeba04b3607e1c4a4e9193e7b4d9a0" args="(T *obj, bool(T::*cb)(unsigned cycle, unsigned frame))" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#fdfeba04b3607e1c4a4e9193e7b4d9a0">setFrameCallback</a> (T *obj, bool(T::*cb)(unsigned cycle, unsigned frame))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setter per il callback dell'animazione (vedi Descrizione dettagliata). <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#ce467105e9741e82e67b5d7a9241043a">start</a> (bool withLoop=false)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Avvia l'animazione.  <a href="#ce467105e9741e82e67b5d7a9241043a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9c00411b5e684168fed438cdaaf2bd18"></a><!-- doxytag: member="mre::Animation::stop" ref="9c00411b5e684168fed438cdaaf2bd18" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#9c00411b5e684168fed438cdaaf2bd18">stop</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Arresta l'animazione. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#fa4bdba1ab1cd0ae9c55dc47c086a12b">setLoop</a> (bool val)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Imposta se l'animazione va eseguita in ciclo continuo o meno.  <a href="#fa4bdba1ab1cd0ae9c55dc47c086a12b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a899d8d7ea27795d276724a86af7f787"></a><!-- doxytag: member="mre::Animation::getFramesNum" ref="a899d8d7ea27795d276724a86af7f787" args="() const " -->
+unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#a899d8d7ea27795d276724a86af7f787">getFramesNum</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna il numero di fotogrammi. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="870e540534f6b4194eadb888e88dde25"></a><!-- doxytag: member="mre::Animation::isStart" ref="870e540534f6b4194eadb888e88dde25" args="() const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#870e540534f6b4194eadb888e88dde25">isStart</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Verifica se il fotogramma corrente &egrave; il primo. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="74c50fd3a97b343cd70c3a5eea23b754"></a><!-- doxytag: member="mre::Animation::isEnd" ref="74c50fd3a97b343cd70c3a5eea23b754" args="() const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#74c50fd3a97b343cd70c3a5eea23b754">isEnd</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Verifica se il fotogramma corrente &egrave; l'ultimo. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="561e7a4fc3d164fa685b6413fae9d5ae"></a><!-- doxytag: member="mre::Animation::render" ref="561e7a4fc3d164fa685b6413fae9d5ae" args="() const " -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#561e7a4fc3d164fa685b6413fae9d5ae">render</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Visualizza l'oggetto. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="80239ccb434fbad0372c543d5623eceb"></a><!-- doxytag: member="mre::Animation::run" ref="80239ccb434fbad0372c543d5623eceb" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1Animation.html#80239ccb434fbad0372c543d5623eceb">run</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Esegui l'oggetto. <br></td></tr>
+</table>
+<hr><h2>Documentazione dei costruttori e dei distruttori</h2>
+<a class="anchor" name="0603986cb34338c1278295ac03a8341d"></a><!-- doxytag: member="mre::Animation::Animation" ref="0603986cb34338c1278295ac03a8341d" args="(unsigned framesNum, const std::string &amp;framesPrefix, unsigned fps=25)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmre_1_1Animation.html">mre::Animation</a>&lt; T &gt;::<a class="el" href="classmre_1_1Animation.html">Animation</a>           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>framesNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>framesPrefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>fps</em> = <code>25</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Costruttore parametrico. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>framesNum</em>&nbsp;</td><td>Numero di fotogrammi da caricare per questa animazione </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>framesPrefix</em>&nbsp;</td><td>Percorso dei fotogrammi: a questo viene aggiunto un suffisso della forma "\em i.obj" con i compreso tra 1 e <em>framesNum</em> </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fps</em>&nbsp;</td><td>Framerate dell'animazione </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>Documentazione delle funzioni membro</h2>
+<a class="anchor" name="ce467105e9741e82e67b5d7a9241043a"></a><!-- doxytag: member="mre::Animation::start" ref="ce467105e9741e82e67b5d7a9241043a" args="(bool withLoop=false)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmre_1_1Animation.html">mre::Animation</a>&lt; T &gt;::start           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>withLoop</em> = <code>false</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Avvia l'animazione. 
+<p>
+Ogni animazione viene creata in uno stato di "stop" e va avviata con questo metodo. <dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>withLoop</em>&nbsp;</td><td>Flag che specifica se l'animazione va eseguita in ciclo continuo o se deve arrestarsi all'ultimo frame. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="fa4bdba1ab1cd0ae9c55dc47c086a12b"></a><!-- doxytag: member="mre::Animation::setLoop" ref="fa4bdba1ab1cd0ae9c55dc47c086a12b" args="(bool val)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmre_1_1Animation.html">mre::Animation</a>&lt; T &gt;::setLoop           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>val</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Imposta se l'animazione va eseguita in ciclo continuo o meno. 
+<p>
+
+</div>
+</div><p>
+<hr>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
+<li>Animation</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed Nov 12 10:08:56 2008 for Uplezz by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 
+1.5.6</small></address></div>
+</body>
+</html>

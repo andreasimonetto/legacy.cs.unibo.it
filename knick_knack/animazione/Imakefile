@@ -1,0 +1,13 @@
+MAIN = ./Knick_Knack_Anim
+MODEL = $(MAIN).md
+INCLUDES = -I../sources/ -I../sources/xcmodel4/include 
+LIBDIR = ../sources/xcmodel4/lib
+LOCAL_LIBS = -L$(LIBDIR) -ldescriptor -lMATRIX -lm
+
+SRCS = $(MAIN).c ../sources/kk_scene.c
+OBJS = $(MAIN).o ../sources/kk_scene.o
+
+AllTarget($(MAIN) $(MODEL))
+SingleProgramTarget($(MAIN),$(OBJS),$(LOCAL_LIBS),/**/)
+$(MODEL)::$(MAIN)
+	$(MAIN)

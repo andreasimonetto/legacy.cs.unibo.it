@@ -1,0 +1,148 @@
+ #ifndef _MRE_RENDER_ENGINE_
+#define _MRE_RENDER_ENGINE_
+#include "mre/image.h"
+#include "mre/Object"
+
+#include <X11/Xlib.h>
+#include <X11/keysym.h>
+#include <GL/glx.h>
+
+/** Modulo del motore di resa.
+*/
+namespace mre {
+
+/** Motore di resa. Il motore di resa &egrave; la classe principale del modulo
+MRE. Gestisce il main loop e gli eventi di I/O. &Egrave; un singleton, 
+accessibile tramite il metodo statico mre::RenderEngine::getInstance().
+*/
+class RenderEngine {
+	friend void __mre_close(int status);
+	private:
+		Display *dpy;
+		Window win;
+		XVisualInfo *vi;
+		GLXContext cx;
+
+		bool doubleBuffer;
+		float fadingVal, fadingFact;
+
+		bool needRedraw, needReshape, quit;
+		unsigned width, height;
+
+		static RenderEngine *instance;
+		RenderEngine();
+		~RenderEngine();
+
+		void reshape();
+
+		void (*reshapeHandler)(int, int);
+		void (*keyPressHandler)(int, int, int, int);
+		void (*keyReleaseHandler)(int, int, int, int);
+		void (*mouseMotionHandler)(int, int, int);
+		void (*mouseButtonPressHandler)(int, int, int, int);
+		void (*mouseButtonReleaseHandler)(int, int, int, int);
+
+		static unsigned snapshotId;
+	public:
+		/** Recupera l'unica istanza di questa classe. */
+		static RenderEngine* getInstance() {
+			if(!instance) 
+				instance = new RenderEngine();
+			return instance;
+		}
+
+		/** Inizializza la finestra di resa.
+			\param[in] argc Numero di argomenti da riga di comando.
+			\param[in] argv Vettore di argomenti da riga di comando.
+			\param[in] title Titolo della finestra.
+			\param[in] x Coordinata X della finestra.
+			\param[in] y Coordinata Y della finestra.
+			\param[in] width Larghezza della finestra.
+			\param[in] height Altezza della finestra.
+		*/
+		void initMainWindow(int argc, char *argv[], const char *title, unsigned x, unsigned y, unsigned width, unsigned height);
+
+		/** Ritorna la larghezza della finestra. */
+		unsigned getWindowWidth() const { return width; }
+
+		/** Ritorna l'altezza della finestra. */
+		unsigned getWindowHeight() const { return height; }
+
+		/** Inizia il ciclo di resa. */
+		int mainLoop();
+
+		/** Setta l'handler di reshape.
+			\param[in] reshapeHandler : (int width, int height) funzione di reshape.
+		*/
+		void setReshapeHandler(void (*reshapeHandler)(int, int)) { this->reshapeHandler = reshapeHandler; }
+
+		/** Setta il gestore della tastiera (evento tasto premuto).
+			\param[in] keyPressHandler : (int key, int state, int x, int y) funzione
+				di gestione, dove \em key &egrave; il tasto premuto, \em state
+				&egrave; lo stato del mouse ed \em x, \em y le coordinate del puntatore.
+		*/
+		void setKeyPressHandler(void (*keyPressHandler)(int, int, int, int)) { this->keyPressHandler = keyPressHandler; }
+
+		/** Setta il gestore della tastiera (evento tasto rilasciato).
+			\param[in] keyReleaseHandler : (int key, int state, int x, int y) funzione
+				di gestione, dove \em key &egrave; il tasto rilasciato, \em state
+				&egrave; lo stato del mouse ed \em x, \em y le coordinate del puntatore.
+		*/
+		void setKeyReleaseHandler(void (*keyReleaseHandler)(int, int, int, int)) { this->keyReleaseHandler = keyReleaseHandler; }
+
+		/** Setta il gestore del mouse (evento di motion).
+			\param[in] mouseMotionHandler : (int state, int x, int y) funzione
+				di gestione, dove \em state &egrave; lo stato del mouse 
+				ed \em x, \em y le coordinate del puntatore.
+		*/
+		void setMouseMotionHandler(void (*mouseMotionHandler)(int, int, int)) { this->mouseMotionHandler = mouseMotionHandler; }
+
+		/** Setta il gestore del mouse (evento di button-press).
+			\param[in] mouseButtonPressHandler : (int button, int x, int y) funzione
+				di gestione, dove \em button &egrave; il tasto premuto
+				ed \em x, \em y le coordinate del puntatore.
+		*/
+		void setMouseButtonPressHandler(void (*mouseButtonPressHandler)(int, int, int, int)) { this->mouseButtonPressHandler = mouseButtonPressHandler; }
+
+		/** Setta il gestore del mouse (evento di button-release).
+			\param[in] mouseButtonReleaseHandler : (int button, int x, int y) funzione
+				di gestione, dove \em button &egrave; il tasto rilasciato 
+				ed \em x, \em y le coordinate del puntatore.
+		*/
+		void setMouseButtonReleaseHandler(void (*mouseButtonReleaseHandler)(int, int, int, int)) { this->mouseButtonReleaseHandler = mouseButtonReleaseHandler; }
+
+		/** Prende uno snapshot della scena corrente, con antialiasing. Gli
+			snapshot sono salvati nella cartella 'data/snapshots'.
+		*/
+		bool snapshot();
+
+		/** Effetto di fading out: sfuma la scena verso il nero con una certa velocit&agrave;.
+			\param[in] fact Fattore di velocit&agrave;.
+		*/
+		void fadeOut(float fact = 0.0625) { fadingVal = 1.0; fadingFact = fact; }
+
+		/** Richiede esplicitamente un redisplay della scena. */ 
+		void postRedisplay() { needRedraw = true; }
+
+		/** Richiede l'uscita dal main loop. */ 
+		void postQuit() { quit = true; }
+
+		/** Rende l'intera scena. */ 
+		void render() const;
+
+		/** Rende un singolo oggetto. 
+			\param[in] obj Oggetto da rendere.
+		*/ 
+		void render(const Object *obj) const;
+
+		/** Rende un immagine 2D. 
+			\param[in] image Puntatore all'immagine da rendere.
+			\param[in] x Ascissa a cui rendere l'immagine.
+			\param[in] y Ordinata a cui rendere l'immagine.
+		*/ 
+		void render(const image_t *image, unsigned x = 0, unsigned y = 0) const;
+};
+
+};
+#endif
+

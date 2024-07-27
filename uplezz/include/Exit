@@ -1,0 +1,27 @@
+#ifndef _UPLEZZ_EXIT_
+#define _UPLEZZ_EXIT_
+#include "uplezz.h"
+#include "mge/Object"
+#include "mre/Object"
+#include "mre/RenderEngine"
+#include "mre/SceneFactory"
+#include "mre/SceneManager"
+
+/** Oggetto "uscita". &Egrave; una sorta di porta d'uscita, che conduce al 
+livello successivo.
+*/
+class Exit : public mge::Object, public mre::Object {
+	private:
+		mre::Object *exit;
+	public:
+		Exit(unsigned row, unsigned col) : mge::Object(row, col) {
+			exit = mre::SceneFactory::getInstance()->loadMesh("data/objects/exit.obj");
+			move(CELL_SIZE * getRow() + 0.5 * CELL_SIZE, 0.0, CELL_SIZE * getCol() + 0.5 * CELL_SIZE);
+		}
+
+		int getSymbol() const { return mge::Object::SYMBOL_EXIT; }
+		virtual void render() const { mre::RenderEngine::getInstance()->render(exit); }
+};
+
+#endif
+

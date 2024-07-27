@@ -1,0 +1,43 @@
+#ifndef _SYS_CLOCK_
+#define _SYS_CLOCK_
+
+#include <sys/time.h>
+#include <time.h>
+
+namespace sys {
+
+/** Orologio. Questa classe s'interfaccia al clock di sistema per recuperare
+l'ora attuale. &Egrave; munita di alcune operazioni primitive di somma e 
+differenza fra date/orari.
+\sa ClockViewer
+*/
+class Clock {
+	friend class ClockViewer;
+	/** Calcola la differenza tra due date */
+	friend Clock operator -(const Clock &clock1, const Clock &clock2);
+	/** Calcola la somma tra due date */
+	friend Clock operator +(const Clock &clock1, const Clock &clock2);
+	private:
+		struct timeval tod;
+	public:
+		/** Costruttore di default. Inizializza l'orologio con la 
+		data e ora correnti. */
+		Clock() { sync(); }
+
+		/** Sincronizza la data e l'ora col sistema */
+		void sync();
+
+		/** Ritorna l'orologio attuale */
+		static Clock now() { return Clock(); }
+
+		/** Sottrae una data/ora da quella corrente */
+		void operator -=(const Clock &clock);
+
+		/** Somma una data/ora a quella corrente */
+		void operator +=(const Clock &clock);
+};
+
+};
+
+#endif
+

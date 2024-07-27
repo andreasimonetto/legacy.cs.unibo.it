@@ -1,0 +1,79 @@
+#ifndef _MGE_GAME_ENGINE_
+#define _MGE_GAME_ENGINE_
+#include "sys/Object"
+#include "mge/Object"
+#include "mge/Matrix"
+#include <string>
+#include <iostream>
+
+/** Modulo del motore di gioco. Qui tutti gli oggetti di gioco sono di classe
+mge::Object, e si distinguono solo in base ad un intero. (1 = Giocatore, ...).
+*/
+namespace mge {
+
+typedef Matrix<mge::Object*> Grid;
+
+/** Motore di gioco. Questa &egrave; la classe di base per implementare
+Uplezz. Dev'essere estesa per gestire la creazione degli oggetti di gioco.
+*/
+class GameEngine : public sys::Object {
+	protected:
+		GameEngine();
+		virtual ~GameEngine();
+		static GameEngine *instance;
+		Grid *grid, *originalGrid;
+		mge::Object *player;
+	public:
+		/** Punti cardinali. */
+		enum Direction {
+			/** Nord */
+			DIR_NORTH,
+			/** Sud */
+			DIR_SOUTH,
+			/** Oves */
+			DIR_WEST,
+			/** Est */
+			DIR_EAST
+		};
+
+		/** Azioni che il giocatore pu&ograve; svolgere. */
+		enum Action {
+			/** Nessuna azione */
+			ACTION_NONE,
+			/** Cammina (se possibile, secondo l'orientamento corrente) */
+			ACTION_WALK,
+			/** Spingi (se l'oggetto adiacente &egrave; \em moveable e non \em bloccato) */
+			ACTION_PUSH,
+			/** Esci dal livello corrente */
+			ACTION_EXIT
+		};
+
+		static GameEngine* getInstance() { return instance; }
+		static void freeInstance() { delete instance; }
+
+		/** Crea un oggetto, dato un simbolo ed una posizione sulla griglia.
+			\param[in] s Simbolo dell'oggetto.
+			\param[in] row Posizione sulla griglia (asse N/S).
+			\param[in] col Posizione sulla griglia (asse W/E).
+		*/
+		virtual mge::Object* create(mge::Object::Symbol s, unsigned row, unsigned col) = 0;
+
+		/** Carica una griglia da file, dato il percorso. */
+		virtual int loadGrid(const std::string &path);
+
+		/** Ricarica la griglia corrente (se presente). */
+		virtual void reloadGrid();
+
+		/** Ritorna la griglia corrente. */
+		Grid* getGrid() const { return grid; }
+
+		/** Muove il giocatore in una direzione. */
+		Action movePlayer(Direction dir);
+
+		//Object* getPlayer() const { return player; }
+};
+
+};
+
+#endif
+

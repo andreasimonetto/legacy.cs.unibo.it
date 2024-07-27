@@ -1,0 +1,27 @@
+#ifndef _MRE_SKYBOX_
+#define _MRE_SKYBOX_
+#include "mre/Material"
+#include "mre/Object"
+#include "mre/Texture2D"
+
+namespace mre {
+
+/** "Scatola" contenente lo sfondo.
+\sa SceneFactory, SceneManager
+*/
+class SkyBox : public Object {
+	friend class SceneFactory;
+	private:
+		// Texture2Ds: front, back, down, up, left, right
+		Texture2D *ft, *bk, *up, *dn, *lf, *rt;
+		float edge;
+
+		SkyBox(const std::string &texPath, float edge = 1.0);
+	public:
+		/** Metodo di resa */
+		virtual void render() const;
+};
+
+};
+#endif
+

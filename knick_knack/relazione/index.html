@@ -1,0 +1,410 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Grafica 2008 - Knick Knack (v.1.0) by Andrea Simonetto</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head><body>
+<table id="header">
+<tr><td style="padding: 0 1em 0 0;"><img src="images/banner.gif" alt=""></td>
+<td valign="top" width="80%" align="left">
+	<div id="header-title">Knick Knack</div>
+	<div class="header-info">(v.1.0)</div>
+	<div class="header-info">Copyright (C) 2008  Andrea Simonetto</div>
+	<div class="header-info"><ul>
+		<li>Progetto del corso di Grafica (assegnato il 26 Maggio 2008)
+		<li>Corso di laurea in Scienze e Tecnologie Informatiche - Universit&agrave; degli Studi di Bologna
+		<li>Distribuito sotto licenza Creative Commons
+		<li><a href="http://www.youtube.com/watch?v=PAlmTdoFapA" target="_blank">Video originale su YouTube</a>
+		<li><a href="http://simonett.web.cs.unibo.it/grafica/Knick_Knack.tgz">Download del progetto</a>
+		<li><a href="http://www.dm.unibo.it/~casciola/html/xcmodel.html" target="_blank">Sito di XCModel</a>
+	</ul></div>
+</td></tr>
+</table>
+<hr>
+<div class="chapter-title">Obiettivo</div><div class="chapter">
+<p>Utilizzando i programmi <em>XCCurv</em>, <em>XCSurf</em> e <em>XCRayt</em> di 
+<em>XCModel 4.0</em>, realizzare un'esperienza significativa di modellazione e 
+resa realistica insieme alla progettazione di una breve animazione digitale: si 
+tratta di riprogettare, in modellazione 3D, un personaggio di un film di 
+animazione e di inserirlo in una scena. Il personaggio scelto &egrave; Knick 
+Knack, protagonista di un cortometraggio della Pixar Animation datato 1989.</p>
+</div>
+
+<div class="chapter-title">Progettazione degli oggetti della scena e delle superfici</div><div class="chapter">
+<p><em>XCCurv</em> e <em>XCSurf</em> mettono a disposizione, rispettivamente, 
+un tool di progettazione di curve bidimensionali ed un ambiente di modellazione 
+di superfici NURBS trimmate. In questa sezione viene descritta la progettazione 
+delle superfici utilizzate per formare gli oggetti della scena; gli oggetti 
+rimanenti (cio&egrave; il tavolo e la lampada) sono stati scaricati dal 
+<a href="http://www.dm.unibo.it/~casciola/php/public_html/DataBase/viewDataBase.php" target="_blank">database di oggetti di XCModel</a>.
+</p>
+<div class="section-title">Knick Knack: il pupazzo di neve</div><div class="section">
+<p>Knick knack &egrave; il protagonista della scena. &Egrave; composto 
+principalmente da due superfici di rivoluzione: il corpo ed il cappello, come 
+mostrato nelle figure 1, 2 e 3. Inoltre &egrave; composto da un naso (un 
+semplice cono), da due gambe (due cilindri posti perpendicolarmente al piano XZ) 
+e da due braccia, ottenute per estrusione da tre cerchi.</p><p>&nbsp;</p>
+<table width="100%"><tr>
+<td valign="top"><div class="fig"><img src="images/build_corpo1.gif" alt=""></div><div class="didasc">Figura 1: Curva profilo del corpo</div></td>
+<td valign="top"><div class="fig"><img src="images/build_corpo2.gif" alt=""></div><div class="didasc">Figura 2: Curva profilo del cappello</div></td>
+<td valign="top"><div class="fig"><img src="images/build_corpo3.gif" alt=""></div><div class="didasc">Figura 3: Superfici di rivoluzione "corpo" e "cappello"</div></td>
+</tr></table>
+
+<table width="100%"><tr>
+<td valign="top" width="33%"><div class="fig"><img src="images/bottoni.gif" alt=""></div><div class="didasc">Figura 4: Curve profilo di alcuni "bottoni"</div></td>
+<td valign="top" width="33%"><div class="fig"><img src="images/cravatta.gif" alt=""></div><div class="didasc">Figura 5: Modello gerarchico "cravatta"</div></td>
+<td valign="top" width="33%"><div style="padding: 0 0 0 1em">
+<p>Inoltre sono presenti dei piccoli "bottoni" ottenuti per 
+<em>skinning</em> dalle curve in figura 4. Questi vanno a comporre la bocca, gli 
+occhi ed i tre bottoni della giacca; bisogna posizionarli manualmente sul corpo 
+in modo che lo compenetrino leggermente per ottenere l'effetto profondit&agrave; 
+e la proiezione dell'ombra sul corpo. In pi&ugrave; le sopracciglia sono 
+ricavate da un cilindro, scalato e posizionato opportunamente, a cui &egrave; 
+stato aumentato il grado di un'unit&agrave;.</p>
+<p>Infine la cravatta: si tratta di un semplice <em>torus</em> modellato 
+gerarchicamente per far uscira la "lingua" e incurvato fino al punto desiderato 
+grazie allo strumento interattivo di "bending"; il risultato &egrave; analogo 
+a quello di figura 5.</p></div></td>
+</tr></table>
+</div>
+
+<div class="section-title">La "boccia" di vetro (o cupola)</div><div class="section">
+<p>La cupola si ottiene come superficie di rivoluzione a partire dalle tre curve 
+profilo di figura 6; il risultato &egrave; quello di figura 7. Il tetto &egrave; 
+una sfera, che viene trimmata una volta per ottenere una semisfera ed in seguito 
+deformata per renderla lievemente irregolare: per farlo basta traslare 
+leggermente i punti di controllo superiori della semisfera nel verso negativo 
+dell'asse Y. Infine la superficie ottenuta viene nuovamente trimmata: la parte 
+anteriore (la pi&ugrave; grande) sar&agrave; il vetro della "boccia", mentre 
+la parte posteriore sar&agrave; <em>texturata</em> per ottenere lo sfondo della 
+boccia. Il modello risultante &egrave; mostrato in figura 8. </p><p>&nbsp;</p>
+<table width="100%"><tr>
+<td valign="top"><div class="fig"><img src="images/build_cupola1.gif" alt=""></div><div class="didasc">Figura 6: Curve profilo della base della cupola</div></td>
+<td valign="top"><div class="fig"><img src="images/build_cupola2.gif" alt=""></div><div class="didasc">Figura 7: Superficie di rivoluzione "base cupola"</div></td>
+<td valign="top"><div class="fig"><img src="images/build_cupola3.gif" alt=""></div><div class="didasc">Figura 8: "Tetto" della cupola</div></td>
+</tr></table>
+</div>
+
+<div class="section-title">L'igloo</div><div class="section">
+<p>L'igloo viene prodotto per estrusione dalle curve profilo di figura 9. Per 
+realizzarle si pu&ograve; effettuare un join tra due semicerchi: uno pi&ugrave; 
+grande (quello di destra) ed uno pi&ugrave; piccolo (a sinistra) che viene poi 
+<em>stretchato</em> per renderlo pi&ugrave; longilineo. Il risultato &egrave; 
+simile a quello in figura 10. Bisogna separare la faccia anteriore da quella 
+posteriore per applicarvi due texture diverse (una con l'entrata, una 
+senza).</p><p>&nbsp;</p>
+<table width="100%"><tr>
+<td valign="top" width="33%"><div class="fig"><img src="images/build_igloo1.gif" alt=""></div><div class="didasc">Figura 9: Curve profilo dell'igloo</div></td>
+<td valign="top" width="33%"><div class="fig"><img src="images/build_igloo2.gif" alt=""></div><div class="didasc">Figura 10: Superfici di estrusione dell'igloo</div></td>
+<td valign="top" width="34%">&nbsp;</td>
+</tr></table>
+</div>
+</div>
+
+<div class="chapter-title">Descrizone della scena e animazione</div><div class="chapter">
+<p>La libreria C <em>descriptor</em> del pacchetto <em>XCModel 4.0</em> 
+mette a disposizione un set di funzioni per la definizione e la manipolazione
+delle scene 3D, intese come liste di superfici NURBS trimmate, punti luce, 
+attributi dei materiali, viewpoint, ecc...</p>
+<p>Per descrivere la scena avremo bisogno di definirne (once-and-for-all) 
+l'aspetto di base. Scriviamo innanzitutto una procedura di 
+costruzione di un "ambiente", inteso come background, luce ambiente, punti
+luce e attributi degli oggetti. L'ambiente rimarr&agrave; lo stesso per tutte le 
+scene, perci&ograve; ci riferiremo ad esso come <em>statico</em> (eventualmente 
+sarebbe possibile creare delle variabili globali per i punti luce, per poterli 
+modificare successivamente).</p>
+<div class="source"><pre>
+<font color="#009900">void</font> <b><font color="#000000">build_environment</font></b><font color="#990000">(</font><font color="#009900">void</font><font color="#990000">)</font>
+<font color="#FF0000">{</font>
+	<i><font color="#9A1900">/*** Impostazione colore e luci ambiente ***/</font></i>
+	<b><font color="#000000">set_background</font></b><font color="#990000">(</font><font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> TRUE<font color="#990000">);</font>
+	<b><font color="#000000">set_ambient_light</font></b><font color="#990000">(</font><font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">0.7</font><font color="#990000">);</font>
+	<b><font color="#000000">create_point_light</font></b><font color="#990000">(</font><font color="#993399">2.320</font><font color="#990000">,</font> <font color="#993399">10.203</font><font color="#990000">,</font> <font color="#993399">15.992</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">0.75</font><font color="#990000">,</font> <font color="#993399">35</font><font color="#990000">,</font> <font color="#FF0000">"Luce_Lampada"</font><font color="#990000">);</font>
+	<b><font color="#000000">create_point_light</font></b><font color="#990000">(</font><font color="#993399">2.996</font><font color="#990000">,</font> <font color="#993399">3.896</font><font color="#990000">,</font> <font color="#993399">5.777</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">0.75</font><font color="#990000">,</font> <font color="#993399">10</font><font color="#990000">,</font> <font color="#FF0000">"Luce_Cupola"</font><font color="#990000">);</font>
+
+	<i><font color="#9A1900">/*** Attributo 1 ***/</font></i>
+	sfondo_attr <font color="#990000">=</font> <b><font color="#000000">create_attribute</font></b><font color="#990000">(</font><font color="#FF0000">"sfondo_attr"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_color</font></b><font color="#990000">(</font>sfondo_attr<font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_reflectivity</font></b><font color="#990000">(</font>sfondo_attr<font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">128</font><font color="#990000">);</font>
+	<b><font color="#000000">set_transparency</font></b><font color="#990000">(</font>sfondo_attr<font color="#990000">,</font> <font color="#993399">0.4</font><font color="#990000">,</font> <font color="#993399">0.2</font><font color="#990000">,</font> <font color="#993399">5</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">);</font>
+
+	<i><font color="#9A1900">/*** Attributo 2 ***/</font></i>
+	corpo_attr <font color="#990000">=</font> <b><font color="#000000">create_attribute</font></b><font color="#990000">(</font><font color="#FF0000">"corpo_attr"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_color</font></b><font color="#990000">(</font>corpo_attr<font color="#990000">,</font> <font color="#993399">0.9</font><font color="#990000">,</font> <font color="#993399">0.9</font><font color="#990000">,</font> <font color="#993399">0.9</font><font color="#990000">,</font> <font color="#993399">0.6</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_reflectivity</font></b><font color="#990000">(</font>corpo_attr<font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">128</font><font color="#990000">);</font>
+
+	...
+<font color="#FF0000">}</font>
+</pre></div><div class="didasc">Figura 11: L'ambiente statico</div>
+
+<p>Considereremo la scena in funzione del fotogramma corrente nell'animazione: 
+in questo modo sar&agrave; sufficiente scrivere una sola volta il codice della 
+scena (tramite la libreria <em>descriptor</em>), invece che duplicarlo in 
+"scena statica" e "scena animata". La scena statica sar&agrave; semplicemente 
+il primo fotogramma dell'animazione. Scriviamo pertanto le trasformazioni dello 
+stato degli oggetti dinamici nel tempo, fotogramma per fotogramma, come array di 
+triplette per traslazioni, fattori di scala e rotazioni.</p>
+<div class="source"><pre>
+<i><font color="#9a1900">/* Tipo tripletta di numeri floating-point */</font></i>
+<b><font color="#0000ff">typedef</font></b> <font color="#009900">float</font> vect3f <font color="#990000">[</font><font color="#993399">3</font><font color="#990000">];</font>
+
+<i><font color="#9a1900">/* Numero di fotogrammi dell'animazione */</font></i>
+<b><font color="#0000ff">const</font></b> <font color="#009900">unsigned</font> Anim_Frames <font color="#990000">=</font> <font color="#993399">42</font><font color="#990000">;</font>
+
+<i><font color="#9a1900">/* Fattori di scala per gli occhi */</font></i>
+<b><font color="#0000ff">const</font></b> vect3f frame_scala_occhi<font color="#990000">[]</font> <font color="#990000">=</font> <font color="#ff0000">{</font>
+	<i><font color="#9a1900">/* Frame  0 */</font></i> <font color="#ff0000">{</font><font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#ff0000">}</font><font color="#990000">,</font>
+	<i><font color="#9a1900">/* Frame  1 */</font></i> ...
+	<i><font color="#9a1900">/* ...      */</font></i> ...
+	<i><font color="#9a1900">/* Frame 41 */</font></i> ...
+<font color="#ff0000">}</font><font color="#990000">;</font>
+
+<i><font color="#9a1900">/* Traslazioni delle bolle */</font></i>
+<b><font color="#0000ff">const</font></b> vect3f frame_pos_bolla<font color="#990000">[]</font> <font color="#990000">=</font> <font color="#ff0000">{</font>
+	<i><font color="#9a1900">/* Frame  0 */</font></i> <font color="#ff0000">{</font><font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#ff0000">}</font><font color="#990000">,</font>
+	<i><font color="#9a1900">/* Frame  1 */</font></i> ...
+	<i><font color="#9a1900">/* ...      */</font></i> ...
+	<i><font color="#9a1900">/* Frame 41 */</font></i> ...
+<font color="#ff0000">}</font><font color="#990000">;</font>
+
+...
+</pre></div><div class="didasc">Figura 12: Definizione trasformazioni nel tempo</div>
+
+<p>Oltre all'ambiente statico, vi sar&agrave; una parte di scena invariante nel 
+tempo (una sorta di scenario statico). Scriviamo una procedura di costruzione 
+della parte statica della scena (i.e. lista di oggetti che non variano tra i 
+fotogrammi).</p>
+<div class="source"><pre>
+ITEM <b><font color="#000000">build_static_scene</font></b><font color="#990000">(</font><font color="#009900">unsigned</font> frameno<font color="#990000">)</font>
+<font color="#ff0000">{</font>
+ITEM scene<font color="#990000">,</font> item<font color="#990000">;</font>
+
+	<i><font color="#9a1900">/*** Pareti ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">read_nurbs</font></b><font color="#990000">(</font><font color="#ff0000">"plane.db"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_domain_texture</font></b><font color="#990000">(</font>item<font color="#990000">,</font> sfondo_attr<font color="#990000">,</font> <font color="#ff0000">"textures/pavimento.hr"</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.25</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.25</font><font color="#990000">,</font> <font color="#993399">1</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#990000">-</font><font color="#993399">30.0</font><font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">create_list</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#ff0000">"Ambiente"</font><font color="#990000">);</font>
+
+	item <font color="#990000">=</font> <b><font color="#000000">read_nurbs</font></b><font color="#990000">(</font><font color="#ff0000">"plane.db"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_domain_texture</font></b><font color="#990000">(</font>item<font color="#990000">,</font> sfondo_attr<font color="#990000">,</font> <font color="#ff0000">"textures/sfondo.hr"</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.25</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.25</font><font color="#990000">,</font> <font color="#993399">1</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_y_rotate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">90.0</font><font color="#990000">,</font> <font color="#993399">1</font><font color="#990000">);</font>
+	<b><font color="#000000">set_x_rotate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">90.0</font><font color="#990000">,</font> <font color="#993399">1</font><font color="#990000">);</font>
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	item <font color="#990000">=</font> <b><font color="#000000">read_nurbs</font></b><font color="#990000">(</font><font color="#ff0000">"plane.db"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_domain_texture</font></b><font color="#990000">(</font>item<font color="#990000">,</font> sfondo_attr<font color="#990000">,</font> <font color="#ff0000">"textures/sfondo.hr"</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.25</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.25</font><font color="#990000">,</font> <font color="#993399">1</font><font color="#990000">,</font> <font color="#993399">0.5</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">,</font> <font color="#993399">30.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_x_rotate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">90.0</font><font color="#990000">,</font> <font color="#993399">1</font><font color="#990000">);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#990000">-</font><font color="#993399">30.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	<i><font color="#9a1900">/*** Tavolo ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">read_obj</font></b><font color="#990000">(</font><font color="#ff0000">"tavolo.obj"</font><font color="#990000">,</font> <font color="#ff0000">"Tavolo1"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#990000">-</font><font color="#993399">50.0</font><font color="#990000">,</font> <font color="#990000">-</font><font color="#993399">50.0</font><font color="#990000">,</font> <font color="#990000">-</font><font color="#993399">67.5</font><font color="#990000">);</font>
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">0.52</font><font color="#990000">,</font> <font color="#993399">0.5</font><font color="#990000">,</font> <font color="#993399">0.450450</font><font color="#990000">);</font>
+	<b><font color="#000000">set_domain_texture</font></b><font color="#990000">(</font>item<font color="#990000">,</font> tavolo_attr<font color="#990000">,</font> <font color="#ff0000">"textures/wood3.hr"</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.5</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.5</font><font color="#990000">,</font> <font color="#993399">1</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">,</font> <font color="#993399">1.0</font><font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	<i><font color="#9a1900">/*** Lampada ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">read_obj</font></b><font color="#990000">(</font><font color="#ff0000">"lampada.obj"</font><font color="#990000">,</font> <font color="#ff0000">"Lampada1"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_z_rotate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">135.0</font><font color="#990000">,</font> <font color="#993399">1</font><font color="#990000">);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">85.0</font><font color="#990000">,</font> <font color="#993399">85.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">0.1953125</font><font color="#990000">,</font> <font color="#993399">0.1953125</font><font color="#990000">,</font> <font color="#993399">0.1953125</font><font color="#990000">);</font>
+	<b><font color="#000000">set_attribute</font></b><font color="#990000">(</font>item<font color="#990000">,</font> lampada_attr<font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	<b><font color="#0000ff">return</font></b> scene<font color="#990000">;</font>
+<font color="#ff0000">}</font>
+</pre></div><div class="didasc">Figura 13: Costruzione dello scenario statico</div>
+
+<p>Ora si tratta di descrivere il resto della scena, quella che potrebbe 
+mutare durante l'animazione. Scriviamo perci&ograve; una funzione, 
+parametrica nel fotogramma corrente, per ogni oggetto dinamico della scena 
+(Pupazzo di neve, Cupola, Igloo, ...), usando gli attributi dell'ambiente 
+statico e le triplette di trasformazione definiti in precedenza.</p>
+<div class="source"><pre>
+ITEM <b><font color="#000000">build_knick_knack</font></b><font color="#990000">(</font><font color="#009900">unsigned</font> frameno<font color="#990000">)</font>
+<font color="#ff0000">{</font>
+ITEM knick_knack<font color="#990000">,</font> item<font color="#990000">;</font>
+
+	<i><font color="#9a1900">/*** Corpo ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">read_obj</font></b><font color="#990000">(</font><font color="#ff0000">"corpo.obj"</font><font color="#990000">,</font> <font color="#ff0000">"Corpo"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_attribute</font></b><font color="#990000">(</font>item<font color="#990000">,</font> corpo_attr<font color="#990000">);</font>
+	knick_knack <font color="#990000">=</font> <b><font color="#000000">create_list</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#ff0000">"Knick_Knack"</font><font color="#990000">);</font>
+
+	<i><font color="#9a1900">/*** Occhi ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">read_nurbs</font></b><font color="#990000">(</font><font color="#ff0000">"occhio1.db"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> frame_scala_occhi<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">0</font><font color="#990000">],</font> frame_scala_occhi<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">1</font><font color="#990000">],</font> frame_scala_occhi<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">2</font><font color="#990000">]);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">0.108</font><font color="#990000">,</font> <font color="#993399">0.583</font><font color="#990000">,</font> <font color="#993399">2.361</font><font color="#990000">);</font>
+	<b><font color="#000000">set_attribute</font></b><font color="#990000">(</font>item<font color="#990000">,</font> occhi_attr<font color="#990000">);</font>
+	knick_knack <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>knick_knack<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	item <font color="#990000">=</font> <b><font color="#000000">read_nurbs</font></b><font color="#990000">(</font><font color="#ff0000">"occhio2.db"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> frame_scala_occhi<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">0</font><font color="#990000">],</font> frame_scala_occhi<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">1</font><font color="#990000">],</font> frame_scala_occhi<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">2</font><font color="#990000">]);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#990000">-</font><font color="#993399">0.100</font><font color="#990000">,</font> <font color="#993399">0.569</font><font color="#990000">,</font> <font color="#993399">2.347</font><font color="#990000">);</font>
+	<b><font color="#000000">set_attribute</font></b><font color="#990000">(</font>item<font color="#990000">,</font> occhi_attr<font color="#990000">);</font>
+	knick_knack <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>knick_knack<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	<i><font color="#9a1900">/*** Bocca ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">read_obj</font></b><font color="#990000">(</font><font color="#ff0000">"bocca.obj"</font><font color="#990000">,</font> <font color="#ff0000">"Bocca"</font><font color="#990000">);</font>
+	<b><font color="#000000">set_attribute</font></b><font color="#990000">(</font>item<font color="#990000">,</font> bocca_attr<font color="#990000">);</font>
+	knick_knack <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>knick_knack<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	...
+
+	<b><font color="#0000ff">return</font></b> knick_knack<font color="#990000">;</font>
+<font color="#FF0000">}</font>
+</pre></div><div class="didasc">Figura 14: Bozza di costruzione del pupazzo di neve</div>
+
+<p>Scriviamo la funzione di costruzione della scena parametrica nel fotogramma
+corrente e nel nome della scena stessa, che richiami le funzioni di costruzione 
+viste fin qui (ad eccezione dell'ambiente statico, poich&egrave; quello viene 
+costruito una volta per tutte prima di cominciare ad iterare attraverso i 
+fotogrammi dell'animazione).</p>
+<div class="source"><pre>
+ITEM <b><font color="#000000">build_scene_frame</font></b><font color="#990000">(</font><font color="#009900">unsigned</font> frameno<font color="#990000">,</font> <b><font color="#0000ff">const</font></b> <font color="#009900">char</font> <font color="#990000">*</font>scene_name<font color="#990000">)</font>
+<font color="#ff0000">{</font>
+ITEM scene<font color="#990000">,</font> item<font color="#990000">;</font>
+
+	<i><font color="#9a1900">/*** Scenario (statico) ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">build_static_scene</font></b><font color="#990000">(</font><font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">create_list</font></b><font color="#990000">(</font>item<font color="#990000">,</font> scene_name<font color="#990000">);</font>
+
+	<i><font color="#9a1900">/*** Knick Knack ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">build_knick_knack</font></b><font color="#990000">(</font>frameno<font color="#990000">);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> M<font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	<i><font color="#9a1900">/*** Cupola ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">build_cupola</font></b><font color="#990000">(</font>frameno<font color="#990000">);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.0</font><font color="#990000">,</font> <font color="#993399">0.175</font><font color="#990000">);</font> 
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">7.0</font><font color="#990000">,</font> <font color="#993399">7.0</font><font color="#990000">,</font> <font color="#993399">7.0</font><font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	<i><font color="#9a1900">/*** Igloo ***/</font></i>
+	item <font color="#990000">=</font> <b><font color="#000000">build_igloo</font></b><font color="#990000">(</font>frameno<font color="#990000">);</font>
+	<b><font color="#000000">set_scale</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#993399">2.0</font><font color="#990000">,</font> <font color="#993399">2.0</font><font color="#990000">,</font> <font color="#993399">2.0</font><font color="#990000">);</font>
+	<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> <font color="#990000">-</font><font color="#993399">1.0</font><font color="#990000">,</font> <font color="#990000">-</font><font color="#993399">2.0</font><font color="#990000">,</font> M<font color="#990000">);</font>
+	scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+
+	<i><font color="#9a1900">/*** Bolla 1 ***/</font></i>
+	<b><font color="#0000ff">if</font></b><font color="#990000">(</font>frameno <font color="#990000">&gt;</font> <font color="#993399">0</font><font color="#990000">)</font> <font color="#ff0000">{</font>
+		item <font color="#990000">=</font> <b><font color="#000000">read_nurbs</font></b><font color="#990000">(</font><font color="#ff0000">"bolla.db"</font><font color="#990000">);</font>
+		<b><font color="#000000">set_attribute</font></b><font color="#990000">(</font>item<font color="#990000">,</font> bollicine_attr<font color="#990000">);</font>
+		<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> frame_pos_bolla<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">0</font><font color="#990000">],</font> frame_pos_bolla<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">1</font><font color="#990000">],</font> frame_pos_bolla<font color="#990000">[</font>frameno<font color="#990000">][</font><font color="#993399">2</font><font color="#990000">]);</font>
+		scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+	<font color="#ff0000">}</font>
+
+	<i><font color="#9a1900">/*** Bolla 2 ***/</font></i>
+	<b><font color="#0000ff">if</font></b><font color="#990000">(</font>frameno <font color="#990000">&gt;=</font> <font color="#993399">10</font><font color="#990000">)</font> <font color="#ff0000">{</font>
+		item <font color="#990000">=</font> <b><font color="#000000">read_nurbs</font></b><font color="#990000">(</font><font color="#ff0000">"bolla.db"</font><font color="#990000">);</font>
+		<b><font color="#000000">set_attribute</font></b><font color="#990000">(</font>item<font color="#990000">,</font> bollicine_attr<font color="#990000">);</font>
+		<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> frame_pos_bolla<font color="#990000">[</font>frameno <font color="#990000">-</font> <font color="#993399">10</font><font color="#990000">][</font><font color="#993399">0</font><font color="#990000">],</font> frame_pos_bolla<font color="#990000">[</font>frameno <font color="#990000">-</font> <font color="#993399">10</font><font color="#990000">][</font><font color="#993399">1</font><font color="#990000">],</font> frame_pos_bolla<font color="#990000">[</font>frameno <font color="#990000">-</font> <font color="#993399">10</font><font color="#990000">][</font><font color="#993399">2</font><font color="#990000">]);</font>
+		scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+	<font color="#ff0000">}</font>
+
+	<i><font color="#9a1900">/*** Bolla 3 ***/</font></i>
+	<b><font color="#0000ff">if</font></b><font color="#990000">(</font>frameno <font color="#990000">&gt;=</font> <font color="#993399">15</font><font color="#990000">)</font> <font color="#ff0000">{</font>
+		item <font color="#990000">=</font> <b><font color="#000000">read_nurbs</font></b><font color="#990000">(</font><font color="#ff0000">"bolla.db"</font><font color="#990000">);</font>
+		<b><font color="#000000">set_attribute</font></b><font color="#990000">(</font>item<font color="#990000">,</font> bollicine_attr<font color="#990000">);</font>
+		<b><font color="#000000">set_translate</font></b><font color="#990000">(</font>item<font color="#990000">,</font> frame_pos_bolla<font color="#990000">[</font>frameno <font color="#990000">-</font> <font color="#993399">15</font><font color="#990000">][</font><font color="#993399">0</font><font color="#990000">],</font> frame_pos_bolla<font color="#990000">[</font>frameno <font color="#990000">-</font> <font color="#993399">15</font><font color="#990000">][</font><font color="#993399">1</font><font color="#990000">],</font> frame_pos_bolla<font color="#990000">[</font>frameno <font color="#990000">-</font> <font color="#993399">15</font><font color="#990000">][</font><font color="#993399">2</font><font color="#990000">]);</font>
+		scene <font color="#990000">=</font> <b><font color="#000000">insert_in_list</font></b><font color="#990000">(</font>scene<font color="#990000">,</font> item<font color="#990000">);</font>
+	<font color="#ff0000">}</font>
+
+	<b><font color="#0000ff">return</font></b> scene<font color="#990000">;</font>
+<font color="#ff0000">}</font>
+</pre></div><div class="didasc">Figura 15: Funzione principale di costruzione delle scene</div>
+
+<p>Infine, scriviamo la main function che non f&agrave; altro che costruire 
+l'ambiente statico ed iterare su ogni fotogramma la costruzione ed il 
+salvataggio della scena corrente.</p>
+<div class="source"><pre>
+<font color="#009900">int</font> <b><font color="#000000">main</font></b><font color="#990000">(</font><font color="#009900">void</font><font color="#990000">)</font>
+<font color="#ff0000">{</font>
+ITEM scene<font color="#990000">;</font>
+<font color="#009900">unsigned</font> i<font color="#990000">;</font>
+
+	<i><font color="#9a1900">/*** Costruisce l'ambiente (attributi, luci, ...) ***/</font></i>
+	<b><font color="#000000">build_environment</font></b><font color="#990000">();</font>
+
+	<i><font color="#9a1900">/*** Per ogni fotogramma <strong>i</strong> dell'animazione ***/</font></i>
+	<b><font color="#0000ff">for</font></b><font color="#990000">(</font>i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> Anim_Frames<font color="#990000">;</font> i<font color="#990000">++)</font> <font color="#ff0000">{</font>
+		<i><font color="#9a1900">/*** Costruisce la scena per il fotogramma <strong>i</strong> ***/</font></i>
+		scene <font color="#990000">=</font> <b><font color="#000000">build_scene_frame</font></b><font color="#990000">(</font>i<font color="#990000">,</font> <font color="#ff0000">"Knick_Knack"</font><font color="#990000">);</font>
+
+		<i><font color="#9a1900">/*** Salva il fotogramma ottenuto ***/</font></i>
+		<b><font color="#000000">save_scene_ani</font></b><font color="#990000">(</font>Anim_Frames<font color="#990000">,</font> <font color="#ff0000">"Knick_Knack_Anim.ani"</font><font color="#990000">,</font> <font color="#ff0000">"Knick_Knack_Anim"</font><font color="#990000">,</font> <font color="#ff0000">"Knick_Knack"</font><font color="#990000">,</font> scene<font color="#990000">);</font>
+	<font color="#ff0000">}</font>
+
+	<b><font color="#0000ff">return</font></b> <font color="#993399">0</font><font color="#990000">;</font>
+<font color="#ff0000">}</font>
+</pre></div><div class="didasc">Figura 16: La main function</div>
+</div>
+
+<div class="chapter-title">Alcune immagini di resa</div><div class="chapter">
+<table width="100%">
+<tr><td align="center"><img src="images/Knick_Knack7.gif" border="1" alt=""></td>
+<td align="center"><img src="images/Knick_Knack0.gif" border="1" alt=""></td></tr>
+<tr><td align="center"><img src="images/Knick_Knack5.gif" border="1" alt=""></td>
+<td align="center"><img src="images/Anim.gif" border="1" alt=""></td></tr>
+</table>
+</div>
+
+<div class="chapter-title">Problemi e bug</div><div class="chapter">
+<p>Non avere a disposizione degli strumenti di modellazione solida si traduce in 
+un notevole handicap: questo comporta anche la difficolt&agrave; (e spesso 
+l'impossibilit&agrave;) di applicare <em>texture</em> o <em>mappe a sbalzo</em> 
+ad oggetti composti da pi&ugrave; superfici. 
+Inoltre gli strumenti interattivi di <em>XCSurf</em> sono spesso 
+controintuitivi. Infine <em>XCSurf</em> <em>crasha</em> spesso inaspettatamente 
+e soffre di alcuni altri bug pi&ugrave; sistematici.</p>
+<p>Il formato <em>.hr</em> &egrave; molto scomodo, specialmente in assenza di 
+pratici <em>tool</em> di conversione: se <em>XCView</em> fosse pensato per 
+accettare parametri a riga di comando ed agire in <em>batch-mode</em> si 
+potrebbe agevolmente integrare con degli script di "conversione di massa" (in 
+realt&agrave; potrebbe essere gi&agrave; pensato cos&igrave;: 
+l'impossibilit&agrave; di saperlo deriva dalla scarsa documentazione e dal fatto 
+che NON &Egrave; CORREDATO DEL CODICE SORGENTE!!!). In pratica il maggior 
+disagio si manifesta nel dover convertire uno per uno i file <em>.hr</em> in 
+<em>.ppm</em> (reinserendone di volta in volta il nome). Non sono stato inoltre 
+capace di usare la funzione EXPORT, forse a causa di un bug (crea sempre file 
+corrotti), perci&ograve; per produrre un <em>.gif</em> ho dovuto salvare come 
+<em>.ppm</em>, aprire con GIMP (o un altro editor a scelta) ed esportare come 
+<em>.gif</em>. Ovviamente tutto ci&ograve; diventa particolarmente frustrante 
+nel contesto della conversione di un'animazione.</p>
+<p>Tutta la <em>suite</em> soffre di gravi pecche di compatibilit&agrave; coi 
+driver del server X, probabilmente dovuti all'opzione di <em>backing-store</em>, 
+usa troppe finestre che potrebbero essere riassunte in un'unica vista e pur non 
+richiedendo molte risorse, diventa pesante se resta aperta molto a lungo, 
+probabilmente di nuovo per la <em>backing-store feature</em> (il sistema 
+dovr&agrave; allocare un certo spazio per salvare il contenuto di ogni finestra 
+non visualizzata, che col tempo finir&agrave; nell'area di <em>swap</em> 
+sull'hard-disk). Sul mio sistema &egrave; insensibile al tasto di chiusura 
+(intendo la <em>x</em> in alto a destra) ed ha alcuni difetti grafici nella 
+visualizzazione dell'<em>hint</em> dei comandi.</p><p>&nbsp;</p>
+<p>In definitiva molte cose che dovrebbero essere semplici diventano ostiche, 
+alcuni banali quesiti rimangono insoluti:</p><ul>
+<li>perch&egrave; non prendere spunto da alcuni prodotti commerciali per 
+creare delle procedure di modellazione pi&ugrave; user-friendly?
+<li>perch&egrave; non utilizzare delle librerie di conversione per 
+<em>.gif</em>, <em>.jpeg</em> ecc... invece di riscrivere il codice di 
+conversione?
+<li>perch&egrave; non innalzare un po' il livello d'astrazione dalle finestre 
+ed appoggiarsi sulla <em>glib</em> o sulle <em>Qt</em> anzich&egrave; sulle 
+primitive di <em>Xlib</em>? 
+<li>perch&egrave; non pubblicare il codice sorgente sotto licenza 
+<em>open source</em> (questo favorirebbe di certo la realizzazione "spontanea" 
+da parte della comunit&agrave; di alcuni dei punti sopra)?
+</ul>
+<em>"Meritate di poter cooperare apertamente e liberamente con altre 
+persone che usano software.<br>Meritate di poter imparare come funziona il 
+software e con esso di insegnare ai vostri studenti.<br>Meritate di poter 
+assumere il vostro programmatore favorito per aggiustarlo quando non funziona.
+<br>Meritate il software libero."</em><br><br>(Free Software, Free Society: 
+The Selected Essays of Richard M. Stallman, GNU Press, 2002)
+</div>
+</body></html>
+

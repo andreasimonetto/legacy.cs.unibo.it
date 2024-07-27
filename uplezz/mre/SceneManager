@@ -1,0 +1,66 @@
+#ifndef _MRE_SCENE_MANAGER_H_
+#define _MRE_SCENE_MANAGER_H_
+#include "mre/Camera"
+#include "mre/Light"
+#include "mre/Object"
+#include "sys/Object"
+#include <vector>
+#include <list>
+#include <string>
+
+/** Numero massimo di punti luce per scena */
+#define LIGHTS_MAX 8
+
+namespace mre {
+
+/** Gestore della scena. Permette di definire una scena in termini di una lista
+di oggetti, alcuni punti luce (al pi&ugrave; LIGHTS_MAX) e una camera. Gli oggetti
+del motore di resa hanno un metodo virtuale \em run() che viene invocato
+periodicamente per tutti gli oggetti presenti nella scena. Lo SceneManager &egrave;
+un singleton accessibile tramite il metodo statico mre::SceneManager::getInstance().
+*/
+class SceneManager : public sys::Object {
+	friend void __mre_close(int status);
+	private:
+		Camera *currentCamera;
+		std::vector<Light*> lights;
+		bool needClear;
+
+		std::list<mre::Object*> scene, insertList;
+		static SceneManager *instance;
+		SceneManager() { needClear = false; }
+		~SceneManager() { }
+
+	public:
+		/** Recupera l'unica istanza di questa classe. */
+		static SceneManager* getInstance() {
+			if(!instance)
+				instance = new SceneManager();
+			return instance;
+		}
+
+		/** Setta la camera corrente */
+		void setCurrentCamera(Camera *camera) { currentCamera = camera; }
+	
+		/** Ritorna la camera corrente */
+		Camera* getCurrentCamera() const { return currentCamera; }
+
+		/** Aggiungi un punto luce */
+		int addLight(Light *light);
+
+		/** Aggiungi un oggetto alla scena */
+		void addObject(mre::Object *object) { insertList.push_back(object); }
+
+		/** Elimina tutti gli oggetti dalla scena */
+		void clearScene() { needClear = true; }
+
+		/** Rendi la scena */
+		virtual void render() const;
+
+		/** Invoca il metodo \em run() su tutti gli oggetti della scena */
+		virtual void run();
+};
+
+};
+#endif
+

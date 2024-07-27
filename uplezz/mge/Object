@@ -1,0 +1,73 @@
+#ifndef _MGE_OBJECT_
+#define _MGE_OBJECT_
+#include "sys/Object"
+
+namespace mge {
+
+/** Oggetti del motore di gioco. Un oggetto del motore di gioco &egrave;
+caratterizzato da un simbolo (intero), da una posizione e dalla 
+possibilit&agrave; o meno di essere spostato.
+*/
+class Object : public sys::Object {
+	friend class GameEngine;
+	public:
+		/** Possibili simboli (identificatori delle classi 
+		degli oggetti).
+		*/
+		enum Symbol {
+			/** Errore, oggetto sconosciuto. */
+			SYMBOL_ERROR = -1,
+			/** Cella vuota */
+			SYMBOL_EMPTY,
+			/** Giocatore */
+			SYMBOL_PLAYER,
+			/** Acqua */
+			SYMBOL_WATER,
+			/** Fontana */
+			SYMBOL_FOUNTAIN,
+			/** Albero */
+			SYMBOL_TREE,
+			/** Uscita */
+			SYMBOL_EXIT
+		};
+	protected:
+		unsigned row, col;
+
+		/** Costruttore di oggetti di gioco.
+			\param[in] row Ascissa dell'oggetto (asse N/S).
+			\param[in] col Ordinata dell'oggetto (asse W/E).
+		*/
+		Object(unsigned row = 0, unsigned col = 0) {
+			this->row = row;
+			this->col = col;
+		}
+
+		virtual ~Object() { }
+	public:
+		/** Ritorna l'ascissa dell'oggetto. */
+		virtual unsigned getRow() const { return row; }
+
+		/** Ritorna l'ordinata dell'oggetto. */
+		virtual unsigned getCol() const { return col; }
+
+		/** Setta l'ascissa dell'oggetto. */
+		virtual void setRow(unsigned i) { row = i; }
+
+		/** Setta l'ordinata dell'oggetto. */
+		virtual void setCol(unsigned j) { col = j; }
+
+		/** Ripristina le coordinate dell'oggetto. */
+		virtual void reset(unsigned row, unsigned col) {
+			this->row = row;
+			this->col = col;
+		}
+
+		/** Predicato che dice se l'oggetto si pu&ograve; spostare 
+		(per default ritorna \em false). */
+		virtual bool moveable() const { return false; }
+};
+
+};
+
+#endif
+

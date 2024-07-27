@@ -1,0 +1,41 @@
+#ifndef _SYS_TIMER_
+#define _SYS_TIMER_
+
+#include <sys/time.h>
+#include <time.h>
+
+namespace sys {
+
+/** Conto alla rovescia. Scatta con frequenza costante, esibendo un cambiamento 
+di valore del metodo <em>hasExpired()</em>.
+*/
+class Timer {
+	private:
+		struct timeval start;
+		unsigned long interval;
+	public:
+		/** Costruttore di default. */
+		Timer() {
+			restart();
+			interval = 0;
+		}
+
+		/** Costruttore parametrico. Richiede il valore iniziale del 
+			timer in microsecondi. */
+		Timer(unsigned long microseconds) { restart(microseconds); }
+
+		/** Ricomincia il conto alla rovescia. */
+		void restart();
+
+		/** Ricomincia il conto alla rovescia a partire da un valore 
+			espresso in microsecondi. */
+		void restart(unsigned long microseconds);
+
+		/** Segnala se il conto alla rovescia &egrave; finito. */
+		bool hasExpired() const;
+};
+
+};
+
+#endif
+

@@ -1,0 +1,83 @@
+#ifndef _MRE_MESH_
+#define _MRE_MESH_
+#include "mre/Material"
+#include "mre/Object"
+#include "mre/Texture2D"
+#include "mre/Vector2f"
+#include "mre/Vector3f"
+
+#include <map>
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+namespace mre {
+
+/** Classe per modelli 3D.
+\sa SceneFactory, SceneManager
+*/
+class Mesh : public Object {
+	friend class SceneFactory;
+	private:
+		class Triangle {
+			public:
+				int vindices[3]; // Array of triangle vertex indices
+				int nindices[3]; // Array of triangle normal indices
+				int tindices[3]; // Array of triangle texcoord indices
+				int findex;      // Index of triangle facet normal
+
+				Triangle() {
+					//vindices[0] = vindices[1] = vindices[2] = 0;
+					nindices[0] = nindices[1] = nindices[2] = 0;
+					tindices[0] = tindices[1] = tindices[2] = 0;
+					findex = 0;
+				}
+		};
+
+		class Group {
+			public:
+				vector<unsigned> triangles; // Array of triangle indices
+				Material *material;         // Material pointer for group
+				Group() : material(0) { }
+		};
+
+		string meshPath;   // Path to this mesh
+		map<string, Group> groups; // Table of groups
+		string mtllibPath;  // Path to the material library
+		map<string, Material> materials; // Table of materials
+		vector<Vector3f> vertices;       // Array of vertices
+		vector<Vector3f> normals;        // Array of normals
+		vector<Vector2f> texcoords;      // Array of texture coordinates
+		vector<Vector3f> facetnorms;     // Array of facetnorms
+		vector<Triangle*> triangles;     // Array of triangles
+		Group *curGroup;
+
+		int yyScanObj();
+		int yyScanMtl();
+
+		Mesh(const string &path) : meshPath(path) {
+			if(loadObj(meshPath) == 0 && mtllibPath.length() > 0)
+				loadMtl(mtllibPath);
+			//cout << vertices.size() << " vertices, " << triangles.size() << " triangles loaded." << endl;
+		}
+
+		~Mesh() {
+			for(vector<Triangle*>::iterator it = triangles.begin(); it != triangles.end(); it++) {
+				delete *it;
+			}
+		}
+	protected:
+		/** Carica un file Wavefront .obj (modello 3D) */
+		int loadObj(const string &path);
+		/** Carica un file Wavefront .mtl (materiale) */
+		int loadMtl(const string &path);
+	public:
+		/** Rende la mesh */
+		virtual void render() const;
+};
+
+};
+#endif
+

@@ -1,0 +1,64 @@
+#ifndef _MGE_MATRIX_
+#define _MGE_MATRIX_
+
+namespace mge {
+
+/** Classe matrice generica. Implementa una matrice a dimensione
+fissa e con elementi di tipo generico \em T.
+*/
+template <class T>
+class Matrix {
+	private:
+		T *matrix;
+		unsigned rows, cols;
+	public:
+		/** Costruttore parametrico.
+			\param[in] rows Numero di righe
+			\param[in] cols Numero di colonne
+		*/
+		Matrix(unsigned rows, unsigned cols) {
+			matrix = new T [rows * cols];
+			this->rows = rows;
+			this->cols = cols;
+		}
+
+		/** Costruttore copia */
+		Matrix(const Matrix<T> &m) {
+			rows = m.rows;
+			cols = m.cols;
+			matrix = new T [rows * cols];
+			for(unsigned i = 0; i < rows * cols; i++)
+				matrix[i] = m.matrix[i];
+		}
+
+		~Matrix() { delete matrix; }
+
+		/** Ritorna il numero di righe della matrice */
+		unsigned getRows() const { return rows; }
+
+		/** Ritorna il numero di colonne della matrice */
+		unsigned getCols() const { return cols; }
+
+		/** Ritorna l'elemento di indici \em <i,j>.
+			\param[in] i Indice di riga
+			\param[in] j Indice di colonna
+		*/
+		T get(unsigned i, unsigned j) const { return matrix[i * cols + j]; }
+
+		/** Setta l'elemento \em <i,j>.
+			\param[in] i Indice di riga
+			\param[in] j Indice di colonna
+			\param[in] val Nuovo valore dell'elemento <i, j>
+		*/
+		void set(unsigned i, unsigned j, T val) { matrix[i * cols + j] = val; }
+
+		/** Opratore di subscript: ritorna la riga \em i.
+			\param[in] i Indice di riga
+		*/
+		T* operator [] (unsigned i) { return matrix + (i * cols); }
+};
+
+};
+
+#endif
+

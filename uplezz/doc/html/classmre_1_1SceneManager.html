@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Uplezz: Riferimenti per la classe mre::SceneManager</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<div align="center"><img src="images/banner.png" /></div>
+<div style="padding-left: 2em; padding-right: 2em; padding-bottom: 1em;">
+
+<!-- Generato da Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Pagina&nbsp;Principale</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace</span></a></li>
+      <li class="current"><a href="classes.html"><span>Classi</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="classes.html"><span>Lista&nbsp;in&nbsp;ordine&nbsp;alfabetico</span></a></li>
+      <li><a href="annotated.html"><span>Elenco&nbsp;dei&nbsp;tipi&nbsp;composti</span></a></li>
+      <li><a href="hierarchy.html"><span>Gerarchia&nbsp;delle&nbsp;classi</span></a></li>
+      <li><a href="functions.html"><span>Membri&nbsp;dei&nbsp;composti</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacemre.html">mre</a>::<a class="el" href="classmre_1_1SceneManager.html">SceneManager</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Riferimenti per la classe mre::SceneManager</h1><!-- doxytag: class="mre::SceneManager" --><!-- doxytag: inherits="sys::Object" --><div class="dynheader">
+Diagramma delle classi per mre::SceneManager</div>
+<div class="dynsection">
+<p><center><img src="classmre_1_1SceneManager__inherit__graph.png" border="0" usemap="#mre_1_1SceneManager__inherit__map" alt="Inheritance graph"></center>
+<map name="mre_1_1SceneManager__inherit__map">
+<area shape="rect" href="classsys_1_1Object.html" title="Oggetto di sistema." alt="" coords="31,5,119,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagramma di collaborazione per mre::SceneManager:</div>
+<div class="dynsection">
+<p><center><img src="classmre_1_1SceneManager__coll__graph.png" border="0" usemap="#mre_1_1SceneManager__coll__map" alt="Collaboration graph"></center>
+<map name="mre_1_1SceneManager__coll__map">
+<area shape="rect" href="classsys_1_1Object.html" title="Oggetto di sistema." alt="" coords="5,128,93,155"><area shape="rect" href="classmre_1_1Camera.html" title="Classe camera." alt="" coords="117,128,213,155"><area shape="rect" href="classmre_1_1Vector3f.html" title="Vettore tridimensionale di float." alt="" coords="116,5,215,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="classmre_1_1SceneManager-members.html">Elenco di tutti i membri.</a><hr><a name="_details"></a><h2>Descrizione dettagliata</h2>
+Gestore della scena. 
+<p>
+Permette di definire una scena in termini di una lista di oggetti, alcuni punti luce (al pi&ugrave; LIGHTS_MAX) e una camera. Gli oggetti del motore di resa hanno un metodo virtuale <em><a class="el" href="classmre_1_1SceneManager.html#d90068de7da78192bf8fb1e59a793d8c" title="Invoca il metodo run() su tutti gli oggetti della scena.">run()</a></em> che viene invocato periodicamente per tutti gli oggetti presenti nella scena. Lo <a class="el" href="classmre_1_1SceneManager.html" title="Gestore della scena.">SceneManager</a> &egrave; un singleton accessibile tramite il metodo statico <a class="el" href="classmre_1_1SceneManager.html#229070135934356d7094c7cb8dc4e409" title="Recupera l&#39;unica istanza di questa classe.">mre::SceneManager::getInstance()</a>. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e9cb90150a5045c0c6c89f7e868b24ea"></a><!-- doxytag: member="mre::SceneManager::setCurrentCamera" ref="e9cb90150a5045c0c6c89f7e868b24ea" args="(Camera *camera)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneManager.html#e9cb90150a5045c0c6c89f7e868b24ea">setCurrentCamera</a> (<a class="el" href="classmre_1_1Camera.html">Camera</a> *camera)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setta la camera corrente. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d333d8d334c748b25221f3e9540e1c11"></a><!-- doxytag: member="mre::SceneManager::getCurrentCamera" ref="d333d8d334c748b25221f3e9540e1c11" args="() const " -->
+<a class="el" href="classmre_1_1Camera.html">Camera</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneManager.html#d333d8d334c748b25221f3e9540e1c11">getCurrentCamera</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna la camera corrente. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f3e083636efeb1c3c55aed578dfe2ad1"></a><!-- doxytag: member="mre::SceneManager::addLight" ref="f3e083636efeb1c3c55aed578dfe2ad1" args="(Light *light)" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneManager.html#f3e083636efeb1c3c55aed578dfe2ad1">addLight</a> (<a class="el" href="classmre_1_1Light.html">Light</a> *light)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aggiungi un punto luce. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="03c9eac4c09ae2ed8950bc4126e6d113"></a><!-- doxytag: member="mre::SceneManager::addObject" ref="03c9eac4c09ae2ed8950bc4126e6d113" args="(mre::Object *object)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneManager.html#03c9eac4c09ae2ed8950bc4126e6d113">addObject</a> (<a class="el" href="classmre_1_1Object.html">mre::Object</a> *object)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aggiungi un oggetto alla scena. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ff2ab617bf1254e2b95be33c4f923e09"></a><!-- doxytag: member="mre::SceneManager::clearScene" ref="ff2ab617bf1254e2b95be33c4f923e09" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneManager.html#ff2ab617bf1254e2b95be33c4f923e09">clearScene</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina tutti gli oggetti dalla scena. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="995628aa521845be8bdb37dc4f99a581"></a><!-- doxytag: member="mre::SceneManager::render" ref="995628aa521845be8bdb37dc4f99a581" args="() const " -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneManager.html#995628aa521845be8bdb37dc4f99a581">render</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Rendi la scena. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d90068de7da78192bf8fb1e59a793d8c"></a><!-- doxytag: member="mre::SceneManager::run" ref="d90068de7da78192bf8fb1e59a793d8c" args="()" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneManager.html#d90068de7da78192bf8fb1e59a793d8c">run</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Invoca il metodo <em><a class="el" href="classmre_1_1SceneManager.html#d90068de7da78192bf8fb1e59a793d8c" title="Invoca il metodo run() su tutti gli oggetti della scena.">run()</a></em> su tutti gli oggetti della scena. <br></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici statici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="classmre_1_1SceneManager.html">SceneManager</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneManager.html#229070135934356d7094c7cb8dc4e409">getInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recupera l'unica istanza di questa classe.  <a href="#229070135934356d7094c7cb8dc4e409"></a><br></td></tr>
+</table>
+<hr><h2>Documentazione delle funzioni membro</h2>
+<a class="anchor" name="229070135934356d7094c7cb8dc4e409"></a><!-- doxytag: member="mre::SceneManager::getInstance" ref="229070135934356d7094c7cb8dc4e409" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classmre_1_1SceneManager.html">SceneManager</a>* mre::SceneManager::getInstance           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Recupera l'unica istanza di questa classe. 
+<p>
+
+</div>
+</div><p>
+<hr>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
+<li>SceneManager</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed Nov 12 10:08:57 2008 for Uplezz by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 
+1.5.6</small></address></div>
+</body>
+</html>

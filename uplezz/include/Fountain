@@ -1,0 +1,35 @@
+#ifndef _UPLEZZ_FOUNTAIN_
+#define _UPLEZZ_FOUNTAIN_
+#include "uplezz.h"
+#include "mge/Object"
+#include "mre/Object"
+#include "mre/RenderEngine"
+#include "mre/SceneFactory"
+#include "mre/SceneManager"
+
+/** Oggetto fontanella. Unico oggetto "moveable" del gioco, costituisce 
+un ostacolo che pu&ograve; essere spostato secondo le politiche gi&agrave; 
+descritte. &Egrave; l'elemento "puzzle" del gioco.
+*/
+class Fountain : public mge::Object, public mre::Object {
+	private:
+		mre::Object *fountain;
+	public:
+		Fountain(unsigned row, unsigned col) : mge::Object(row, col) {
+			fountain = mre::SceneFactory::getInstance()->loadMesh("data/objects/fountain.obj");
+			move(CELL_SIZE * getRow() + 0.5 * CELL_SIZE, 0.0, CELL_SIZE * getCol() + 0.5 * CELL_SIZE);
+		}
+
+		virtual void reset(unsigned row, unsigned col) {
+			mge::Object::reset(row, col);
+			resetTransform();
+			move(CELL_SIZE * getRow() + 0.5 * CELL_SIZE, 0.0, CELL_SIZE * getCol() + 0.5 * CELL_SIZE);
+		}
+
+		int getSymbol() const { return mge::Object::SYMBOL_FOUNTAIN; }
+		virtual bool moveable() const { return true; }
+		virtual void render() const { mre::RenderEngine::getInstance()->render(fountain); }
+};
+
+#endif
+

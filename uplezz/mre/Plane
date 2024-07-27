@@ -1,0 +1,28 @@
+#ifndef _MRE_PLANE_
+#define _MRE_PLANE_
+#include "mre/Object"
+
+namespace mre {
+
+/** Piano
+\sa SceneFactory, SceneManager
+*/
+class Plane : public Object {
+	friend class SceneFactory;
+	protected:
+		float width, height;
+		bool reverseNormals;
+
+		Plane(float width = 1.0, float height = 1.0, bool reverseNormals = false) {
+			this->width = width;
+			this->height = height;
+			this->reverseNormals = reverseNormals;
+		}
+	public:
+		/** Metodo di resa */
+		virtual void render() const;
+};
+
+};
+#endif
+

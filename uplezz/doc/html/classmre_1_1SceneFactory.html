@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Uplezz: Riferimenti per la classe mre::SceneFactory</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<div align="center"><img src="images/banner.png" /></div>
+<div style="padding-left: 2em; padding-right: 2em; padding-bottom: 1em;">
+
+<!-- Generato da Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Pagina&nbsp;Principale</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace</span></a></li>
+      <li class="current"><a href="classes.html"><span>Classi</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="classes.html"><span>Lista&nbsp;in&nbsp;ordine&nbsp;alfabetico</span></a></li>
+      <li><a href="annotated.html"><span>Elenco&nbsp;dei&nbsp;tipi&nbsp;composti</span></a></li>
+      <li><a href="hierarchy.html"><span>Gerarchia&nbsp;delle&nbsp;classi</span></a></li>
+      <li><a href="functions.html"><span>Membri&nbsp;dei&nbsp;composti</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacemre.html">mre</a>::<a class="el" href="classmre_1_1SceneFactory.html">SceneFactory</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Riferimenti per la classe mre::SceneFactory</h1><!-- doxytag: class="mre::SceneFactory" --><div class="dynheader">
+Diagramma di collaborazione per mre::SceneFactory:</div>
+<div class="dynsection">
+<p><center><img src="classmre_1_1SceneFactory__coll__graph.png" border="0" usemap="#mre_1_1SceneFactory__coll__map" alt="Collaboration graph"></center>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="classmre_1_1SceneFactory-members.html">Elenco di tutti i membri.</a><hr><a name="_details"></a><h2>Descrizione dettagliata</h2>
+Classe "fabbrica" per oggetti MRE. 
+<p>
+Per produrre qualunque oggetto da inserire nelle scene, bisogna utilizzare questa classe, accessibile unicamente dal metodo statico <a class="el" href="classmre_1_1SceneFactory.html#bf8517b9faf0c5e42b6679ae78cdaa34" title="Recupera l&#39;unica istanza di questa classe.">mre::SceneFactory::getInstance()</a>. Gli oggetti che vengono caricati da file vengono registrati in una tabella per poterne velocizzare successivi accessi. Inoltre gli oggetti complessi vengono "precompilati" grazie alle primitive GL in modo da aumentare le performance di resa. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a5abd5d1fb9608fe1b272acce64d3c92"></a><!-- doxytag: member="mre::SceneFactory::loadTexture2D" ref="a5abd5d1fb9608fe1b272acce64d3c92" args="(const std::string &amp;path)" -->
+<a class="el" href="classmre_1_1Texture2D.html">Texture2D</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#a5abd5d1fb9608fe1b272acce64d3c92">loadTexture2D</a> (const std::string &amp;path)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carica una texture da file. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b59fdeeadf875fbb60d5d059958925bc"></a><!-- doxytag: member="mre::SceneFactory::loadMesh" ref="b59fdeeadf875fbb60d5d059958925bc" args="(const std::string &amp;path)" -->
+<a class="el" href="classmre_1_1Object.html">Object</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#b59fdeeadf875fbb60d5d059958925bc">loadMesh</a> (const std::string &amp;path)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carica una mesh da file. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classmre_1_1Sphere.html">Sphere</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#2f7a9b6a2cbf800406d1816675912c0d">createSphere</a> (float radius=1.0, int depth=5, bool reverseNormals=false)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una sfera.  <a href="#2f7a9b6a2cbf800406d1816675912c0d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classmre_1_1Plane.html">Plane</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#a6fbeb4770aba97142db895af867b05c">createPlane</a> (float width=1.0, float depth=1.0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea un piano.  <a href="#a6fbeb4770aba97142db895af867b05c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classmre_1_1Cube.html">Cube</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#782758af4d68594e4c63c177e06d8ff9">createCube</a> (float edge=1.0, bool reverseNormals=false)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea un cubo.  <a href="#782758af4d68594e4c63c177e06d8ff9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classmre_1_1SkyBox.html">SkyBox</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#49b8a55cbdbf72e9c7f54b03469cbe95">createSkyBox</a> (const std::string &amp;skyBoxPath, float edge=1.0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea uno Skybox.  <a href="#49b8a55cbdbf72e9c7f54b03469cbe95"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="055e7e145b87cc0b0d6c6b0c98ed177d"></a><!-- doxytag: member="mre::SceneFactory::createCamera" ref="055e7e145b87cc0b0d6c6b0c98ed177d" args="(const std::string &amp;name)" -->
+<a class="el" href="classmre_1_1Camera.html">Camera</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#055e7e145b87cc0b0d6c6b0c98ed177d">createCamera</a> (const std::string &amp;name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una camera con nome. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e747f1350325f8e155088671e350484c"></a><!-- doxytag: member="mre::SceneFactory::createCamera" ref="e747f1350325f8e155088671e350484c" args="(const std::string &amp;name, const Vector3f &amp;pos, const Vector3f &amp;center, const Vector3f &amp;viewup)" -->
+<a class="el" href="classmre_1_1Camera.html">Camera</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#e747f1350325f8e155088671e350484c">createCamera</a> (const std::string &amp;name, const <a class="el" href="classmre_1_1Vector3f.html">Vector3f</a> &amp;pos, const <a class="el" href="classmre_1_1Vector3f.html">Vector3f</a> &amp;center, const <a class="el" href="classmre_1_1Vector3f.html">Vector3f</a> &amp;viewup)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una camera con nome e parametri. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bd57bd33eb1a99ed1a3ffae96bafcc0e"></a><!-- doxytag: member="mre::SceneFactory::deleteCamera" ref="bd57bd33eb1a99ed1a3ffae96bafcc0e" args="(const std::string &amp;name)" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#bd57bd33eb1a99ed1a3ffae96bafcc0e">deleteCamera</a> (const std::string &amp;name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina una camera. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ffb7d8d616c19b6801db43a4085a9ef9"></a><!-- doxytag: member="mre::SceneFactory::getCamera" ref="ffb7d8d616c19b6801db43a4085a9ef9" args="(const std::string &amp;name) const " -->
+<a class="el" href="classmre_1_1Camera.html">Camera</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#ffb7d8d616c19b6801db43a4085a9ef9">getCamera</a> (const std::string &amp;name) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna una camera dato il nome. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2af40ddf186bcaf7b916c550218a3972"></a><!-- doxytag: member="mre::SceneFactory::createLight" ref="2af40ddf186bcaf7b916c550218a3972" args="(const std::string &amp;name)" -->
+<a class="el" href="classmre_1_1Light.html">Light</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#2af40ddf186bcaf7b916c550218a3972">createLight</a> (const std::string &amp;name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una luce con nome. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d4d8ae3cde2a768fe2e60c39d4b1856f"></a><!-- doxytag: member="mre::SceneFactory::deleteLight" ref="d4d8ae3cde2a768fe2e60c39d4b1856f" args="(const std::string &amp;name)" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#d4d8ae3cde2a768fe2e60c39d4b1856f">deleteLight</a> (const std::string &amp;name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina una luce. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9d3d50fb3046211b12325080fe65fbba"></a><!-- doxytag: member="mre::SceneFactory::getLight" ref="9d3d50fb3046211b12325080fe65fbba" args="(const std::string &amp;name) const " -->
+<a class="el" href="classmre_1_1Light.html">Light</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#9d3d50fb3046211b12325080fe65fbba">getLight</a> (const std::string &amp;name) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna una luce dato il nome. <br></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici statici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="classmre_1_1SceneFactory.html">SceneFactory</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmre_1_1SceneFactory.html#bf8517b9faf0c5e42b6679ae78cdaa34">getInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recupera l'unica istanza di questa classe.  <a href="#bf8517b9faf0c5e42b6679ae78cdaa34"></a><br></td></tr>
+</table>
+<hr><h2>Documentazione delle funzioni membro</h2>
+<a class="anchor" name="bf8517b9faf0c5e42b6679ae78cdaa34"></a><!-- doxytag: member="mre::SceneFactory::getInstance" ref="bf8517b9faf0c5e42b6679ae78cdaa34" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classmre_1_1SceneFactory.html">SceneFactory</a>* mre::SceneFactory::getInstance           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Recupera l'unica istanza di questa classe. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="2f7a9b6a2cbf800406d1816675912c0d"></a><!-- doxytag: member="mre::SceneFactory::createSphere" ref="2f7a9b6a2cbf800406d1816675912c0d" args="(float radius=1.0, int depth=5, bool reverseNormals=false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmre_1_1Sphere.html">Sphere</a>* mre::SceneFactory::createSphere           </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>radius</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>depth</em> = <code>5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>reverseNormals</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea una sfera. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>radius</em>&nbsp;</td><td>Raggio della sfera </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>depth</em>&nbsp;</td><td>Livello di dettaglio </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>reverseNormals</em>&nbsp;</td><td>Decide se invertire il verso delle normali </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a6fbeb4770aba97142db895af867b05c"></a><!-- doxytag: member="mre::SceneFactory::createPlane" ref="a6fbeb4770aba97142db895af867b05c" args="(float width=1.0, float depth=1.0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmre_1_1Plane.html">Plane</a>* mre::SceneFactory::createPlane           </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>width</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>depth</em> = <code>1.0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea un piano. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>width</em>&nbsp;</td><td>Larghezza </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>depth</em>&nbsp;</td><td>Profondit&agrave; </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="782758af4d68594e4c63c177e06d8ff9"></a><!-- doxytag: member="mre::SceneFactory::createCube" ref="782758af4d68594e4c63c177e06d8ff9" args="(float edge=1.0, bool reverseNormals=false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmre_1_1Cube.html">Cube</a>* mre::SceneFactory::createCube           </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>edge</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>reverseNormals</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea un cubo. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>edge</em>&nbsp;</td><td>Dimensione del lato </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>reverseNormals</em>&nbsp;</td><td>Decide se invertire il verso delle normali </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="49b8a55cbdbf72e9c7f54b03469cbe95"></a><!-- doxytag: member="mre::SceneFactory::createSkyBox" ref="49b8a55cbdbf72e9c7f54b03469cbe95" args="(const std::string &amp;skyBoxPath, float edge=1.0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmre_1_1SkyBox.html">SkyBox</a>* mre::SceneFactory::createSkyBox           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>skyBoxPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>edge</em> = <code>1.0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea uno Skybox. 
+<p>
+Uno Skybox &egrave; un cubo di lato arbitrario alle cui 6 facce interne vengono applicate altrettante texture che descrivono lo "sfondo" di gioco. <dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>skyBoxPath</em>&nbsp;</td><td>percorso delle immagini. Le 6 immagini vengono cercate, a partire dal percorso specificato, concatenando a quest'ultimo 6 suffissi: <ul>
+<li>"_bk.ppm" Faccia posteriore (back); </li>
+<li>"_ft.ppm" Faccia anteriore (front); </li>
+<li>"_lf.ppm" Faccia sinistra (left); </li>
+<li>"_rt.ppm" Faccia destra (right); </li>
+<li>"_up.ppm" Faccia superiore (up); </li>
+<li>"_dn.ppm" Faccia inferiore (down);</li>
+</ul>
+&Egrave; necessario che tutte e 6 le immagini si trovino nel percorso specificato e nel formato PPM. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>edge</em>&nbsp;</td><td>Lato del cubo. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
+<li>SceneFactory</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed Nov 12 10:08:57 2008 for Uplezz by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 
+1.5.6</small></address></div>
+</body>
+</html>

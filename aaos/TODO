@@ -1,0 +1,7 @@
+- Translate the README in english!!
+- Complete the support functions.
+- Change the script test/build_unexp.sh, eliminating the cpp
+  preprocessing an the re-indentation (!!) of the expanded code.
+- Add I/O events queue timer/discarding policy
+- Write a reasonable init function
+- Add hash table ADT

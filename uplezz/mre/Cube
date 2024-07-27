@@ -1,0 +1,27 @@
+#ifndef _MRE_CUBE_
+#define _MRE_CUBE_
+#include "mre/Object"
+
+namespace mre {
+
+/** Cubo 
+\sa SceneFactory, SceneManager
+*/
+class Cube : public Object {
+	friend class SceneFactory;
+	private:
+		float edge;
+		bool reverseNormals;
+
+		Cube(float edge = 1.0, bool reverseNormals = false) {
+			this->edge = edge;
+			this->reverseNormals = reverseNormals;
+		}
+	public:
+		/** Metodo di resa */
+		virtual void render() const;
+};
+
+};
+#endif
+

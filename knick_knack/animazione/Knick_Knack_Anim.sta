@@ -1,0 +1,3010 @@
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim0.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 52
+number of textured primitives .......... : 15
+total number of patches ................ : 1547
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 368831
+number of shadows rays .................... : 617428
+total number of ray-extent checks ......... : 33743863
+number of ray-object intersections ........ : 349886 (94.86%)
+number of shadow ray-object intersections . : 405622 (65.70%)
+
+number of ray-patch intersections calls ........ : 3311291
+number of tests resolved with second extent .... : 319897 (9.66%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515905
+Number of computed samples ............. : 206192
+Number of reused samples ............... : 309713
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 26.60
+
+object tested per normal ray .................. : 6.12
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 28.53
+box tested per shadow ray ..................... : 24.57
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 52.09%
+average objects per noempty voxel ............. : 1.79
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.815
+
+preprocessing time ..................... :  0h   0'  0.04''
+ray tracing processing time ............ :  0h   0'  31.80''
+total processing time .................. :  0h   0'  31.84''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim1.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 3114
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369970
+number of shadows rays .................... : 619840
+total number of ray-extent checks ......... : 34409270
+number of ray-object intersections ........ : 351088 (94.90%)
+number of shadow ray-object intersections . : 407454 (65.74%)
+
+number of ray-patch intersections calls ........ : 3329886
+number of tests resolved with second extent .... : 323548 (9.72%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515395
+Number of computed samples ............. : 206025
+Number of reused samples ............... : 309370
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.10
+box tested per ray ............................ : 27.25
+
+object tested per normal ray .................. : 6.13
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 29.30
+box tested per shadow ray ..................... : 25.10
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.53
+percentage empty voxel ........................ : 51.71%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  0.13''
+ray tracing processing time ............ :  0h   0'  39.77''
+total processing time .................. :  0h   0'  39.90''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim2.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 4681
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370036
+number of shadows rays .................... : 619938
+total number of ray-extent checks ......... : 34392684
+number of ray-object intersections ........ : 351140 (94.89%)
+number of shadow ray-object intersections . : 407685 (65.76%)
+
+number of ray-patch intersections calls ........ : 3327455
+number of tests resolved with second extent .... : 321972 (9.68%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515435
+Number of computed samples ............. : 206034
+Number of reused samples ............... : 309401
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.10
+box tested per ray ............................ : 27.25
+
+object tested per normal ray .................. : 6.12
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 29.30
+box tested per shadow ray ..................... : 25.10
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 51.59%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  0.27''
+ray tracing processing time ............ :  0h   0'  43.98''
+total processing time .................. :  0h   0'  44.25''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim3.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 6248
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369929
+number of shadows rays .................... : 619685
+total number of ray-extent checks ......... : 34358138
+number of ray-object intersections ........ : 351014 (94.89%)
+number of shadow ray-object intersections . : 407309 (65.73%)
+
+number of ray-patch intersections calls ........ : 3325253
+number of tests resolved with second extent .... : 321382 (9.66%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515460
+Number of computed samples ............. : 206047
+Number of reused samples ............... : 309413
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.25
+
+object tested per normal ray .................. : 6.12
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 29.30
+box tested per shadow ray ..................... : 25.10
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 51.52%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  0.38''
+ray tracing processing time ............ :  0h   0'  43.11''
+total processing time .................. :  0h   0'  43.49''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim4.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 7815
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 368694
+number of shadows rays .................... : 617619
+total number of ray-extent checks ......... : 34173656
+number of ray-object intersections ........ : 349926 (94.91%)
+number of shadow ray-object intersections . : 406375 (65.80%)
+
+number of ray-patch intersections calls ........ : 3308436
+number of tests resolved with second extent .... : 318673 (9.63%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515310
+Number of computed samples ............. : 205987
+Number of reused samples ............... : 309323
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.24
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 29.29
+box tested per shadow ray ..................... : 25.07
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 51.49%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.815
+
+preprocessing time ..................... :  0h   0'  0.48''
+ray tracing processing time ............ :  0h   0'  42.82''
+total processing time .................. :  0h   0'  43.30''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim5.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 9382
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 367838
+number of shadows rays .................... : 616235
+total number of ray-extent checks ......... : 34042833
+number of ray-object intersections ........ : 349191 (94.93%)
+number of shadow ray-object intersections . : 405788 (65.85%)
+
+number of ray-patch intersections calls ........ : 3295233
+number of tests resolved with second extent .... : 317033 (9.62%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515395
+Number of computed samples ............. : 205993
+Number of reused samples ............... : 309402
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 27.24
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 29.30
+box tested per shadow ray ..................... : 25.07
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 51.46%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.816
+
+preprocessing time ..................... :  0h   0'  0.57''
+ray tracing processing time ............ :  0h   0'  42.56''
+total processing time .................. :  0h   0'  43.13''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim6.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 10949
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 366506
+number of shadows rays .................... : 613718
+total number of ray-extent checks ......... : 33855349
+number of ray-object intersections ........ : 347918 (94.93%)
+number of shadow ray-object intersections . : 404061 (65.84%)
+
+number of ray-patch intersections calls ........ : 3275467
+number of tests resolved with second extent .... : 313804 (9.58%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515140
+Number of computed samples ............. : 205882
+Number of reused samples ............... : 309258
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 27.23
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 29.28
+box tested per shadow ray ..................... : 25.05
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.53
+percentage empty voxel ........................ : 51.44%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.818
+
+preprocessing time ..................... :  0h   0'  0.66''
+ray tracing processing time ............ :  0h   0'  42.51''
+total processing time .................. :  0h   0'  43.17''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim7.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 12516
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 367640
+number of shadows rays .................... : 615852
+total number of ray-extent checks ......... : 34028140
+number of ray-object intersections ........ : 349000 (94.93%)
+number of shadow ray-object intersections . : 405472 (65.84%)
+
+number of ray-patch intersections calls ........ : 3293083
+number of tests resolved with second extent .... : 316626 (9.61%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515590
+Number of computed samples ............. : 206044
+Number of reused samples ............... : 309546
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 27.23
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 29.29
+box tested per shadow ray ..................... : 25.06
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 51.43%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.816
+
+preprocessing time ..................... :  0h   0'  0.74''
+ray tracing processing time ............ :  0h   0'  43.11''
+total processing time .................. :  0h   0'  43.85''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim8.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 14083
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 368522
+number of shadows rays .................... : 617285
+total number of ray-extent checks ......... : 34169478
+number of ray-object intersections ........ : 349758 (94.91%)
+number of shadow ray-object intersections . : 406040 (65.78%)
+
+number of ray-patch intersections calls ........ : 3307478
+number of tests resolved with second extent .... : 319710 (9.67%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515595
+Number of computed samples ............. : 206039
+Number of reused samples ............... : 309556
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.23
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 29.29
+box tested per shadow ray ..................... : 25.06
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 51.42%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.815
+
+preprocessing time ..................... :  0h   0'  0.86''
+ray tracing processing time ............ :  0h   0'  42.81''
+total processing time .................. :  0h   0'  43.67''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim9.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 53
+number of textured primitives .......... : 15
+total number of patches ................ : 15650
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369782
+number of shadows rays .................... : 619696
+total number of ray-extent checks ......... : 34360718
+number of ray-object intersections ........ : 350849 (94.88%)
+number of shadow ray-object intersections . : 407320 (65.73%)
+
+number of ray-patch intersections calls ........ : 3327778
+number of tests resolved with second extent .... : 323498 (9.72%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516120
+Number of computed samples ............. : 206282
+Number of reused samples ............... : 309838
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.26
+
+object tested per normal ray .................. : 6.12
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 29.32
+box tested per shadow ray ..................... : 25.10
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.17
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 51.41%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  0.90''
+ray tracing processing time ............ :  0h   0'  43.23''
+total processing time .................. :  0h   0'  44.13''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim10.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 54
+number of textured primitives .......... : 15
+total number of patches ................ : 17237
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369796
+number of shadows rays .................... : 619606
+total number of ray-extent checks ......... : 34842344
+number of ray-object intersections ........ : 350873 (94.88%)
+number of shadow ray-object intersections . : 407157 (65.71%)
+
+number of ray-patch intersections calls ........ : 3322701
+number of tests resolved with second extent .... : 321905 (9.69%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516225
+Number of computed samples ............. : 206321
+Number of reused samples ............... : 309904
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.95
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.20
+box tested per shadow ray ..................... : 25.59
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.96
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 51.34%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.815
+
+preprocessing time ..................... :  0h   0'  1.02''
+ray tracing processing time ............ :  0h   0'  43.09''
+total processing time .................. :  0h   0'  44.11''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim11.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 54
+number of textured primitives .......... : 15
+total number of patches ................ : 18824
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370924
+number of shadows rays .................... : 621782
+total number of ray-extent checks ......... : 34997486
+number of ray-object intersections ........ : 352069 (94.92%)
+number of shadow ray-object intersections . : 408834 (65.75%)
+
+number of ray-patch intersections calls ........ : 3338095
+number of tests resolved with second extent .... : 324635 (9.73%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515890
+Number of computed samples ............. : 206222
+Number of reused samples ............... : 309668
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.91
+
+object tested per normal ray .................. : 6.12
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 30.09
+box tested per shadow ray ..................... : 25.63
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.53
+percentage empty voxel ........................ : 51.28%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  1.14''
+ray tracing processing time ............ :  0h   0'  43.44''
+total processing time .................. :  0h   0'  44.58''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim12.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 54
+number of textured primitives .......... : 15
+total number of patches ................ : 20411
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370978
+number of shadows rays .................... : 621725
+total number of ray-extent checks ......... : 34980337
+number of ray-object intersections ........ : 352109 (94.91%)
+number of shadow ray-object intersections . : 408897 (65.77%)
+
+number of ray-patch intersections calls ........ : 3335418
+number of tests resolved with second extent .... : 322492 (9.67%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515920
+Number of computed samples ............. : 206228
+Number of reused samples ............... : 309692
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.91
+
+object tested per normal ray .................. : 6.12
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 30.09
+box tested per shadow ray ..................... : 25.62
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 51.23%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.812
+
+preprocessing time ..................... :  0h   0'  1.26''
+ray tracing processing time ............ :  0h   0'  43.50''
+total processing time .................. :  0h   0'  44.76''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim13.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 54
+number of textured primitives .......... : 15
+total number of patches ................ : 21998
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370902
+number of shadows rays .................... : 621496
+total number of ray-extent checks ......... : 34945423
+number of ray-object intersections ........ : 352009 (94.91%)
+number of shadow ray-object intersections . : 408528 (65.73%)
+
+number of ray-patch intersections calls ........ : 3332994
+number of tests resolved with second extent .... : 322179 (9.67%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515960
+Number of computed samples ............. : 206247
+Number of reused samples ............... : 309713
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.90
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.09
+box tested per shadow ray ..................... : 25.62
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 51.18%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.812
+
+preprocessing time ..................... :  0h   0'  1.31''
+ray tracing processing time ............ :  0h   0'  43.25''
+total processing time .................. :  0h   0'  44.56''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim14.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 54
+number of textured primitives .......... : 15
+total number of patches ................ : 23585
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370904
+number of shadows rays .................... : 621496
+total number of ray-extent checks ......... : 34926541
+number of ray-object intersections ........ : 352004 (94.90%)
+number of shadow ray-object intersections . : 408602 (65.74%)
+
+number of ray-patch intersections calls ........ : 3331705
+number of tests resolved with second extent .... : 321216 (9.64%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515960
+Number of computed samples ............. : 206254
+Number of reused samples ............... : 309706
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 27.90
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.09
+box tested per shadow ray ..................... : 25.61
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 51.15%
+average objects per noempty voxel ............. : 1.78
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  1.43''
+ray tracing processing time ............ :  0h   0'  43.51''
+total processing time .................. :  0h   0'  44.94''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim15.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 25192
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371232
+number of shadows rays .................... : 622218
+total number of ray-extent checks ......... : 35476253
+number of ray-object intersections ........ : 352359 (94.92%)
+number of shadow ray-object intersections . : 409151 (65.76%)
+
+number of ray-patch intersections calls ........ : 3335346
+number of tests resolved with second extent .... : 322013 (9.65%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516130
+Number of computed samples ............. : 206304
+Number of reused samples ............... : 309826
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 28.61
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.98
+box tested per shadow ray ..................... : 26.12
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.96
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 51.07%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  1.50''
+ray tracing processing time ............ :  0h   0'  43.75''
+total processing time .................. :  0h   0'  45.25''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim16.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 26799
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371983
+number of shadows rays .................... : 623929
+total number of ray-extent checks ......... : 35594973
+number of ray-object intersections ........ : 353208 (94.95%)
+number of shadow ray-object intersections . : 410522 (65.80%)
+
+number of ray-patch intersections calls ........ : 3350463
+number of tests resolved with second extent .... : 324984 (9.70%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515465
+Number of computed samples ............. : 206080
+Number of reused samples ............... : 309385
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 28.57
+
+object tested per normal ray .................. : 6.12
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 30.88
+box tested per shadow ray ..................... : 26.15
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 51.00%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.811
+
+preprocessing time ..................... :  0h   0'  1.60''
+ray tracing processing time ............ :  0h   0'  43.83''
+total processing time .................. :  0h   0'  45.43''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim17.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 28406
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 372219
+number of shadows rays .................... : 624452
+total number of ray-extent checks ......... : 35612560
+number of ray-object intersections ........ : 353487 (94.97%)
+number of shadow ray-object intersections . : 411090 (65.83%)
+
+number of ray-patch intersections calls ........ : 3349838
+number of tests resolved with second extent .... : 324465 (9.69%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515885
+Number of computed samples ............. : 206208
+Number of reused samples ............... : 309677
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.09
+box tested per ray ............................ : 28.57
+
+object tested per normal ray .................. : 6.12
+object tested per shadow ray .................. : 4.02
+box tested per normal ray ..................... : 30.88
+box tested per shadow ray ..................... : 26.15
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.94%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.811
+
+preprocessing time ..................... :  0h   0'  1.73''
+ray tracing processing time ............ :  0h   0'  44.50''
+total processing time .................. :  0h   0'  46.23''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim18.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 30013
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370552
+number of shadows rays .................... : 621420
+total number of ray-extent checks ......... : 35370207
+number of ray-object intersections ........ : 351925 (94.97%)
+number of shadow ray-object intersections . : 409085 (65.83%)
+
+number of ray-patch intersections calls ........ : 3329286
+number of tests resolved with second extent .... : 321556 (9.66%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515670
+Number of computed samples ............. : 206102
+Number of reused samples ............... : 309568
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 28.55
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.87
+box tested per shadow ray ..................... : 26.12
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 50.88%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.812
+
+preprocessing time ..................... :  0h   0'  1.84''
+ray tracing processing time ............ :  0h   0'  43.69''
+total processing time .................. :  0h   0'  45.53''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim19.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 31620
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369384
+number of shadows rays .................... : 619667
+total number of ray-extent checks ......... : 35201067
+number of ray-object intersections ........ : 350837 (94.98%)
+number of shadow ray-object intersections . : 408282 (65.89%)
+
+number of ray-patch intersections calls ........ : 3315978
+number of tests resolved with second extent .... : 320354 (9.66%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 515945
+Number of computed samples ............. : 206237
+Number of reused samples ............... : 309708
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.56
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 3.99
+box tested per normal ray ..................... : 30.89
+box tested per shadow ray ..................... : 26.11
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.12
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.17
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 50.84%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  1.89''
+ray tracing processing time ............ :  0h   0'  43.14''
+total processing time .................. :  0h   0'  45.03''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim20.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 33227
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 368797
+number of shadows rays .................... : 618496
+total number of ray-extent checks ......... : 35087930
+number of ray-object intersections ........ : 350304 (94.99%)
+number of shadow ray-object intersections . : 407441 (65.88%)
+
+number of ray-patch intersections calls ........ : 3299687
+number of tests resolved with second extent .... : 317290 (9.62%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516140
+Number of computed samples ............. : 206275
+Number of reused samples ............... : 309865
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.06
+box tested per ray ............................ : 28.56
+
+object tested per normal ray .................. : 6.08
+object tested per shadow ray .................. : 3.99
+box tested per normal ray ..................... : 30.88
+box tested per shadow ray ..................... : 26.13
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.17
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 50.79%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.816
+
+preprocessing time ..................... :  0h   0'  2.03''
+ray tracing processing time ............ :  0h   0'  42.79''
+total processing time .................. :  0h   0'  44.82''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim21.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 34834
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369342
+number of shadows rays .................... : 619230
+total number of ray-extent checks ......... : 35149869
+number of ray-object intersections ........ : 350802 (94.98%)
+number of shadow ray-object intersections . : 407954 (65.88%)
+
+number of ray-patch intersections calls ........ : 3306436
+number of tests resolved with second extent .... : 317493 (9.60%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516220
+Number of computed samples ............. : 206328
+Number of reused samples ............... : 309892
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.06
+box tested per ray ............................ : 28.55
+
+object tested per normal ray .................. : 6.09
+object tested per shadow ray .................. : 3.99
+box tested per normal ray ..................... : 30.89
+box tested per shadow ray ..................... : 26.10
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 50.75%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  2.13''
+ray tracing processing time ............ :  0h   0'  42.86''
+total processing time .................. :  0h   0'  44.99''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim22.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 36441
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370734
+number of shadows rays .................... : 621552
+total number of ray-extent checks ......... : 35366716
+number of ray-object intersections ........ : 352067 (94.96%)
+number of shadow ray-object intersections . : 409121 (65.82%)
+
+number of ray-patch intersections calls ........ : 3325743
+number of tests resolved with second extent .... : 319865 (9.62%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516685
+Number of computed samples ............. : 206490
+Number of reused samples ............... : 310195
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.56
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.89
+box tested per shadow ray ..................... : 26.12
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.72%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  2.22''
+ray tracing processing time ............ :  0h   0'  43.56''
+total processing time .................. :  0h   0'  45.78''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim23.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 38048
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371723
+number of shadows rays .................... : 623078
+total number of ray-extent checks ......... : 35511663
+number of ray-object intersections ........ : 352899 (94.94%)
+number of shadow ray-object intersections . : 409676 (65.75%)
+
+number of ray-patch intersections calls ........ : 3339606
+number of tests resolved with second extent .... : 322912 (9.67%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516770
+Number of computed samples ............. : 206517
+Number of reused samples ............... : 310253
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 28.56
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.89
+box tested per shadow ray ..................... : 26.12
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.68%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.811
+
+preprocessing time ..................... :  0h   0'  2.25''
+ray tracing processing time ............ :  0h   0'  43.58''
+total processing time .................. :  0h   0'  45.83''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim24.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 39655
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371540
+number of shadows rays .................... : 623195
+total number of ray-extent checks ......... : 35525962
+number of ray-object intersections ........ : 352738 (94.94%)
+number of shadow ray-object intersections . : 409761 (65.75%)
+
+number of ray-patch intersections calls ........ : 3341133
+number of tests resolved with second extent .... : 324429 (9.71%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516940
+Number of computed samples ............. : 206599
+Number of reused samples ............... : 310341
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 28.59
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.92
+box tested per shadow ray ..................... : 26.16
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.17
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.65%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.812
+
+preprocessing time ..................... :  0h   0'  2.30''
+ray tracing processing time ............ :  0h   0'  43.82''
+total processing time .................. :  0h   0'  46.12''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim25.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 41262
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371459
+number of shadows rays .................... : 623082
+total number of ray-extent checks ......... : 35506497
+number of ray-object intersections ........ : 352731 (94.96%)
+number of shadow ray-object intersections . : 409642 (65.74%)
+
+number of ray-patch intersections calls ........ : 3336099
+number of tests resolved with second extent .... : 323544 (9.70%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516960
+Number of computed samples ............. : 206606
+Number of reused samples ............... : 310354
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 28.60
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.93
+box tested per shadow ray ..................... : 26.16
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.62%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.812
+
+preprocessing time ..................... :  0h   0'  2.44''
+ray tracing processing time ............ :  0h   0'  43.84''
+total processing time .................. :  0h   0'  46.28''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim26.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 42869
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371537
+number of shadows rays .................... : 623006
+total number of ray-extent checks ......... : 35507046
+number of ray-object intersections ........ : 352827 (94.96%)
+number of shadow ray-object intersections . : 409612 (65.75%)
+
+number of ray-patch intersections calls ........ : 3335240
+number of tests resolved with second extent .... : 322442 (9.67%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 517265
+Number of computed samples ............. : 206724
+Number of reused samples ............... : 310541
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.60
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.93
+box tested per shadow ray ..................... : 26.15
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.49
+percentage empty voxel ........................ : 50.60%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.812
+
+preprocessing time ..................... :  0h   0'  2.53''
+ray tracing processing time ............ :  0h   0'  44.03''
+total processing time .................. :  0h   0'  46.56''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim27.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 44476
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371655
+number of shadows rays .................... : 623034
+total number of ray-extent checks ......... : 35502733
+number of ray-object intersections ........ : 352960 (94.97%)
+number of shadow ray-object intersections . : 409672 (65.75%)
+
+number of ray-patch intersections calls ........ : 3335405
+number of tests resolved with second extent .... : 322295 (9.66%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 517420
+Number of computed samples ............. : 206800
+Number of reused samples ............... : 310620
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.58
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.93
+box tested per shadow ray ..................... : 26.14
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.57%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.812
+
+preprocessing time ..................... :  0h   0'  2.65''
+ray tracing processing time ............ :  0h   0'  43.64''
+total processing time .................. :  0h   0'  46.29''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim28.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 46083
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371527
+number of shadows rays .................... : 622656
+total number of ray-extent checks ......... : 35470576
+number of ray-object intersections ........ : 352761 (94.95%)
+number of shadow ray-object intersections . : 409343 (65.74%)
+
+number of ray-patch intersections calls ........ : 3332869
+number of tests resolved with second extent .... : 321517 (9.65%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 517295
+Number of computed samples ............. : 206749
+Number of reused samples ............... : 310546
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.58
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.92
+box tested per shadow ray ..................... : 26.13
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.55%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  2.79''
+ray tracing processing time ............ :  0h   0'  43.93''
+total processing time .................. :  0h   0'  46.72''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim29.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 47690
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 371153
+number of shadows rays .................... : 621871
+total number of ray-extent checks ......... : 35413344
+number of ray-object intersections ........ : 352337 (94.93%)
+number of shadow ray-object intersections . : 408787 (65.74%)
+
+number of ray-patch intersections calls ........ : 3329072
+number of tests resolved with second extent .... : 320911 (9.64%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 517140
+Number of computed samples ............. : 206686
+Number of reused samples ............... : 310454
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.56
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.90
+box tested per shadow ray ..................... : 26.11
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.53%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  2.89''
+ray tracing processing time ............ :  0h   0'  43.77''
+total processing time .................. :  0h   0'  46.66''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim30.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 49297
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369462
+number of shadows rays .................... : 619013
+total number of ray-extent checks ......... : 35191803
+number of ray-object intersections ........ : 350809 (94.95%)
+number of shadow ray-object intersections . : 407208 (65.78%)
+
+number of ray-patch intersections calls ........ : 3310421
+number of tests resolved with second extent .... : 318889 (9.63%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516760
+Number of computed samples ............. : 206529
+Number of reused samples ............... : 310231
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.54
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 3.99
+box tested per normal ray ..................... : 30.88
+box tested per shadow ray ..................... : 26.09
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 50.51%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  2.96''
+ray tracing processing time ............ :  0h   0'  44.15''
+total processing time .................. :  0h   0'  47.11''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim31.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 50904
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 368224
+number of shadows rays .................... : 616959
+total number of ray-extent checks ......... : 35016824
+number of ray-object intersections ........ : 349731 (94.98%)
+number of shadow ray-object intersections . : 406118 (65.83%)
+
+number of ray-patch intersections calls ........ : 3294852
+number of tests resolved with second extent .... : 317044 (9.62%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516655
+Number of computed samples ............. : 206475
+Number of reused samples ............... : 310180
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.06
+box tested per ray ............................ : 28.54
+
+object tested per normal ray .................. : 6.09
+object tested per shadow ray .................. : 3.99
+box tested per normal ray ..................... : 30.88
+box tested per shadow ray ..................... : 26.07
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.17
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 50.49%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.816
+
+preprocessing time ..................... :  0h   0'  3.04''
+ray tracing processing time ............ :  0h   0'  42.92''
+total processing time .................. :  0h   0'  45.96''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim32.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 52511
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 367280
+number of shadows rays .................... : 615261
+total number of ray-extent checks ......... : 34875657
+number of ray-object intersections ........ : 348881 (94.99%)
+number of shadow ray-object intersections . : 405040 (65.83%)
+
+number of ray-patch intersections calls ........ : 3279184
+number of tests resolved with second extent .... : 315261 (9.61%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516590
+Number of computed samples ............. : 206434
+Number of reused samples ............... : 310156
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.06
+box tested per ray ............................ : 28.54
+
+object tested per normal ray .................. : 6.08
+object tested per shadow ray .................. : 3.98
+box tested per normal ray ..................... : 30.88
+box tested per shadow ray ..................... : 26.07
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.86
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.52
+percentage empty voxel ........................ : 50.48%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.817
+
+preprocessing time ..................... :  0h   0'  3.16''
+ray tracing processing time ............ :  0h   0'  42.93''
+total processing time .................. :  0h   0'  46.09''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim33.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 54118
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 368245
+number of shadows rays .................... : 617006
+total number of ray-extent checks ......... : 35011888
+number of ray-object intersections ........ : 349777 (94.98%)
+number of shadow ray-object intersections . : 406251 (65.84%)
+
+number of ray-patch intersections calls ........ : 3294313
+number of tests resolved with second extent .... : 316319 (9.60%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516690
+Number of computed samples ............. : 206490
+Number of reused samples ............... : 310200
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.06
+box tested per ray ............................ : 28.53
+
+object tested per normal ray .................. : 6.09
+object tested per shadow ray .................. : 3.98
+box tested per normal ray ..................... : 30.88
+box tested per shadow ray ..................... : 26.06
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.51
+percentage empty voxel ........................ : 50.46%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.815
+
+preprocessing time ..................... :  0h   0'  3.20''
+ray tracing processing time ............ :  0h   0'  43.21''
+total processing time .................. :  0h   0'  46.41''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim34.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 55725
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369307
+number of shadows rays .................... : 618888
+total number of ray-extent checks ......... : 35178907
+number of ray-object intersections ........ : 350715 (94.97%)
+number of shadow ray-object intersections . : 407148 (65.79%)
+
+number of ray-patch intersections calls ........ : 3308903
+number of tests resolved with second extent .... : 318636 (9.63%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516585
+Number of computed samples ............. : 206446
+Number of reused samples ............... : 310139
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.55
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 3.99
+box tested per normal ray ..................... : 30.89
+box tested per shadow ray ..................... : 26.10
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.44%
+average objects per noempty voxel ............. : 1.77
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  3.38''
+ray tracing processing time ............ :  0h   0'  43.53''
+total processing time .................. :  0h   0'  46.91''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim35.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 57332
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370474
+number of shadows rays .................... : 620901
+total number of ray-extent checks ......... : 35344539
+number of ray-object intersections ........ : 351760 (94.95%)
+number of shadow ray-object intersections . : 408188 (65.74%)
+
+number of ray-patch intersections calls ........ : 3325161
+number of tests resolved with second extent .... : 321297 (9.66%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516650
+Number of computed samples ............. : 206480
+Number of reused samples ............... : 310170
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.56
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.89
+box tested per shadow ray ..................... : 26.12
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.49
+percentage empty voxel ........................ : 50.43%
+average objects per noempty voxel ............. : 1.76
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  3.50''
+ray tracing processing time ............ :  0h   0'  44.13''
+total processing time .................. :  0h   0'  47.63''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim36.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 58939
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370598
+number of shadows rays .................... : 621001
+total number of ray-extent checks ......... : 35353839
+number of ray-object intersections ........ : 351837 (94.94%)
+number of shadow ray-object intersections . : 408224 (65.74%)
+
+number of ray-patch intersections calls ........ : 3326429
+number of tests resolved with second extent .... : 320782 (9.64%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516770
+Number of computed samples ............. : 206526
+Number of reused samples ............... : 310244
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.55
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.89
+box tested per shadow ray ..................... : 26.11
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.42%
+average objects per noempty voxel ............. : 1.76
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  3.55''
+ray tracing processing time ............ :  0h   0'  43.62''
+total processing time .................. :  0h   0'  47.17''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim37.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 60546
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370744
+number of shadows rays .................... : 621167
+total number of ray-extent checks ......... : 35359623
+number of ray-object intersections ........ : 351958 (94.93%)
+number of shadow ray-object intersections . : 408363 (65.74%)
+
+number of ray-patch intersections calls ........ : 3327737
+number of tests resolved with second extent .... : 320777 (9.64%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516930
+Number of computed samples ............. : 206604
+Number of reused samples ............... : 310326
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.54
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.89
+box tested per shadow ray ..................... : 26.09
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.40%
+average objects per noempty voxel ............. : 1.76
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  3.61''
+ray tracing processing time ............ :  0h   0'  42.39''
+total processing time .................. :  0h   0'  46.00''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim38.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 62153
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370570
+number of shadows rays .................... : 620843
+total number of ray-extent checks ......... : 35335079
+number of ray-object intersections ........ : 351765 (94.93%)
+number of shadow ray-object intersections . : 408169 (65.74%)
+
+number of ray-patch intersections calls ........ : 3325365
+number of tests resolved with second extent .... : 320750 (9.65%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516795
+Number of computed samples ............. : 206549
+Number of reused samples ............... : 310246
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.07
+box tested per ray ............................ : 28.54
+
+object tested per normal ray .................. : 6.10
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.88
+box tested per shadow ray ..................... : 26.09
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.39%
+average objects per noempty voxel ............. : 1.76
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.813
+
+preprocessing time ..................... :  0h   0'  3.74''
+ray tracing processing time ............ :  0h   0'  43.59''
+total processing time .................. :  0h   0'  47.33''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim39.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 63760
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 370092
+number of shadows rays .................... : 619999
+total number of ray-extent checks ......... : 35280232
+number of ray-object intersections ........ : 351271 (94.91%)
+number of shadow ray-object intersections . : 407521 (65.73%)
+
+number of ray-patch intersections calls ........ : 3320962
+number of tests resolved with second extent .... : 320499 (9.65%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516460
+Number of computed samples ............. : 206405
+Number of reused samples ............... : 310055
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 28.54
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.00
+box tested per normal ray ..................... : 30.87
+box tested per shadow ray ..................... : 26.10
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.38%
+average objects per noempty voxel ............. : 1.76
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  3.82''
+ray tracing processing time ............ :  0h   0'  42.90''
+total processing time .................. :  0h   0'  46.72''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim40.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 65367
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369581
+number of shadows rays .................... : 619142
+total number of ray-extent checks ......... : 35220683
+number of ray-object intersections ........ : 350791 (94.92%)
+number of shadow ray-object intersections . : 406948 (65.73%)
+
+number of ray-patch intersections calls ........ : 3317709
+number of tests resolved with second extent .... : 320843 (9.67%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516180
+Number of computed samples ............. : 206296
+Number of reused samples ............... : 309884
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 28.52
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.85
+box tested per shadow ray ..................... : 26.08
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.37%
+average objects per noempty voxel ............. : 1.76
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  4.04''
+ray tracing processing time ............ :  0h   0'  38.40''
+total processing time .................. :  0h   0'  42.44''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim41.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 66974
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369664
+number of shadows rays .................... : 619183
+total number of ray-extent checks ......... : 35226901
+number of ray-object intersections ........ : 350828 (94.90%)
+number of shadow ray-object intersections . : 406915 (65.72%)
+
+number of ray-patch intersections calls ........ : 3318542
+number of tests resolved with second extent .... : 320344 (9.65%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516270
+Number of computed samples ............. : 206327
+Number of reused samples ............... : 309943
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 28.52
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.85
+box tested per shadow ray ..................... : 26.08
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.36%
+average objects per noempty voxel ............. : 1.76
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  4.10''
+ray tracing processing time ............ :  0h   0'  43.32''
+total processing time .................. :  0h   0'  47.42''
+
+GENERAL STATISTICS
+------------------
+run-length-encoded image on ............ : /home/simonett/Desktop/graficaproject/Knick_Knack/animazione/Knick_Knack_Anim42.hr
+image resolution (width - height) ...... : 300x300
+maximum intersection-tree depth ........ : 3
+adaptive intersection-tree depth control : ON
+minimum intensity contribution ......... : 0.00390625
+lighting model ......................... : Whitted lighting model
+depth cueing range ..................... : 0.0 - INFINITY
+shadows ................................ : ON
+shadows cache .......................... : ON
+number of light sources ................ : 2
+number of primitive objects ............ : 55
+number of textured primitives .......... : 15
+total number of patches ................ : 66974
+scene extent subdivision ............... : 10
+nurbs extent subdivision ............... : 10
+max uniform subdivision depth .......... : 2
+min patch flatness ..................... : 1.00%
+
+number of rays traced ..................... : 369664
+number of shadows rays .................... : 619183
+total number of ray-extent checks ......... : 35226901
+number of ray-object intersections ........ : 350828 (94.90%)
+number of shadow ray-object intersections . : 406915 (65.72%)
+
+number of ray-patch intersections calls ........ : 3318542
+number of tests resolved with second extent .... : 320344 (9.65%)
+
+Antialiasing statistic
+----------------------
+Algorithm .............................. : adaptive (fast)
+Subdivision level ...................... : 2
+Threshold .............................. : 0.30
+Number of required samples ............. : 516270
+Number of computed samples ............. : 206327
+Number of reused samples ............... : 309943
+
+Seads statistics : Scene seads
+---------------------------------------------------------------
+object tested per ray ......................... : 5.08
+box tested per ray ............................ : 28.52
+
+object tested per normal ray .................. : 6.11
+object tested per shadow ray .................. : 4.01
+box tested per normal ray ..................... : 30.85
+box tested per shadow ray ..................... : 26.08
+percentage empty voxel ........................ : 52.00%
+average objects per noempty voxel ............. : 1.95
+---------------------------------------------------------------
+
+Seads statistics : Second level
+---------------------------------------------------------------
+object tested per ray ......................... : 1.11
+box tested per ray ............................ : 2.85
+
+object tested per normal ray .................. : 1.09
+object tested per shadow ray .................. : 1.16
+box tested per normal ray ..................... : 2.55
+box tested per shadow ray ..................... : 3.50
+percentage empty voxel ........................ : 50.36%
+average objects per noempty voxel ............. : 1.76
+---------------------------------------------------------------
+
+shadows cache hit ratio ................ : 0.814
+
+preprocessing time ..................... :  0h   0'  4.02''
+ray tracing processing time ............ :  0h   0'  43.51''
+total processing time .................. :  0h   0'  47.53''
+

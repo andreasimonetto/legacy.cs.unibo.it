@@ -1,0 +1,35 @@
+29
+ethyl_alcool          1.36
+water                 1.33
+air                   1.00029
+bisulphide_of_carbon  1.63
+calcite_1             1.658
+calcite_2             1.486
+diamond               2.42
+dolomite_1            1.681
+dolomite_2            1.500
+ethane                1.36
+ice_1                 1.309
+ice_2                 1.313
+polystyrene           1.55
+quartz_1              1.544
+quartz_2              1.553
+molten_quartz         1.46
+sodium_chloride       1.53
+siderite_1            1.875
+siderite_2            1.635
+sugar_in_water_30     1.38
+sugar_in_water_80     1.49
+empty_space           1.0
+glass_crown           1.52
+glass_dense_flint     1.66
+glass_flint           1.72
+glass_flint           1.89
+wurtzite_1            2.356
+wurtzite_2            2.378
+sapphire              1.77
+Contiene gli indici di rifrazione delle sostanze piu' diffuse
+La prima riga del file indica il numero di righe di input, le
+successive indicano il nome del materiale e il valore
+corrispondente. Il nome non deve contenere spazi. Non cancellate
+queste righe, spoastarle in avanti per aggiungere indici.

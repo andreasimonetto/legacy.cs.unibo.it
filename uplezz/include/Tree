@@ -1,0 +1,27 @@
+#ifndef _UPLEZZ_TREE_
+#define _UPLEZZ_TREE_
+#include "uplezz.h"
+#include "mge/Object"
+#include "mre/Object"
+#include "mre/RenderEngine"
+#include "mre/SceneFactory"
+#include "mre/SceneManager"
+
+/** Albero. Ostacolo "unmoveable": &egrave; un elemento statico della scena, 
+oltre che uno scomodo intralcio.
+*/
+class Tree : public mge::Object, public mre::Object {
+	private:
+		mre::Object *tree;
+	public:
+		Tree(unsigned row, unsigned col) : mge::Object(row, col) {
+			tree = mre::SceneFactory::getInstance()->loadMesh("data/objects/tree1.obj");
+			move(CELL_SIZE * getRow() + 0.5 * CELL_SIZE, 0.0, CELL_SIZE * getCol() + 0.5 * CELL_SIZE);
+		}
+
+		int getSymbol() const { return mge::Object::SYMBOL_TREE; }
+		virtual void render() const { mre::RenderEngine::getInstance()->render(tree); }
+};
+
+#endif
+

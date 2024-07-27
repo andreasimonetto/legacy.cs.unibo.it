@@ -1,0 +1,13 @@
+<area shape="rect" href="$classmge_1_1GameEngine.html" title="Motore di gioco." alt="" coords="644,60,772,87">
+<area shape="rect" href="$classsys_1_1Object.html" title="Oggetto di sistema." alt="" coords="215,11,303,37">
+<area shape="rect" href="$classmge_1_1Object.html" title="Oggetti del motore di gioco." alt="" coords="421,28,512,55">
+<area shape="rect" href="$classmre_1_1Object.html" title="Oggetto &quot;renderable&quot;." alt="" coords="423,196,511,223">
+<area shape="rect" href="$classmge_1_1Matrix.html" title="Classe matrice generica." alt="" coords="405,91,528,117">
+<area shape="rect" href="$classmre_1_1Plane.html" title="Piano." alt="" coords="667,196,749,223">
+<area shape="rect" href="$classUplezzTimer.html" title="Timer." alt="" coords="661,348,755,375">
+<area shape="rect" href="$classmre_1_1SkyBox.html" title="&quot;Scatola&quot; contenente lo sfondo." alt="" coords="660,247,756,273">
+<area shape="rect" href="$classmre_1_1Material.html" title="Materiali." alt="" coords="211,117,307,144">
+<area shape="rect" href="$classmre_1_1Texture2D.html" title="Texture bidimensionale." alt="" coords="5,269,117,296">
+<area shape="rect" href="$classmre_1_1Vector3f.html" title="Vettore tridimensionale di float." alt="" coords="209,207,308,233">
+<area shape="rect" href="$classsys_1_1Clock.html" title="Orologio." alt="" coords="425,385,508,412">
+<area shape="rect" href="$classmre_1_1Light.html" title="Punto luce." alt="" coords="668,297,748,324">

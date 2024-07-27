@@ -1,0 +1,146 @@
+#ifndef _UPLEZZ_WATER_
+#define _UPLEZZ_WATER_
+#include "uplezz.h"
+#include "mge/GameEngine"
+#include "mge/Object"
+#include "mre/Object"
+#include "mre/RenderEngine"
+#include "mre/SceneFactory"
+#include "mre/SceneManager"
+#include "sys/Timer"
+
+#include "GL/gl.h"
+
+using namespace sys;
+using namespace mre;
+
+/** Acqua. Altro ostacolo "unmoveable": &egrave; un elemento dinamico della 
+scena, oltre che uno scomodo intralcio.
+*/
+class Water : public mge::Object, public mre::Object {
+	private:
+		float waterPos;
+		Timer waterTimer;
+		Material edges;
+	public:
+		Water(unsigned row, unsigned col) :
+			mge::Object(row, col),
+			waterPos(0.0),
+			waterTimer(200000)
+		{
+			material.attachTexture(SceneFactory::getInstance()->loadTexture2D("data/textures/water2.ppm"));
+			material.setAmbient(0.25, 0.25, 1.0, 0.5);
+			material.setDiffuse(0.0, 0.0, 0.0);
+			material.setSpecular(0.0, 0.0, 0.0);
+			material.setShininess(2.0);
+
+			//SceneManager::getInstance()->addObject(this);
+			waterTimer.restart();
+		}
+
+		int getSymbol() const { return mge::Object::SYMBOL_WATER; }
+
+		virtual void render() const
+		{
+		mge::Grid *grid = mge::GameEngine::getInstance()->getGrid();
+		float matKa[4] = { 0.875, 0.875, 0.875, 1.0 };
+		float matKd[4] = { 1.0, 1.0, 1.0, 1.0 };
+		float matKs[4] = { 0.0, 0.0, 1.0, 1.0 };
+		float depth = 4.0;
+
+			material.bind();
+
+			glBegin(GL_QUADS);
+	                glNormal3f(0.0, 1.0, 0.0);
+			glTexCoord2f(waterPos, 0.0);
+			glVertex3f(CELL_SIZE * row, -depth, CELL_SIZE * col);
+	                glNormal3f(0.0, 1.0, 0.0);
+			glTexCoord2f(waterPos, 2.0);
+			glVertex3f(CELL_SIZE * row, -depth, CELL_SIZE * (col + 1));
+	                glNormal3f(0.0, 1.0, 0.0);
+			glTexCoord2f(waterPos + 2.0, 2.0);
+			glVertex3f(CELL_SIZE * (row + 1), -depth, CELL_SIZE * (col + 1));
+	                glNormal3f(0.0, 1.0, 0.0);
+			glTexCoord2f(waterPos + 2.0, 0.0);
+			glVertex3f(CELL_SIZE * (row + 1), -depth, CELL_SIZE * col);
+			glEnd();
+
+			material.unbind();
+
+			matKa[3] = 1.0;
+			matKa[0] = matKa[1] = matKa[2] = 0.6;
+			matKd[3] = 1.0;
+			matKd[0] = matKd[1] = matKd[2] = 0.2;
+			matKs[2] = 0.0;
+			glMaterialfv(GL_FRONT, GL_AMBIENT, matKa);
+			glMaterialfv(GL_FRONT, GL_DIFFUSE, matKd);
+			glMaterialfv(GL_FRONT, GL_SPECULAR, matKs);
+
+			glMaterialf(GL_FRONT, GL_SHININESS, 1);
+
+			if(row == 0 || !grid->get(row - 1, col) || grid->get(row - 1, col)->getSymbol() != mge::Object::SYMBOL_WATER) {
+				glBegin(GL_QUADS);
+			        glNormal3f(1.0, 0.0, 0.0);
+				glVertex3f(CELL_SIZE * row, -depth, CELL_SIZE * col);
+			        glNormal3f(1.0, 0.0, 0.0);
+				glVertex3f(CELL_SIZE * row, 0.0, CELL_SIZE * col);
+			        glNormal3f(1.0, 0.0, 0.0);
+				glVertex3f(CELL_SIZE * row, 0.0, CELL_SIZE * (col + 1));
+			        glNormal3f(1.0, 0.0, 0.0);
+				glVertex3f(CELL_SIZE * row, -depth, CELL_SIZE * (col + 1));
+				glEnd();
+			}
+
+			if(col == 0 || !grid->get(row, col - 1) || grid->get(row, col - 1)->getSymbol() != mge::Object::SYMBOL_WATER) {
+				glBegin(GL_QUADS);
+			        glNormal3f(0.0, 0.0, 1.0);
+				glVertex3f(CELL_SIZE * row, -depth, CELL_SIZE * col);
+			        glNormal3f(0.0, 0.0, 1.0);
+				glVertex3f(CELL_SIZE * (row + 1), -depth, CELL_SIZE * col);
+			        glNormal3f(0.0, 0.0, 1.0);
+				glVertex3f(CELL_SIZE * (row + 1), 0.0, CELL_SIZE * col);
+			        glNormal3f(0.0, 0.0, 1.0);
+				glVertex3f(CELL_SIZE * row, 0.0, CELL_SIZE * col);
+				glEnd();
+			}
+
+			if(row == grid->getRows() - 1 || !grid->get(row + 1, col) || grid->get(row + 1, col)->getSymbol() != mge::Object::SYMBOL_WATER) {
+				glBegin(GL_QUADS);
+			        glNormal3f(-1.0, 0.0, 0.0);
+				glVertex3f(CELL_SIZE * (row + 1), -depth, CELL_SIZE * col);
+			        glNormal3f(-1.0, 0.0, 0.0);
+				glVertex3f(CELL_SIZE * (row + 1), -depth, CELL_SIZE * (col + 1));
+			        glNormal3f(-1.0, 0.0, 0.0);
+				glVertex3f(CELL_SIZE * (row + 1), 0.0, CELL_SIZE * (col + 1));
+			        glNormal3f(-1.0, 0.0, 0.0);
+				glVertex3f(CELL_SIZE * (row + 1), 0.0, CELL_SIZE * col);
+				glEnd();
+			}
+
+			if(col == grid->getCols() - 1 || !grid->get(row, col + 1) || grid->get(row, col + 1)->getSymbol() != mge::Object::SYMBOL_WATER) {
+				glBegin(GL_QUADS);
+			        glNormal3f(0.0, 0.0, -1.0);
+				glVertex3f(CELL_SIZE * row, -depth, CELL_SIZE * (col + 1));
+			        glNormal3f(0.0, 0.0, -1.0);
+				glVertex3f(CELL_SIZE * row, 0.0, CELL_SIZE * (col + 1));
+			        glNormal3f(0.0, 0.0, -1.0);
+				glVertex3f(CELL_SIZE * (row + 1), 0.0, CELL_SIZE * (col + 1));
+			        glNormal3f(0.0, 0.0, -1.0);
+				glVertex3f(CELL_SIZE * (row + 1), -depth, CELL_SIZE * (col + 1));
+				glEnd();
+			}
+		}
+
+		virtual void run() {
+			if(waterTimer.hasExpired()) {
+				waterPos += 0.015625;
+				while(waterPos >= 1.0)
+					waterPos -= 1.0;
+				waterTimer.restart();
+				RenderEngine::getInstance()->postRedisplay();
+			}
+		}
+};
+
+#endif
+

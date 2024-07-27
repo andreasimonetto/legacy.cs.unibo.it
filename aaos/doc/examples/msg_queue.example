@@ -1,0 +1,25 @@
+msg_t *mq = mkEmptyMessageQ();
+msg_t *it;
+
+/* Some insertion on mq ... */
+	
+if(!emptyMessageQ(mq)) {
+	/* From the first MSG inserted to the last one. */
+	it = headMessage(mq);
+	do {
+		/* Operations on it ... */
+		
+		it = it -> m_next;
+	} while(it != headMessage(mq));
+	
+	/* From the last MSG inserted to the first one. */
+	it = mq;
+	do {
+		/* Operations on it ... */
+		
+		it = it -> m_prev;
+	} while(it != mq);
+}
+else {
+	/* Queue is empty. */
+}

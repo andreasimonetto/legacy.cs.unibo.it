@@ -1,0 +1,25 @@
+tcb_t *tq = mkEmptyThreadQ();
+tcb_t *it;
+
+/* Some insertion on tq ... */
+	
+if(!emptyThreadQ(tq)) {
+	/* From the first thread inserted to the last one. */
+	it = headThread(tq);
+	do {
+		/* Operations on it ... */
+		
+		it = it -> t_next;
+	} while(it != headThread(tq));
+	
+	/* From the last thread inserted to the first one. */
+	it = tq;
+	do {
+		/* Operations on it ... */
+		
+		it = it -> t_prev;
+	} while(it != tq);
+}
+else {
+	/* Queue is empty. */
+}

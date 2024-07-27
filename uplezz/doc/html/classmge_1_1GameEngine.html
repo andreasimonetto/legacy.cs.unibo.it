@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Uplezz: Riferimenti per la classe mge::GameEngine</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<div align="center"><img src="images/banner.png" /></div>
+<div style="padding-left: 2em; padding-right: 2em; padding-bottom: 1em;">
+
+<!-- Generato da Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Pagina&nbsp;Principale</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace</span></a></li>
+      <li class="current"><a href="classes.html"><span>Classi</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="classes.html"><span>Lista&nbsp;in&nbsp;ordine&nbsp;alfabetico</span></a></li>
+      <li><a href="annotated.html"><span>Elenco&nbsp;dei&nbsp;tipi&nbsp;composti</span></a></li>
+      <li><a href="hierarchy.html"><span>Gerarchia&nbsp;delle&nbsp;classi</span></a></li>
+      <li><a href="functions.html"><span>Membri&nbsp;dei&nbsp;composti</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacemge.html">mge</a>::<a class="el" href="classmge_1_1GameEngine.html">GameEngine</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Riferimenti per la classe mge::GameEngine</h1><!-- doxytag: class="mge::GameEngine" --><!-- doxytag: inherits="sys::Object" --><div class="dynheader">
+Diagramma delle classi per mge::GameEngine</div>
+<div class="dynsection">
+<p><center><img src="classmge_1_1GameEngine__inherit__graph.png" border="0" usemap="#mge_1_1GameEngine__inherit__map" alt="Inheritance graph"></center>
+<map name="mge_1_1GameEngine__inherit__map">
+<area shape="rect" href="classUplezzEngine.html" title="Motore di Uplezz." alt="" coords="19,155,120,181"><area shape="rect" href="classsys_1_1Object.html" title="Oggetto di sistema." alt="" coords="25,5,113,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagramma di collaborazione per mge::GameEngine:</div>
+<div class="dynsection">
+<p><center><img src="classmge_1_1GameEngine__coll__graph.png" border="0" usemap="#mge_1_1GameEngine__coll__map" alt="Collaboration graph"></center>
+<map name="mge_1_1GameEngine__coll__map">
+<area shape="rect" href="classsys_1_1Object.html" title="Oggetto di sistema." alt="" coords="5,5,93,32"><area shape="rect" href="classmge_1_1Object.html" title="Oggetti del motore di gioco." alt="" coords="59,83,149,109"><area shape="rect" href="classmge_1_1Matrix.html" title="Classe matrice generica." alt="" coords="173,83,296,109"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="classmge_1_1GameEngine-members.html">Elenco di tutti i membri.</a><hr><a name="_details"></a><h2>Descrizione dettagliata</h2>
+Motore di gioco. 
+<p>
+Questa &egrave; la classe di base per implementare Uplezz. Dev'essere estesa per gestire la creazione degli oggetti di gioco. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Tipi pubblici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab4">Direction</a> { <a class="el" href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab47c986b31fa878bb643ff3220a34ccb7e">DIR_NORTH</a>, 
+<a class="el" href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab4c879e6eed2e0c2b1d9f07eff59e893a3">DIR_SOUTH</a>, 
+<a class="el" href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab4aae16da9057bf68b191d9da082de05ec">DIR_WEST</a>, 
+<a class="el" href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab4a6dda766c5dc49e880032a87755a894b">DIR_EAST</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Punti cardinali.  <a href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab4">Continua...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd63">Action</a> { <a class="el" href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd63cfe4262efed07112028d1071f74ceb04">ACTION_NONE</a>, 
+<a class="el" href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd6390221a9c0a5fda1e1a456472af5d958c">ACTION_WALK</a>, 
+<a class="el" href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd6377fe44f4fcc5b0085600af4ba943ea79">ACTION_PUSH</a>, 
+<a class="el" href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd636b91a98b00ee0aac433e1be5064bd2dc">ACTION_EXIT</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Azioni che il giocatore pu&ograve; svolgere.  <a href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd63">Continua...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="classmge_1_1Object.html">mge::Object</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1GameEngine.html#4fcfa6055faa86e7b38d452d074ceadd">create</a> (<a class="el" href="classmge_1_1Object.html#b5209e691586ac8fba4fb56b0b3ebc85">mge::Object::Symbol</a> s, unsigned row, unsigned col)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea un oggetto, dato un simbolo ed una posizione sulla griglia.  <a href="#4fcfa6055faa86e7b38d452d074ceadd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1GameEngine.html#880bda80853d84be420a9124bcf30849">loadGrid</a> (const std::string &amp;path)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carica una griglia da file, dato il percorso.  <a href="#880bda80853d84be420a9124bcf30849"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1GameEngine.html#02c3450731d908a4835694c90ff1c00f">reloadGrid</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ricarica la griglia corrente (se presente).  <a href="#02c3450731d908a4835694c90ff1c00f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classmge_1_1Matrix.html">Grid</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1GameEngine.html#bb56c5c9f775693e73dee0fca8afc117">getGrid</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna la griglia corrente.  <a href="#bb56c5c9f775693e73dee0fca8afc117"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd63">Action</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1GameEngine.html#d802ae5d322c1c34df1dcfd4946cf34a">movePlayer</a> (<a class="el" href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab4">Direction</a> dir)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Muove il giocatore in una direzione.  <a href="#d802ae5d322c1c34df1dcfd4946cf34a"></a><br></td></tr>
+</table>
+<hr><h2>Documentazione dei tipi enumerati (enum)</h2>
+<a class="anchor" name="3a0276f29561292459249f66c3632ab4"></a><!-- doxytag: member="mge::GameEngine::Direction" ref="3a0276f29561292459249f66c3632ab4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab4">mge::GameEngine::Direction</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Punti cardinali. 
+<p>
+<dl compact><dt><b>Valori dei tipi enumerati: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="3a0276f29561292459249f66c3632ab47c986b31fa878bb643ff3220a34ccb7e"></a><!-- doxytag: member="DIR_NORTH" ref="3a0276f29561292459249f66c3632ab47c986b31fa878bb643ff3220a34ccb7e" args="" -->DIR_NORTH</em>&nbsp;</td><td>
+Nord. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="3a0276f29561292459249f66c3632ab4c879e6eed2e0c2b1d9f07eff59e893a3"></a><!-- doxytag: member="DIR_SOUTH" ref="3a0276f29561292459249f66c3632ab4c879e6eed2e0c2b1d9f07eff59e893a3" args="" -->DIR_SOUTH</em>&nbsp;</td><td>
+Sud. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="3a0276f29561292459249f66c3632ab4aae16da9057bf68b191d9da082de05ec"></a><!-- doxytag: member="DIR_WEST" ref="3a0276f29561292459249f66c3632ab4aae16da9057bf68b191d9da082de05ec" args="" -->DIR_WEST</em>&nbsp;</td><td>
+Oves. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="3a0276f29561292459249f66c3632ab4a6dda766c5dc49e880032a87755a894b"></a><!-- doxytag: member="DIR_EAST" ref="3a0276f29561292459249f66c3632ab4a6dda766c5dc49e880032a87755a894b" args="" -->DIR_EAST</em>&nbsp;</td><td>
+Est. </td></tr>
+</table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3cea212e7f220544727cad8b9820cd63"></a><!-- doxytag: member="mge::GameEngine::Action" ref="3cea212e7f220544727cad8b9820cd63" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd63">mge::GameEngine::Action</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Azioni che il giocatore pu&ograve; svolgere. 
+<p>
+<dl compact><dt><b>Valori dei tipi enumerati: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="3cea212e7f220544727cad8b9820cd63cfe4262efed07112028d1071f74ceb04"></a><!-- doxytag: member="ACTION_NONE" ref="3cea212e7f220544727cad8b9820cd63cfe4262efed07112028d1071f74ceb04" args="" -->ACTION_NONE</em>&nbsp;</td><td>
+Nessuna azione. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="3cea212e7f220544727cad8b9820cd6390221a9c0a5fda1e1a456472af5d958c"></a><!-- doxytag: member="ACTION_WALK" ref="3cea212e7f220544727cad8b9820cd6390221a9c0a5fda1e1a456472af5d958c" args="" -->ACTION_WALK</em>&nbsp;</td><td>
+Cammina (se possibile, secondo l'orientamento corrente). </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="3cea212e7f220544727cad8b9820cd6377fe44f4fcc5b0085600af4ba943ea79"></a><!-- doxytag: member="ACTION_PUSH" ref="3cea212e7f220544727cad8b9820cd6377fe44f4fcc5b0085600af4ba943ea79" args="" -->ACTION_PUSH</em>&nbsp;</td><td>
+Spingi (se l'oggetto adiacente &egrave; <em>moveable</em> e non <em>bloccato</em>). </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="3cea212e7f220544727cad8b9820cd636b91a98b00ee0aac433e1be5064bd2dc"></a><!-- doxytag: member="ACTION_EXIT" ref="3cea212e7f220544727cad8b9820cd636b91a98b00ee0aac433e1be5064bd2dc" args="" -->ACTION_EXIT</em>&nbsp;</td><td>
+Esci dal livello corrente. </td></tr>
+</table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>Documentazione delle funzioni membro</h2>
+<a class="anchor" name="4fcfa6055faa86e7b38d452d074ceadd"></a><!-- doxytag: member="mge::GameEngine::create" ref="4fcfa6055faa86e7b38d452d074ceadd" args="(mge::Object::Symbol s, unsigned row, unsigned col)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classmge_1_1Object.html">mge::Object</a>* mge::GameEngine::create           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmge_1_1Object.html#b5209e691586ac8fba4fb56b0b3ebc85">mge::Object::Symbol</a>&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Crea un oggetto, dato un simbolo ed una posizione sulla griglia. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>s</em>&nbsp;</td><td>Simbolo dell'oggetto. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>row</em>&nbsp;</td><td>Posizione sulla griglia (asse N/S). </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>col</em>&nbsp;</td><td>Posizione sulla griglia (asse W/E). </td></tr>
+  </table>
+</dl>
+
+<p>Implementato in <a class="el" href="classUplezzEngine.html#5791869f399ba23e8334bcce962387e7">UplezzEngine</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="880bda80853d84be420a9124bcf30849"></a><!-- doxytag: member="mge::GameEngine::loadGrid" ref="880bda80853d84be420a9124bcf30849" args="(const std::string &amp;path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int mge::GameEngine::loadGrid           </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>path</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Carica una griglia da file, dato il percorso. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="02c3450731d908a4835694c90ff1c00f"></a><!-- doxytag: member="mge::GameEngine::reloadGrid" ref="02c3450731d908a4835694c90ff1c00f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void mge::GameEngine::reloadGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ricarica la griglia corrente (se presente). 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="bb56c5c9f775693e73dee0fca8afc117"></a><!-- doxytag: member="mge::GameEngine::getGrid" ref="bb56c5c9f775693e73dee0fca8afc117" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmge_1_1Matrix.html">Grid</a>* mge::GameEngine::getGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ritorna la griglia corrente. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="d802ae5d322c1c34df1dcfd4946cf34a"></a><!-- doxytag: member="mge::GameEngine::movePlayer" ref="d802ae5d322c1c34df1dcfd4946cf34a" args="(Direction dir)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmge_1_1GameEngine.html#3cea212e7f220544727cad8b9820cd63">Action</a> mge::GameEngine::movePlayer           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmge_1_1GameEngine.html#3a0276f29561292459249f66c3632ab4">Direction</a>&nbsp;</td>
+          <td class="paramname"> <em>dir</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Muove il giocatore in una direzione. 
+<p>
+
+</div>
+</div><p>
+<hr>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
+<li>GameEngine</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed Nov 12 10:08:56 2008 for Uplezz by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 
+1.5.6</small></address></div>
+</body>
+</html>

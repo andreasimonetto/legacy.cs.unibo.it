@@ -1,0 +1,10 @@
+11
+-L300
+-d3
+-w
+-s
+-D2
+-AF
+-t0.300000
+-S Knick_Knack_Anim.sta
+-o Knick_Knack_Anim23.hr

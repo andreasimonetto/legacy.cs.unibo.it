@@ -1,0 +1,25 @@
+#ifndef _SYS_OBJECT_
+#define _SYS_OBJECT_
+
+namespace sys {
+
+/** Oggetto di sistema. Un oggetto &egrave; caratterizzato da un simbolo,
+dalla capacit&agrave; di essere visualizzato, rappresentato, e dal suo
+behaviour o comportamento, che si concretizza nella domanda "cosa f&agrave; 
+quando viene eseguito?" (metodo run()).
+*/
+class Object {
+	public:
+		virtual ~Object() { }
+		/** Ritorna il simbolo dell'oggetto */
+		virtual int getSymbol() const { return -1; }
+		/** Esegui l'oggetto */
+		virtual void run() { }
+		/** Visualizza l'oggetto */
+		virtual void render() const = 0;
+};
+
+};
+
+#endif
+

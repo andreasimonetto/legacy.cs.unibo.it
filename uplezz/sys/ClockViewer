@@ -1,0 +1,45 @@
+#ifndef _SYS_CLOCK_VIEWER_
+#define _SYS_CLOCK_VIEWER_
+
+#include <sys/time.h>
+#include <time.h>
+
+namespace sys {
+
+/** Visualizzatore di data/ora. Serve per ricevere tutte le informazioni
+associate ad un Clock.
+*/
+class ClockViewer {
+	private:
+		suseconds_t tv_usec;
+		struct tm tm;
+	public:
+		/** Costruttore parametrico.
+			\param[in] Istanza di classe Clock
+		*/
+		ClockViewer(const Clock &clock);
+
+		/** Ritorna l'anno segnato dall'orologio */
+		int getYear() const { return tm.tm_year; }
+		/** Mese */
+		int getMonth() const { return tm.tm_mon; }
+		/** Giorno (intero) */
+		int getDay() const { return tm.tm_mday; }
+		/** Giorno della settimana (0=Domenica, 1=Luned&igrave;, ecc) */
+		int getDayOfTheWeek() const { return tm.tm_wday; }
+		/** Giorno dell'anno */
+		int getDayOfTheYear() const { return tm.tm_yday; }
+		/** Ora */
+		int getHours() const { return tm.tm_hour; }
+		/** Minuti */
+		int getMinutes() const { return tm.tm_min; }
+		/** Secondi */
+		int getSeconds() const { return tm.tm_sec; }
+		/** Microsecondi */
+		int getMicroSeconds() const { return tv_usec; }
+};
+
+};
+
+#endif
+

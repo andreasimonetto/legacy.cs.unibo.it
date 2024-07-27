@@ -1,0 +1,32 @@
+#ifndef _MRE_TEXTURE_
+#define _MRE_TEXTURE_
+#include <string>
+
+namespace mre {
+
+/** Texture bidimensionale
+\sa SceneFactory, SceneManager
+*/
+class Texture2D {
+	friend class SceneFactory;
+	private:
+		unsigned texId;
+		unsigned width, height, depth;
+
+		Texture2D(const std::string &path);
+	public:
+		/** Attiva la texture corrente */
+		void bind() const;
+		/** Disattiva la texture corrente */
+		void unbind() const;
+
+		/** Ritorna la larghezza della texture */
+		unsigned getWidth() const { return width; }
+
+		/** Ritorna l'altezza della texture */
+		unsigned getHeight() const { return height; }
+};
+
+};
+#endif
+

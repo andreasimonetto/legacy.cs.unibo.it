@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>My Render Engine: Riferimenti per il file /home/simonett/uplezz/src/mre/mre.cc</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generato da Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Pagina&nbsp;Principale</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Riferimenti per il file /home/simonett/uplezz/src/mre/mre.cc</h1><code>#include &quot;<a class="el" href="alpha_8h.html">mre/alpha.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="image_8h.html">mre/image.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Animation.html">mre/Animation</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Camera.html">mre/Camera</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Cube.html">mre/Cube</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Light.html">mre/Light</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Material.html">mre/Material</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Mesh.html">mre/Mesh</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Object.html">mre/Object</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Plane.html">mre/Plane</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="RenderEngine.html">mre/RenderEngine</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="SceneFactory.html">mre/SceneFactory</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="SceneManager.html">mre/SceneManager</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="SkyBox.html">mre/SkyBox</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Sphere.html">mre/Sphere</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="Texture2D.html">mre/Texture2D</a>&quot;</code><br>
+<code>#include &quot;sys/System&quot;</code><br>
+<code>#include &quot;sys/Timer&quot;</code><br>
+<code>#include &lt;dirent.h&gt;</code><br>
+<code>#include &lt;fnmatch.h&gt;</code><br>
+<code>#include &lt;math.h&gt;</code><br>
+<code>#include &lt;stdio.h&gt;</code><br>
+<code>#include &lt;stdlib.h&gt;</code><br>
+<code>#include &lt;string.h&gt;</code><br>
+<code>#include &lt;iostream&gt;</code><br>
+<code>#include &lt;map&gt;</code><br>
+<code>#include &lt;string&gt;</code><br>
+<code>#include &lt;GL/gl.h&gt;</code><br>
+<code>#include &lt;GL/glu.h&gt;</code><br>
+<code>#include &lt;GL/glx.h&gt;</code><br>
+
+<p>
+<div class="dynheader">
+Grafo delle dipendenze di inclusione per mre.cc:</div>
+<div class="dynsection">
+<p><center><img src="mre_8cc__incl.png" border="0" usemap="#/home/simonett/uplezz/src/mre/mre.cc_map" alt=""></center>
+<map name="/home/simonett/uplezz/src/mre/mre.cc_map">
+<area shape="rect" href="alpha_8h.html" title="mre/alpha.h" alt="" coords="19,155,107,181"><area shape="rect" href="image_8h.html" title="mre/image.h" alt="" coords="13,229,107,256"><area shape="rect" href="Animation.html" title="mre/Animation" alt="" coords="1516,80,1620,107"><area shape="rect" href="Object.html" title="mre/Object" alt="" coords="1081,304,1167,331"><area shape="rect" href="Material.html" title="mre/Material" alt="" coords="743,379,836,405"><area shape="rect" href="Texture2D.html" title="mre/Texture2D" alt="" coords="695,453,801,480"><area shape="rect" href="RenderEngine.html" title="mre/RenderEngine" alt="" coords="413,155,541,181"><area shape="rect" href="SceneFactory.html" title="mre/SceneFactory" alt="" coords="1375,155,1503,181"><area shape="rect" href="Camera.html" title="mre/Camera" alt="" coords="2069,229,2160,256"><area shape="rect" href="Cube.html" title="mre/Cube" alt="" coords="877,229,955,256"><area shape="rect" href="Light.html" title="mre/Light" alt="" coords="1664,229,1739,256"><area shape="rect" href="Mesh.html" title="mre/Mesh" alt="" coords="1965,229,2045,256"><area shape="rect" href="Plane.html" title="mre/Plane" alt="" coords="1029,229,1109,256"><area shape="rect" href="SkyBox.html" title="mre/SkyBox" alt="" coords="659,229,752,256"><area shape="rect" href="Sphere.html" title="mre/Sphere" alt="" coords="1133,229,1221,256"><area shape="rect" href="SceneManager.html" title="mre/SceneManager" alt="" coords="1760,155,1893,181"><area shape="rect" href="Vector3f.html" title="mre/Vector3f" alt="" coords="1837,379,1933,405"><area shape="rect" href="Panel.html" title="mre/Panel" alt="" coords="1245,229,1325,256"><area shape="rect" href="Vector2f.html" title="mre/Vector2f" alt="" coords="1957,379,2053,405"></map>
+</div>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Namespace</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">namespace &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemre.html">mre</a></td></tr>
+
+<tr><td colspan="2"><br><h2>Definizioni</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="mre_8cc.html#3d02bc609deaa381a71ed6334084ef52">SNAPSHOT_DIR</a>&nbsp;&nbsp;&nbsp;&quot;data/snapshots/&quot;</td></tr>
+
+<tr><td colspan="2"><br><h2>Funzioni</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemre.html#612b4c77c6197a7d4d6a58a26e12787e">mre::snapshot_dir_filter</a> (const struct dirent *entry)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemre.html#8cdb5a0e53d7e934b762a9662c5e1da4">mre::mre_load_ppm</a> (const char *path, unsigned *<a class="el" href="alpha_8cc.html#ca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, unsigned *<a class="el" href="alpha_8cc.html#b2e78c61905b4419fcc7b4cfc500fe85">height</a>, unsigned *depth)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemre.html#80f5c9c93655e2ff0dbc4166476b26ce">mre::glWindowPos2f</a> (GLfloat, GLfloat)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemre.html#106fad6ba09ce7a38ce38ba18ef360e4">mre::__mre_close</a> (int status)</td></tr>
+
+</table>
+<hr><h2>Documentazione delle definizioni</h2>
+<a class="anchor" name="3d02bc609deaa381a71ed6334084ef52"></a><!-- doxytag: member="mre.cc::SNAPSHOT_DIR" ref="3d02bc609deaa381a71ed6334084ef52" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SNAPSHOT_DIR&nbsp;&nbsp;&nbsp;&quot;data/snapshots/&quot;          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generato il Sun Oct 19 17:31:32 2008 per My Render Engine da&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.6 </small></address>
+</body>
+</html>

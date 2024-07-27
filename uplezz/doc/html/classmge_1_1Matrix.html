@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Uplezz: Template per la classe mge::Matrix&lt; T &gt;</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<div align="center"><img src="images/banner.png" /></div>
+<div style="padding-left: 2em; padding-right: 2em; padding-bottom: 1em;">
+
+<!-- Generato da Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Pagina&nbsp;Principale</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace</span></a></li>
+      <li class="current"><a href="classes.html"><span>Classi</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="classes.html"><span>Lista&nbsp;in&nbsp;ordine&nbsp;alfabetico</span></a></li>
+      <li><a href="annotated.html"><span>Elenco&nbsp;dei&nbsp;tipi&nbsp;composti</span></a></li>
+      <li><a href="hierarchy.html"><span>Gerarchia&nbsp;delle&nbsp;classi</span></a></li>
+      <li><a href="functions.html"><span>Membri&nbsp;dei&nbsp;composti</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacemge.html">mge</a>::<a class="el" href="classmge_1_1Matrix.html">Matrix</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Template per la classe mge::Matrix&lt; T &gt;</h1><!-- doxytag: class="mge::Matrix" -->
+<p>
+<a href="classmge_1_1Matrix-members.html">Elenco di tutti i membri.</a><hr><a name="_details"></a><h2>Descrizione dettagliata</h2>
+<h3>template&lt;class T&gt;<br>
+ class mge::Matrix&lt; T &gt;</h3>
+
+Classe matrice generica. 
+<p>
+Implementa una matrice a dimensione fissa e con elementi di tipo generico <em>T</em>. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Membri pubblici</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1Matrix.html#6939541450d417b79b1e1316365550a3">Matrix</a> (unsigned rows, unsigned cols)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Costruttore parametrico.  <a href="#6939541450d417b79b1e1316365550a3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0dbfbd89b1b6368a16bf40ed38355d1a"></a><!-- doxytag: member="mge::Matrix::Matrix" ref="0dbfbd89b1b6368a16bf40ed38355d1a" args="(const Matrix&lt; T &gt; &amp;m)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1Matrix.html#0dbfbd89b1b6368a16bf40ed38355d1a">Matrix</a> (const <a class="el" href="classmge_1_1Matrix.html">Matrix</a>&lt; T &gt; &amp;m)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Costruttore copia. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0fc41238836337a972fbf9c9698eab1b"></a><!-- doxytag: member="mge::Matrix::getRows" ref="0fc41238836337a972fbf9c9698eab1b" args="() const " -->
+unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1Matrix.html#0fc41238836337a972fbf9c9698eab1b">getRows</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna il numero di righe della matrice. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="de33ecf015844afab34efd18b12d2664"></a><!-- doxytag: member="mge::Matrix::getCols" ref="de33ecf015844afab34efd18b12d2664" args="() const " -->
+unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1Matrix.html#de33ecf015844afab34efd18b12d2664">getCols</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna il numero di colonne della matrice. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1Matrix.html#1a7899f0f3a21c4d26696e4246e62c99">get</a> (unsigned i, unsigned j) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ritorna l'elemento di indici <em>&lt;i</em>,j&gt;.  <a href="#1a7899f0f3a21c4d26696e4246e62c99"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1Matrix.html#413bf36ec540b37f4f0cdbfa7db9d2f7">set</a> (unsigned i, unsigned j, T val)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setta l'elemento <em>&lt;i</em>,j&gt;.  <a href="#413bf36ec540b37f4f0cdbfa7db9d2f7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmge_1_1Matrix.html#89aa1b203c54fcf5c78f9ccca2330848">operator[]</a> (unsigned i)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Opratore di subscript: ritorna la riga <em>i</em>.  <a href="#89aa1b203c54fcf5c78f9ccca2330848"></a><br></td></tr>
+</table>
+<hr><h2>Documentazione dei costruttori e dei distruttori</h2>
+<a class="anchor" name="6939541450d417b79b1e1316365550a3"></a><!-- doxytag: member="mge::Matrix::Matrix" ref="6939541450d417b79b1e1316365550a3" args="(unsigned rows, unsigned cols)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmge_1_1Matrix.html">mge::Matrix</a>&lt; T &gt;::<a class="el" href="classmge_1_1Matrix.html">Matrix</a>           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>cols</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Costruttore parametrico. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rows</em>&nbsp;</td><td>Numero di righe </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>cols</em>&nbsp;</td><td>Numero di colonne </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>Documentazione delle funzioni membro</h2>
+<a class="anchor" name="1a7899f0f3a21c4d26696e4246e62c99"></a><!-- doxytag: member="mge::Matrix::get" ref="1a7899f0f3a21c4d26696e4246e62c99" args="(unsigned i, unsigned j) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classmge_1_1Matrix.html">mge::Matrix</a>&lt; T &gt;::get           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>j</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ritorna l'elemento di indici <em>&lt;i</em>,j&gt;. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>i</em>&nbsp;</td><td>Indice di riga </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>j</em>&nbsp;</td><td>Indice di colonna </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="413bf36ec540b37f4f0cdbfa7db9d2f7"></a><!-- doxytag: member="mge::Matrix::set" ref="413bf36ec540b37f4f0cdbfa7db9d2f7" args="(unsigned i, unsigned j, T val)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmge_1_1Matrix.html">mge::Matrix</a>&lt; T &gt;::set           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>val</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Setta l'elemento <em>&lt;i</em>,j&gt;. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>i</em>&nbsp;</td><td>Indice di riga </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>j</em>&nbsp;</td><td>Indice di colonna </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>val</em>&nbsp;</td><td>Nuovo valore dell'elemento &lt;i, j&gt; </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="89aa1b203c54fcf5c78f9ccca2330848"></a><!-- doxytag: member="mge::Matrix::operator[]" ref="89aa1b203c54fcf5c78f9ccca2330848" args="(unsigned i)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classmge_1_1Matrix.html">mge::Matrix</a>&lt; T &gt;::operator[]           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>i</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Opratore di subscript: ritorna la riga <em>i</em>. 
+<p>
+<dl compact><dt><b>Parametri:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>i</em>&nbsp;</td><td>Indice di riga </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
+<li>Matrix</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed Nov 12 10:08:56 2008 for Uplezz by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 
+1.5.6</small></address></div>
+</body>
+</html>

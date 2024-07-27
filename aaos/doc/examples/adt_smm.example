@@ -1,0 +1,28 @@
+#include <adt.h>
+#define MAX_INFO 100
+	
+struct info {
+	int id;
+	char details[50];
+	char authors[50];
+};
+
+/* 1. Init the memory area needed. */
+void initInfos();
+
+/* 2. Free an element previuosly allocated with allocInfo(). */
+void freeInfo(struct info *m);
+
+/* 3. Allocate an element. Return NULL on failure.
+	NOTE: The initial value of the allocated element is unknown.
+*/
+struct info* allocInfo();
+		
+/* 4. Return an identifier for the element. */
+int getInfoID(const struct info*);
+
+int main() {
+	...
+}
+
+DEF_ADT_SMM(struct info, Info, MAX_INFO) /* WITHOUT the semicolon!! */

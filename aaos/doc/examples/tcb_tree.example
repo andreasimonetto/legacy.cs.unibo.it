@@ -1,0 +1,23 @@
+void tcb_tree_visit(tcb_t *root)
+{
+	/* Operations on root ... */
+	
+	if(!emptyChild(root))
+	{
+	tcb_t *t;
+
+		for(t = root -> t_first_child; t; t = t -> t_next_sibling)
+			tcb_tree_visit(t);
+	}
+}
+
+tcb_t *tree = NULL;
+
+/* Operations on the tree ... */
+
+if(tree) {
+	tcb_tree_visit(tree);
+}
+else {
+	/* Tree is empty. */
+}

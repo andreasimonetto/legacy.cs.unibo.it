@@ -1,0 +1,19 @@
+<area shape="rect" href="$classmge_1_1GameEngine.html" title="Motore di gioco." alt="" coords="147,56,275,83">
+<area shape="rect" href="$classmge_1_1Object.html" title="Oggetti del motore di gioco." alt="" coords="165,183,256,209">
+<area shape="rect" href="$classmre_1_1Object.html" title="Oggetto &quot;renderable&quot;." alt="" coords="167,309,255,336">
+<area shape="rect" href="$classmre_1_1SceneManager.html" title="Gestore della scena." alt="" coords="141,360,280,387">
+<area shape="rect" href="$classUplezzEngine.html" title="Motore di Uplezz." alt="" coords="363,5,464,32">
+<area shape="rect" href="$classExit.html" title="Oggetto &quot;uscita&quot;." alt="" coords="392,107,435,133">
+<area shape="rect" href="$classFountain.html" title="Oggetto fontanella." alt="" coords="377,157,449,184">
+<area shape="rect" href="$classPlayer.html" title="Giocatore." alt="" coords="384,208,443,235">
+<area shape="rect" href="$classTree.html" title="Albero." alt="" coords="389,259,437,285">
+<area shape="rect" href="$classWater.html" title="Acqua." alt="" coords="385,56,441,83">
+<area shape="rect" href="$classmre_1_1Animation.html" title="mre::Animation\&lt; Player \&gt;" alt="" coords="328,309,499,336">
+<area shape="rect" href="$classmre_1_1Animation.html" title="Classe MESH animata." alt="" coords="343,360,484,387">
+<area shape="rect" href="$classmre_1_1Cube.html" title="Cubo." alt="" coords="373,411,453,437">
+<area shape="rect" href="$classmre_1_1Mesh.html" title="Classe per modelli 3D." alt="" coords="372,461,455,488">
+<area shape="rect" href="$classmre_1_1Plane.html" title="Piano." alt="" coords="372,512,455,539">
+<area shape="rect" href="$classmre_1_1SkyBox.html" title="&quot;Scatola&quot; contenente lo sfondo." alt="" coords="365,563,461,589">
+<area shape="rect" href="$classmre_1_1Sphere.html" title="Sfera." alt="" coords="368,613,459,640">
+<area shape="rect" href="$classSplashScreen.html" title="Schermata di caricamento." alt="" coords="363,664,464,691">
+<area shape="rect" href="$classUplezzTimer.html" title="Timer." alt="" coords="367,715,460,741">

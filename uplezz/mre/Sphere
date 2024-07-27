@@ -1,0 +1,32 @@
+#ifndef _MRE_SPHERE_
+#define _MRE_SPHERE_
+#include "mre/Object"
+
+namespace mre {
+
+/** Sfera
+\sa SceneFactory, SceneManager
+*/
+class Sphere : public Object {
+	friend class SceneFactory;
+	private:
+		float radius;
+		int depth;
+		bool reverseNormals;
+
+		void divide_triangle(Vector3f &a, Vector3f &b, Vector3f &c, int depth) const;
+	protected:
+		Sphere(float radius = 1.0, int depth = 5, bool reverseNormals = false) {
+			this->radius = radius;
+			this->depth = depth;
+			this->reverseNormals = reverseNormals;
+			material.setShininess(100.0);
+		}
+	public:
+		/** Metodo di resa */
+		virtual void render() const;
+};
+
+};
+#endif
+

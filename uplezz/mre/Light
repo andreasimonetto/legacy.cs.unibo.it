@@ -1,0 +1,84 @@
+#ifndef _MRE_LIGHT_
+#define _MRE_LIGHT_
+
+namespace mre {
+
+/** Punto luce 
+\sa SceneFactory, SceneManager
+*/
+class Light {
+	friend class SceneManager;
+	friend class SceneFactory;
+	private:
+		float diffuse[4];  // Diffuse component
+		float ambient[4];  // Ambient component
+		float specular[4]; // Specular component
+		float pos[4];      // Light position (pos[3] == 0.0 ? directional : spot)
+
+		void activate(unsigned id) const;
+
+		// Default constructor 
+		Light() {
+			diffuse[0] = diffuse[1] = diffuse[2] = 1.0;
+			ambient[0] = ambient[1] = ambient[2] = 0.2;
+			specular[0] = specular[1] = specular[2] = 0.0;
+			diffuse[3] = ambient[3] = specular[3] = 1.0;
+			pos[0] = pos[1] = pos[2] = pos[3] = 0.0;
+		}
+	public:
+		/** Tipo di luce */
+		enum Type {
+			/** Direzionale */
+			TYPE_DIRECTIONAL,
+			/** Puntiforme */
+			TYPE_SPOT,
+		};
+
+		/** Imposta la componente diffusa.
+			\param[in] r Componente rossa
+			\param[in] g Componente verde
+			\param[in] b Componente blu
+			\param[in] a Componente alpha
+		*/
+		void setDiffuse(float r, float g, float b, float a = 1.0) { diffuse[0] = r; diffuse[1] = g; diffuse[2] = b; diffuse[3] = a; } 
+
+		/** Imposta la componente ambiente.
+			\param[in] r Componente rossa
+			\param[in] g Componente verde
+			\param[in] b Componente blu
+			\param[in] a Componente alpha
+		*/
+		void setAmbient(float r, float g, float b, float a = 1.0) { ambient[0] = r; ambient[1] = g; ambient[2] = b; ambient[3] = a; } 
+
+		/** Imposta la componente speculare.
+			\param[in] r Componente rossa
+			\param[in] g Componente verde
+			\param[in] b Componente blu
+			\param[in] a Componente alpha
+		*/
+		void setSpecular(float r, float g, float b, float a = 1.0) { specular[0] = r; specular[1] = g; specular[2] = b; specular[3] = a; } 
+
+		/** Imposta la posizione della luce.
+			\param[in] x Ascissa
+			\param[in] y Ordinata
+			\param[in] z Profondit&agrave;
+		*/
+		void setPosition(float x, float y, float z) { pos[0] = x; pos[1] = y; pos[2] = z; }
+
+		/** Setta il tipo di luce (direzionale o puntiforme). */
+		void setType(Type type) { 
+			switch(type) {
+				default:
+				case TYPE_DIRECTIONAL:
+					pos[3] = 0.0;
+					break;
+				case TYPE_SPOT:
+					pos[3] = 1.0;
+					break;
+			}
+		}
+};
+
+};
+#endif
+

@@ -1,0 +1,30 @@
+#ifndef _MRE_CAMERA_
+#define _MRE_CAMERA_
+#include "mre/Vector3f"
+
+namespace mre {
+
+/** Classe camera. &Egrave; definita da tre vettori di reali 3D, rispettivamente
+\em posizione, \em centro e \em viewup.
+\sa SceneFactory, SceneManager
+*/
+class Camera {
+	friend class SceneFactory;
+	friend class SceneManager;
+	private:
+		Camera() : position(0.0, 0.0, -1.0), center(0.0, 0.0, 0.0), viewup(0.0, 1.0, 0.0) { }
+		Camera(const Vector3f &pos, const Vector3f &cntr, const Vector3f &vwp) : position(pos), center(cntr), viewup(vwp) { }
+		void activate() const;
+	public:
+		/** Posizione della camera */
+		Vector3f position;
+		/** Punto verso cui la camera "guarda" */
+		Vector3f center;
+		/** Alto della camera */
+		Vector3f viewup;
+
+};
+
+};
+#endif
+

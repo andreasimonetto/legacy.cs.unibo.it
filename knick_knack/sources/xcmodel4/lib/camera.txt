@@ -1,0 +1,31 @@
+/* per una pellicole 35mm, aspect ratio 1,5:1 24X36 */
+gradi  mm
+180      7.5
+ 75     28
+ 46     50
+ 18    135
+  5    500
+  2.1 1200
+
+normale 46
+grandangolo_corto_fuoco 35mm
+grandangolo_vero_1 24mm
+grandangolo_vero_2 28mm
+grandangolo_spinto 21mm
+teleobiettivo_lungo_fuoco_80 80
+teleobiettivo_lungo_fuoco_105 105
+teleobiettivo_lungo_fuoco_135 135
+telini_80 80
+telini_105 105
+telini_135 135
+medio_tele_135 135
+medio_tele_300 300
+teleobiettivo_2000 2000
+zoom_grandangolo_40-50
+zoom_grandangolo_35-80
+zoom_grandangolo_35-100
+telezoom_200-300
+telezoom_80-200
+telezoom_100-300
+fish-eye_180 180
+fish-eye_220 220

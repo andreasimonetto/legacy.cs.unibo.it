@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Uplezz: Documentazione</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<div align="center"><img src="images/banner.png" /></div>
+<div style="padding-left: 2em; padding-right: 2em; padding-bottom: 1em;">
+
+<!-- Generato da Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li class="current"><a href="index.html"><span>Pagina&nbsp;Principale</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace</span></a></li>
+      <li><a href="classes.html"><span>Classi</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Documentazione</h1>
+<p>
+<h3 align="center">1.0 </h3>Questo progetto &egrave; stato realizzato durante l'anno accademico 2007/2008, nell'ambito del corso di Grafica 3D tenuto dal Professor Giulio Casciola presso l'Universit&agrave; degli Studi di Bologna. L'obiettivo &egrave; la progettazione e l'implementazione di un piccolo videogame tridimensionale con l'uso delle librerie grafiche GL sotto al server X. Il linguaggio di sviluppo usato &egrave; C++.<h2><a class="anchor" name="intro">
+Introduzione</a></h2>
+Il sistema software si articola in tre moduli: il motore di gioco, il motore di resa e l'interfaccia verso il sistema. Il primo implementa le caratteristiche e le dinamiche del gioco, senza curarsi dei dettagli grafici. Il secondo costituisce la parte principale del progetto e si sviluppa in una serie di classi per la definizione, la trasformazione e la resa di oggetti grafici (tra cui MESH, animazioni, texture, punti luce, viste...). Il terzo modulo consta di una serie di <em>facilities</em> per interfacciarsi col sistema operativo, come ad esempio una classe orologio, una per i log, ecc... Ogni modulo definisce un namespace contenente le relative classi; i namespace sono, rispettivamente, <em><a class="el" href="namespacemge.html" title="Modulo del motore di gioco.">mge</a></em> (MGE Game Engine), <em><a class="el" href="namespacemre.html" title="Modulo del motore di resa.">mre</a></em> (MRE Render Engine) e <em><a class="el" href="namespacesys.html" title="Modulo d&#39;interfacciamento col sistema operativo.">sys</a></em>. Gli oggetti al di fuori di questi namespace sono quelli che compongono il gioco come specifica implementazione del motore di gioco e, al contempo, come istanza del motore di resa.<h2><a class="anchor" name="game_engine">
+Il motore di gioco (MGE)</a></h2>
+Il gioco si svolge su un mondo a griglia. Il giocatore (classe <a class="el" href="classPlayer.html" title="Giocatore.">Player</a>) pu&ograve; muoversi in direzione dei quattro punti cardinali di cella in cella. Su ogni cella pu&ograve; trovarsi al pi&ugrave; uno dei seguenti oggetti: <ul>
+<li>il giocatore (classe <a class="el" href="classPlayer.html" title="Giocatore.">Player</a>); </li>
+<li>un albero (classe <a class="el" href="classTree.html" title="Albero.">Tree</a>); </li>
+<li>acqua (classe <a class="el" href="classWater.html" title="Acqua.">Water</a>); </li>
+<li>una fontanella (classe <a class="el" href="classFountain.html" title="Oggetto fontanella.">Fountain</a>); </li>
+<li>l'uscita (classe <a class="el" href="classExit.html" title="Oggetto &quot;uscita&quot;.">Exit</a>).</li>
+</ul>
+Il giocatore pu&ograve; muoversi solo su una cella libera, sulla cella d'uscita o su una cella occupata da una fontanella, spostandola. Per contro non pu&ograve; mai spostarsi su una cella contenente un albero o acqua. Ovviamente l'obiettivo &egrave; raggiungere l'uscita per accedere al livello successivo. Ecco un esempio di livello di gioco:<p>
+<div align="center">
+<img src="images/game_abstract.gif" alt="game_abstract.gif">
+<p><strong>Schema di gioco</strong></p></div>
+ Per finire questo livello, il giocatore deve muoversi di 8 celle verso Est, una verso Sud, spostare la fontanella di 2 celle a Sud, ecc... proseguendo verso l'uscita. I vincoli che il motore di gioco deve rispettare sono: <ul>
+<li>esistono un solo giocatore ed una sola uscita per livello; </li>
+<li>il giocatore pu&ograve; muovere una sola fontanella per volta. Inoltre non sono consentiti i movimenti verso Nord e verso Sud di due fontanelle adiacenti che hanno in comune il bordo della cella N/S. Analogamente per il caso W/E; nei due schemi seguenti, alcuni spostamenti non sono possibili: <div class="fragment"><pre class="fragment">
+-P-         -----                      LEGENDA
+-@-         -P@@-                      P : Giocatore
+-@-         -----                      @ : Fontanella
+---          (2)                       - : Cella libera
+(1)
+</pre></div> Infatti, nel caso (1) le celle su cui stanno le fontanelle, hanno un lato in comune; il giocatore in questo caso non potr&agrave; muoversi verso Sud, poich&egrave; la fontanella a Sud &egrave; <em>bloccata</em>. Analogamente, nel caso (2) il giocatore non potr&agrave; muoversi verso Est. Si noti che una fontanella pu&ograve; essere bloccata anche dagli altri oggetti del gioco. Inoltre nel caso (1) ambedue le fontanelle possono essere spostate nei versi W/E; </li>
+<li>il giocatore non pu&ograve; uscire dalla griglia di gioco, n&egrave; transitare su celle occupate da alberi, acqua o fontanelle bloccate secondo le modalit&agrave; di cui sopra. </li>
+<li>la fontanella che viene spostata in una direzione finisce sulla cella immediatamente adiacente nella medesima direzione, a patto che questa sia libera; </li>
+<li>i livelli sono file di testo, salvati nel seguente formato: <div class="fragment"><pre class="fragment">
+MGEGRID 1.0
+&lt;M&gt; &lt;N&gt;
+&lt;1,1&gt; &lt;1,2&gt;  ...  &lt;1,N&gt;
+&lt;2,1&gt; &lt;2,2&gt;  ...  &lt;2,N&gt;
+ ...   ...   ...   ...  
+&lt;M,1&gt; &lt;M,2&gt;  ...  &lt;M,N&gt;
+</pre></div> dove <em>M</em> ed <em>N</em> sono interi positivi che indicano il numero di righe e di colonne della matrice sottostante, che descrive la composizione della griglia. Le componenti &lt;i, j&gt; sono interi compresi fra 0 e 5, che rappresentano, rispettivamente: cella vuota (0), giocatore (1), acqua (2), fontanelle (3), alberi (4) e uscita(5). Un esempio di file <em>grid:</em> <div class="fragment"><pre class="fragment">
+MGEGRID 1.0
+9 11
+4  0  4  0  4  0  4  0  4  0  4
+0  2  2  2  2  2  2  2  2  2  0
+4  2  5  0  0  0  0  0  0  2  4
+4  2  0  0  0  0  0  0  0  2  4
+0  2  0  0  0  1  0  0  0  2  0
+4  2  0  0  0  0  3  0  0  2  4
+0  2  0  0  0  0  0  0  0  2  0
+0  2  2  2  2  2  2  2  2  2  0
+4  0  4  0  4  0  4  0  4  0  4
+</pre></div></li>
+</ul>
+<h2><a class="anchor" name="render_engine">
+Il motore di resa (MRE)</a></h2>
+Il motore di resa s'interfaccia al server X per gestire l'I/O e le finestre. Inoltre mette a disposizione una serie d'oggetti per definire, trasformare e rendere oggetti 3D. Lo schema generale d'un programma che usa il motore di resa &egrave; descritto nella figura sotto:<p>
+<div align="center">
+<img src="images/render_engine_abstract.gif" alt="render_engine_abstract.gif">
+<p><strong>Render engine main loop</strong></p></div>
+ L'utente pu&ograve; definire, all'inizio del programma, una serie di handler per gestire gli eventi di I/O. Inoltre pu&ograve; richiedere al motore di resa di ridisegnare la scena per intero. Altrimenti questa sar&agrave; ridisegnata ugualmente con la frequenza di 25 volte al secondo. Per mezzo della classe <a class="el" href="classmre_1_1SceneFactory.html" title="Classe &quot;fabbrica&quot; per oggetti MRE.">mre::SceneFactory</a> &egrave; possibile creare oggetti geometrici o caricarli da file, mentre grazie allo <a class="el" href="classmre_1_1SceneManager.html" title="Gestore della scena.">mre::SceneManager</a> &egrave; possibile creare una scena, posizionare una camera (o pi&ugrave; di una, la camera attiva viene scelta di volta in volta) e i punti luce. Di seguito &egrave; riportato l'esempio di un semplice programma che crea una scena con una sfera al centro e la visualizza:<p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">#include "mre/RenderEngine"</span>
+<span class="preprocessor">#include "mre/SceneFactory"</span>
+<span class="preprocessor">#include "mre/SceneManager"</span>
+
+<span class="preprocessor">#define WINDOW_TITLE "MRE TEST"</span>
+<span class="preprocessor"></span><span class="preprocessor">#define WINDOW_WIDTH  640</span>
+<span class="preprocessor"></span><span class="preprocessor">#define WINDOW_HEIGHT 480</span>
+<span class="preprocessor"></span>
+<span class="keyword">using namespace </span>mre;
+<span class="keyword">using namespace </span>sys;
+
+<span class="comment">// Gestione della tastiera: richiede all'engine di uscire quando viene rilasciato il tasto ESC.</span>
+<span class="keywordtype">void</span> keyReleaseHandle(<span class="keywordtype">int</span> key, <span class="keywordtype">int</span> state, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)
+{
+        <span class="keywordflow">if</span>(key == XK_Escape)
+                RenderEngine::getInstance()-&gt;postQuit();
+}
+
+<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])
+{
+Light *lite;
+Sphere *sphere;
+Camera *camera;
+
+        <span class="comment">// Inizializza la finestra principale</span>
+        RenderEngine::getInstance()-&gt;initMainWindow(argc, argv, WINDOW_TITLE, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+
+        <span class="comment">// Crea una camera, la posiziona e la setta come corrente nella scena</span>
+        camera = SceneFactory::getInstance()-&gt;createCamera(<span class="stringliteral">"DefaultCamera"</span>);
+        camera-&gt;position[2] = -6.0;
+        SceneManager::getInstance()-&gt;setCurrentCamera(camera);
+
+        <span class="comment">// Crea una luce, la posiziona e l'aggiunge alla scena</span>
+        lite = SceneFactory::getInstance()-&gt;createLight(<span class="stringliteral">"DefaultLight"</span>);
+        lite-&gt;setPosition(-1.0, 0.7071, -0.7071);
+        SceneManager::getInstance()-&gt;addLight(lite);
+
+        <span class="comment">// Crea una sfera di raggio 2.5</span>
+        sphere = SceneFactory::getInstance()-&gt;createSphere(2.5);
+        SceneManager::getInstance()-&gt;addObject(sphere);
+
+        <span class="comment">// Imposta il gestore dell'evento "tasto rilasciato"</span>
+        RenderEngine::getInstance()-&gt;setKeyReleaseHandler(keyReleaseHandle);
+
+        <span class="comment">// Inizia il main loop</span>
+        <span class="keywordflow">return</span> RenderEngine::getInstance()-&gt;mainLoop();
+}
+
+</pre></div><p>
+L'ambiente 3D &egrave; gestito principalmente mediante la classe <a class="el" href="classmre_1_1Vector3f.html" title="Vettore tridimensionale di float.">mre::Vector3f</a>, dove le componenti (0, 1, 2) = (x, y, z) corrispondono rispettivamente a larghezza, altezza e profondit&agrave;. Oppurtune operazioni primitive sono ridefinite per un uso pi&ugrave; agevole delle istanze di questa classe.<h2><a class="anchor" name="os_interface">
+Interfacciarsi col sistema operativo (SYS)</a></h2>
+L'interfaccia col sistema mette a disposizione una classe "orologio di sistema" (classe <a class="el" href="classsys_1_1Clock.html" title="Orologio.">sys::Clock</a>) munita di operazioni di somma e differenza tra orari e affiancata da una classe dedicata alla visualizzazione della data e dell'ora. Inoltre implementa una classe "cronometro" (<a class="el" href="classsys_1_1Timer.html" title="Conto alla rovescia.">sys::Timer</a>) che "segnala" lo scadere di un dato intervallo. Infine il <em>singleton</em> di classe sys::System (accessibile dal metodo statico sys::System::getInstance()) fornisce alcuni metodi per creare un log e per gestire gli stati d'uscita. </div>
+<hr size="1"><address style="text-align: right;"><small>
+Generated on Wed Nov 12 10:08:56 2008 for Uplezz by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 
+1.5.6</small></address></div>
+</body>
+</html>

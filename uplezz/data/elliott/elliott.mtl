@@ -1,0 +1,217 @@
+newmtl Body
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl DeformableJoints
+illum 4
+Kd 0.20 0.20 0.20
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl EyeBrows
+illum 4
+Kd 0.20 0.20 0.20
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.43 0.43 0.43
+Ns 60.78
+newmtl EyeLids
+illum 4
+Kd 0.80 0.80 0.80
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 96.08
+newmtl Feet_Base
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 96.08
+newmtl Feet_Upper
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Head
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Hip
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Left_Ear
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Left_EyeCasing
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Left_Eyeball
+illum 4
+Kd 0.60 0.60 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 423.53
+newmtl Left_Fingers
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Left_ForeArm
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Left_UpperArm
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl NeckSegment1
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 60.78
+newmtl NeckSegment2
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 60.78
+newmtl Right_Ear
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Right_EyeCasing
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Right_Eyeball
+illum 4
+Kd 0.60 0.60 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 423.53
+newmtl Right_Fingers
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Right_ForeArm
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Right_UpperArm
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Shins
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Thighs
+illum 4
+Kd 0.60 0.60 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Thumbs
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Toe_Base
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+newmtl Toe_Upper
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 60.78
+

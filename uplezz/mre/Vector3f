@@ -1,0 +1,78 @@
+#ifndef _MRE_VECTOR3F_
+#define _MRE_VECTOR3F_
+#include <math.h>
+#include <string.h>
+
+namespace mre {
+
+/** Vettore tridimensionale di float.
+*/
+class Vector3f {
+	/** Operatore di differenza tra vettori 3D */
+	friend Vector3f operator -(const Vector3f &a, const Vector3f &b) {
+		Vector3f result(a);
+		result.f[0] -= b.f[0];
+		result.f[1] -= b.f[1];
+		result.f[2] -= b.f[2];
+		return result;
+	}
+
+	/** Operatore di prodotto vettoriale */
+	friend Vector3f operator *(const Vector3f &a, const Vector3f &b) {
+		Vector3f result;
+		result.f[0] = a.f[1] * b.f[2] - a.f[2] * b.f[1];
+		result.f[1] = a.f[2] * b.f[0] - a.f[0] * b.f[2];
+		result.f[2] = a.f[0] * b.f[1] - a.f[1] * b.f[0];
+		return result;
+	}
+
+	/** Operatore di prodotto scalare */
+	friend Vector3f operator *(float a, const Vector3f &v) {
+		Vector3f result(v);
+		result.f[0] *= a;
+		result.f[1] *= a;
+		result.f[2] *= a;
+		return result;
+	}
+	private:
+		float f[3];
+	public:
+		/** Costruttore copia */
+		Vector3f(const Vector3f &v) { memcpy(f, v.f, 3 * sizeof(float)); }
+
+		/** Costruttore tramite array.
+			\param[in] v Array di (almeno) tre componenti \em float
+		*/
+		Vector3f(const float *v) { memcpy(f, v, 3 * sizeof(float)); }
+
+		/* Costruttore parametrico.
+			\param[in] a Primo parametro
+			\param[in] b Secondo parametro
+			\param[in] c Terzo parametro
+		*/
+		Vector3f(float a = 0.0, float b = 0.0, float c = 0.0) { f[0] = a; f[1] = b; f[2] = c; }
+
+		/** Operatore di subscript (lettura/scrittura) */
+		const float& operator [](int i) const { return f[i]; }
+
+		/** Operatore di subscript (in sola lettura) */
+		float& operator [](int i) { return f[i]; }
+
+		/** Operatore di deferenziazione */
+		const float* operator *() const { return f; }
+
+		/** Normalizza il vettore */
+		void normalize() {
+			float d = f[0] * f[0] + f[1] * f[1] + f[2] * f[2];
+			d = sqrtf(d);
+			if(d > 0.0) {
+				f[0] /= d;
+				f[1] /= d;
+				f[2] /= d;
+			}
+		}
+};
+
+};
+#endif
+

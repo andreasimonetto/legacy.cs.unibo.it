@@ -1,0 +1,41 @@
+#include <adt.h>
+
+/* A user-defined structure. */
+struct elem {
+	/* field_next and field_prev */
+	struct elem *ptr_next, *ptr_prev;
+	
+	/* Other fields ... */
+	int val;
+};
+
+/* 1. Build an empty queue (i.e. NULL). */
+struct elem *mkEmptyElementQ();
+
+/* 2. Test whether or not a Queue is empty. */
+int emptyElementQ(const struct elem *q);
+
+/* 3. Enqueue an Element into a Queue. */
+void insertElement(struct elem **q, struct elem *v);
+
+/* 4. Remove an Element from a Queue.
+ 	NOTE: The Element you want to remove must be present in the Queue. This 
+	function doesn't search occurrences of v in the queue. The result
+	of removing an Element that's not present in the Queue is unpredictable.
+*/
+struct elem *outElement(struct elem **q, struct elem *v);
+
+/* 5. Extract the outgoing Element from a Queue. */
+struct elem *removeElement(struct elem **q);
+
+/* 6. Return the outgoing Element. */
+struct elem *headElement(const struct elem *q);
+
+/* 7. Search for Element v in the Queue q. Return v if found, NULL otherwise. */
+struct elem *searchElement(const struct elem *q, const struct elem *v);
+
+int main() {
+	...
+}
+
+DEF_ADT_QUEUE(struct elem, Element, ptr_next, ptr_prev)

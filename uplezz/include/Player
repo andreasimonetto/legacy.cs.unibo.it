@@ -1,0 +1,199 @@
+#ifndef _UPLEZZ_PLAYER_
+#define _UPLEZZ_PLAYER_
+#include "uplezz.h"
+#include "Fountain"
+#include "mge/Object"
+#include "mge/GameEngine"
+#include "mre/Animation"
+#include "mre/Camera"
+#include "mre/RenderEngine"
+#include "mre/SceneManager"
+#include "sys/System"
+#include "sys/Timer"
+#include <math.h>
+#include <list>
+
+using namespace std;
+using namespace mre;
+
+/** Giocatore. Utilizza il motore di resa per implementare la visualizzazione 
+e le animazioni del robot "Elliott", protagonista del gioco.
+*/
+class Player : public mge::Object, public mre::Object {
+	private:
+		enum {
+			STATUS_IDLE,
+			STATUS_WALK_START,
+			STATUS_WALKING,
+			STATUS_WALK_STOPPING,
+			STATUS_WALK_END,
+			STATUS_PUSH_TRY,
+			STATUS_PUSH_START,
+			STATUS_PUSHING,
+			STATUS_PUSH_STOPPING,
+			STATUS_PUSH_END,
+			STATUS_EXIT_START,
+			STATUS_EXIT,
+			STATUS_EYES_TICK,
+			STATUS_ROTATING,
+			STATUS_CLICKING,
+			STATUS_DIE
+		};
+
+		Camera *camera;
+
+		mre::Object *idleFrame, *curFrame;
+		Animation<Player> walkAnim, walkStartAnim, walkEndAnim;
+		Animation<Player> pushAnim, pushStartAnim, pushEndAnim;
+		Animation<Player> clickAnim, dieAnim, eyesTickAnim;
+
+		int status;
+		bool stopAction, exitAction;
+
+		sys::Timer eyesTickTimer, rotTimer, cameraTimer;
+		float rotDir;
+		int rotCount;
+
+		bool cameraIsRotating, cameraIsResetting;
+		int cameraX, cameraY;
+		float cameraD, cameraTheta, cameraPhi;
+		float cameraDeltaD, cameraDeltaTheta, cameraDeltaPhi;
+
+		mge::GameEngine::Action action;
+		Fountain *fountain;
+
+		mge::GameEngine::Direction getDirection()
+		{
+		mge::GameEngine::Direction dir = mge::GameEngine::DIR_EAST;
+		
+			if(rotation[1] == 270.0) 
+				dir = mge::GameEngine::DIR_NORTH;
+			else if(rotation[1] == 90.0) 
+				dir = mge::GameEngine::DIR_SOUTH;
+			else if(rotation[1] == 180.0) 
+				dir = mge::GameEngine::DIR_WEST;
+
+			return dir;
+		}
+
+		void refreshCamera() {
+			camera->position[0] = position[0] - cameraD * sinf(cameraTheta) * cosf(cameraPhi);
+			camera->position[1] = 16.0 + cameraD * cosf(cameraTheta);
+			camera->position[2] = position[2] - cameraD * sinf(cameraTheta) * sinf(cameraPhi);
+			camera->center[0] = position[0];
+			camera->center[1] = 12.0;
+			camera->center[2] = position[2];
+		}
+
+		bool actionStartCallback(unsigned cycle, unsigned frame);
+		bool actionCallback(unsigned cycle, unsigned frame);
+
+		void tickEyes() {
+			if(status == STATUS_IDLE) {
+				curFrame = &eyesTickAnim;
+				eyesTickAnim.start();
+				status = STATUS_EYES_TICK;
+			}
+		}
+	public:
+		Player(const string &path, unsigned row, unsigned col);
+		~Player();
+
+		int getSymbol() const { return mge::Object::SYMBOL_PLAYER; }
+
+		void cameraRotate(int x, int y);
+
+		void cameraRotateBegin(int x, int y) {
+			cameraIsRotating = true;
+			cameraX = x;
+			cameraY = y;
+		}
+
+		void cameraRotateEnd() { cameraIsRotating = false; }
+
+		void cameraReset() {
+			cameraDeltaD = 16.0 - cameraD;
+			cameraDeltaPhi = (cameraPhi <= M_PI ? -cameraPhi : (2.0 * M_PI - cameraPhi));
+			cameraDeltaTheta = M_PI * 0.4 - cameraTheta;
+			cameraIsResetting = true;
+			cameraTimer.restart();
+		}
+
+		void cameraDistanceInc() {
+			if(cameraD < 20.0) {
+				cameraD += 0.25;
+				refreshCamera();
+				RenderEngine::getInstance()->postRedisplay();
+			}
+		}
+
+		void cameraDistanceDec() {
+			if(cameraD > 7.0) {
+				cameraD -= 0.25;
+				refreshCamera();
+				RenderEngine::getInstance()->postRedisplay();
+			}
+		}
+
+		void click() {
+			if(status == STATUS_IDLE) {
+				curFrame = &clickAnim;
+				clickAnim.start();
+				status = STATUS_CLICKING;
+			}
+		}
+
+		void die() {
+			if(status == STATUS_IDLE) {
+				//RenderEngine::getInstance()->fadeOut(0.166667);
+				curFrame = &dieAnim;
+				dieAnim.start();
+				status = STATUS_DIE;
+			}
+		}
+
+		void startWalk() {
+			if(status == STATUS_IDLE) {
+				stopAction = false;
+				curFrame = &walkStartAnim;
+				walkStartAnim.start();
+				status = STATUS_WALK_START;
+			}
+		}
+
+		void stopWalk() { stopAction = true; }
+
+		void rotateLeft() {
+			if(status == STATUS_IDLE) {
+				rotDir = 1.0;
+				status = STATUS_ROTATING;	
+			}
+		}
+
+		void rotateRight() {
+			if(status == STATUS_IDLE) {
+				rotDir = -1.0;
+				status = STATUS_ROTATING;	
+			}
+		}
+
+		virtual void render() const { RenderEngine::getInstance()->render(curFrame); }
+
+		virtual void reset(unsigned row, unsigned col) {
+			mge::Object::reset(row, col);
+			resetTransform();
+			rotate(90.0, mre::Object::AXIS_Y);
+			move(CELL_SIZE * getRow() + 0.5 * CELL_SIZE, 0.0, CELL_SIZE * getCol() + 0.5 * CELL_SIZE);
+			cameraPhi = 0.0;
+			cameraTheta = M_PI * 0.4;
+			cameraD = 16.0;
+			refreshCamera();
+		}
+
+		bool hasExit() const { return exitAction; }
+
+		virtual void run();
+};
+
+#endif
+

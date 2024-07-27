@@ -1,0 +1,18 @@
+8
+fish_eye 178
+wide_angle 75
+standard 46
+middle_tele_1 18
+middel_tele_2 5
+middle_tele_3 2.1
+45 45
+25 25
+Questo file contiene una lista di possibili obbiettivi
+il primo parametro indica quante righe devono essere lette
+Le righe che seguono sono costituite da due colonne, la
+prima indica il nome dell'obbiettivo, mentre la seconda indica
+l'angolo di campo dello stesso, quest'ultimo puo' variare solo
+tra 1.0 e 178.0 (costrain di hrayt e descriptor). Vedi camera.txt in
+questa dir per ulteriori informazioni. Non cancellate queste
+informazioni spostatele in avanti se si vogliono aggiungere altri
+obbiettivi.
